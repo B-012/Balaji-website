@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100">
+  <rect width="300" height="100" fill="#ffffff" rx="8"/>
+  <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="50" fill="#0033a0" letter-spacing="2">IATA</text>
+  <text x="50%" y="75%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="14" fill="#333333" letter-spacing="1">ACCREDITED AGENT</text>
+  <path d="M40,20 L260,20" stroke="#0033a0" stroke-width="3" stroke-linecap="round"/>
+  <path d="M40,80 L260,80" stroke="#0033a0" stroke-width="3" stroke-linecap="round"/>
+</svg>

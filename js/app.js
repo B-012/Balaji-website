@@ -136,11 +136,14 @@ function loadSharedLayouts() {
                 <img src="logo.png" alt="Balaji Travels Logo" style="height: 70px; width: auto; max-width: 100%; object-fit: contain;">
               </a>
               <p>Your Journey, Our Passion — Explore the World with Balaji Travels. The most trusted premium tour operator and booking assistant based in Kolkata, West Bengal.</p>
-              <div class="social-links">
+              <div class="social-links" style="margin-bottom: 20px;">
                 <a href="https://www.facebook.com/p/Balaji-Travels-100067196636092/" target="_blank" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://instagram.com" target="_blank" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 <a href="https://twitter.com" target="_blank" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                 <a href="https://youtube.com" target="_blank" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              </div>
+              <div class="iata-accreditation" style="display: inline-block;">
+                <img src="images/iata-logo.svg" alt="IATA Accredited Agent" style="height: 55px; width: auto; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
               </div>
             </div>
             
