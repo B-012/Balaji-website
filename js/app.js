@@ -143,7 +143,7 @@ function loadSharedLayouts() {
                 <a href="https://youtube.com" target="_blank" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
               </div>
               <div class="iata-accreditation" style="display: inline-block;">
-                <img src="images/iata-logo.svg" alt="IATA Accredited Agent" style="height: 55px; width: auto; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                <img src="images/iata-image.jpg" alt="IATA Accredited Agent" style="height: 55px; width: auto; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
               </div>
             </div>
             
