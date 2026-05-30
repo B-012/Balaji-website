@@ -208,30 +208,32 @@ function loadSharedLayouts() {
           <h3>Plan Your Dream Trip</h3>
           <p>Fill out the details below and get a customized holiday quote in 2 hours.</p>
           <form id="modal-enquiry-form" onsubmit="handleFormSubmit(event, 'modal-enquiry-form')">
+            <input type="hidden" name="access_key" value="819cd7ea-5d5a-4a26-8f2b-494e0b50bbaf">
+            <input type="hidden" name="subject" value="New Lead from Modal Enquiry Form">
             <div class="form-group" style="margin-bottom: 15px;">
               <label><i class="fas fa-user"></i> Full Name</label>
-              <input type="text" class="form-control" placeholder="Enter your full name" required>
+              <input type="text" name="name" class="form-control" placeholder="Enter your full name" required>
             </div>
             <div class="form-group" style="margin-bottom: 15px;">
               <label><i class="fas fa-phone"></i> Contact Number</label>
-              <input type="tel" class="form-control" placeholder="Enter 10-digit mobile number" required pattern="[0-9]{10}">
+              <input type="tel" name="phone" class="form-control" placeholder="Enter 10-digit mobile number" required pattern="[0-9]{10}">
             </div>
             <div class="form-group" style="margin-bottom: 15px;">
               <label><i class="fas fa-envelope"></i> Email Address</label>
-              <input type="email" class="form-control" placeholder="Enter email address" required>
+              <input type="email" name="email" class="form-control" placeholder="Enter email address" required>
             </div>
             <div class="form-group" style="margin-bottom: 15px;">
               <label><i class="fas fa-map-marker-alt"></i> Destination of Choice</label>
-              <input type="text" id="modal-destination" class="form-control" placeholder="Where do you want to go?" required>
+              <input type="text" name="destination" id="modal-destination" class="form-control" placeholder="Where do you want to go?" required>
             </div>
             <div class="form-group-row" style="margin-bottom: 20px;">
               <div class="form-group">
                 <label><i class="fas fa-calendar-alt"></i> Travel Date</label>
-                <input type="date" class="form-control" required>
+                <input type="date" name="travel_date" class="form-control" required>
               </div>
               <div class="form-group">
                 <label><i class="fas fa-users"></i> Travelers</label>
-                <select class="form-control" required>
+                <select name="travelers" class="form-control" required>
                   <option value="1">1 Person</option>
                   <option value="2">2 Persons (Couple)</option>
                   <option value="3-5">3 - 5 Persons (Family)</option>
@@ -968,34 +970,51 @@ function handleFormSubmit(event, formId) {
   submitBtn.disabled = true;
   submitBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Processing Request...`;
 
-  // Simulate network delay
-  setTimeout(() => {
+  const formData = new FormData(form);
+
+  fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
     submitBtn.disabled = false;
     submitBtn.innerHTML = originalText;
     
-    // Show premium, warm success message
-    successEl.style.display = "block";
-    successEl.innerHTML = `
-      <div style="text-align: center;">
-        <i class="fas fa-check-circle" style="font-size: 2.2rem; color: #2ecc71; margin-bottom: 10px; display: block;"></i>
-        <h4 style="margin-bottom: 5px; color: #155724;">Quote Request Received!</h4>
-        <p style="font-size: 0.85rem; margin: 0;">Dhanyabaad! Our Kolkata-based travel expert will contact you via Phone/WhatsApp within <strong>2 hours</strong> with premium customized plans.<br><strong style="color: var(--primary-color);">Apna Sapna, Hamari Zimmedari!</strong></p>
-      </div>
-    `;
-    
-    form.reset();
-
-    // Auto-scroll success card into view
-    successEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-
-    // If modal, auto-close after 5 seconds
-    if (formId === 'modal-enquiry-form') {
-      setTimeout(() => {
-        closeBookingModal();
-        successEl.style.display = "none";
-      }, 5500);
+    if (data.success) {
+      successEl.style.display = "block";
+      successEl.innerHTML = `
+        <div style="text-align: center;">
+          <i class="fas fa-check-circle" style="font-size: 2.2rem; color: #2ecc71; margin-bottom: 10px; display: block;"></i>
+          <h4 style="margin-bottom: 5px; color: #155724;">Quote Request Received!</h4>
+          <p style="font-size: 0.85rem; margin: 0;">Dhanyabaad! Our Kolkata-based travel expert will contact you within <strong>2 hours</strong>.<br><strong style="color: var(--primary-color);">Apna Sapna, Hamari Zimmedari!</strong></p>
+        </div>
+      `;
+      form.reset();
+      
+      successEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      
+      if (formId === 'modal-enquiry-form') {
+        setTimeout(() => {
+          closeBookingModal();
+          successEl.style.display = "none";
+        }, 5500);
+      }
+    } else {
+      successEl.style.display = "block";
+      successEl.style.backgroundColor = "#ffefef";
+      successEl.style.color = "#d9534f";
+      successEl.innerHTML = `<strong>Error:</strong> Something went wrong. Please try again.`;
     }
-  }, 1800);
+  })
+  .catch(error => {
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = originalText;
+    successEl.style.display = "block";
+    successEl.style.backgroundColor = "#ffefef";
+    successEl.style.color = "#d9534f";
+    successEl.innerHTML = `<strong>Error:</strong> Network issue. Please call us directly.`;
+  });
 }
 
 // 7. HIGH PERFORMANCE SCROLL REVEAL ENGINE

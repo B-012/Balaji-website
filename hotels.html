@@ -66,9 +66,11 @@
             <h3 style="margin-bottom: 20px;"><i class="fas fa-hotel"></i> Find Best Hotel Deals</h3>
             
             <form id="hotel-booking-form" onsubmit="searchHotels(event)">
+<input type="hidden" name="access_key" value="819cd7ea-5d5a-4a26-8f2b-494e0b50bbaf">
+<input type="hidden" name="subject" value="New Lead from hotels.html">
               <div class="form-group" style="margin-bottom: 15px;">
                 <label><i class="fas fa-map-marker-alt"></i> Destination City or Specific Hotel Area</label>
-                <select id="hotel-destination" class="form-control" required>
+                <select name="selection" id="hotel-destination" class="form-control" required>
                   <optgroup label="Popular Domestic Sectors">
                     <option value="GOA" selected>Goa (Beach Resorts & Luxury Villas)</option>
                     <option value="KASHMIR">Kashmir (Srinagar, Gulmarg & Pahalgam Stays)</option>
@@ -102,18 +104,18 @@
               <div class="form-group-row" style="margin-bottom: 15px;">
                 <div class="form-group">
                   <label><i class="fas fa-calendar-alt"></i> Check-In Date</label>
-                  <input type="date" class="form-control" required>
+                  <input name="travel_date" type="date" class="form-control" required>
                 </div>
                 <div class="form-group">
                   <label><i class="fas fa-calendar-alt"></i> Check-Out Date</label>
-                  <input type="date" class="form-control" required>
+                  <input name="travel_date" type="date" class="form-control" required>
                 </div>
               </div>
 
               <div class="form-group-row" style="margin-bottom: 20px;">
                 <div class="form-group">
                   <label><i class="fas fa-bed"></i> Rooms Required</label>
-                  <select class="form-control">
+                  <select name="selection" class="form-control">
                     <option value="1">1 Room</option>
                     <option value="2">2 Rooms</option>
                     <option value="3">3 Rooms</option>
@@ -122,7 +124,7 @@
                 </div>
                 <div class="form-group">
                   <label><i class="fas fa-users"></i> Guests (Adults + Kids)</label>
-                  <select class="form-control">
+                  <select name="selection" class="form-control">
                     <option value="1">1 Adult</option>
                     <option value="2">2 Adults</option>
                     <option value="3">3 Adults (with Triple Bed)</option>
@@ -132,7 +134,7 @@
                 </div>
                 <div class="form-group">
                   <label><i class="fas fa-star" style="color: var(--accent-color);"></i> Class Preference</label>
-                  <select class="form-control">
+                  <select name="selection" class="form-control">
                     <option value="5-star">5★ Luxury Resorts</option>
                     <option value="4-star">4★ Premium Stays</option>
                     <option value="3-star">3★ Deluxe Budget</option>
@@ -145,8 +147,8 @@
               <div style="background-color: var(--bg-secondary); padding: 15px; border-radius: var(--radius-sm); margin-bottom: 20px; border-left: 4px solid var(--primary-color);">
                 <h4 style="font-size: 0.95rem; color: var(--primary-color); margin-bottom: 10px;">Contact Details for Instant Pricing</h4>
                 <div class="form-group-row">
-                  <input type="tel" class="form-control" placeholder="10-digit mobile number" required pattern="[0-9]{10}">
-                  <input type="email" class="form-control" placeholder="Email address" required>
+                  <input name="phone" type="tel" class="form-control" placeholder="10-digit mobile number" required pattern="[0-9]{10}">
+                  <input name="email" type="email" class="form-control" placeholder="Email address" required>
                 </div>
               </div>
 

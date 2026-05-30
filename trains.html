@@ -66,10 +66,12 @@
             <h3 style="margin-bottom: 20px;"><i class="fas fa-train"></i> Train Ticket Booking Assistance</h3>
             
             <form id="train-booking-form" onsubmit="searchTrains(event)">
+<input type="hidden" name="access_key" value="819cd7ea-5d5a-4a26-8f2b-494e0b50bbaf">
+<input type="hidden" name="subject" value="New Lead from trains.html">
               <div class="form-group-row" style="margin-bottom: 15px;">
                 <div class="form-group">
                   <label><i class="fas fa-train-subway"></i> From Station</label>
-                  <select id="train-origin" class="form-control" required>
+                  <select name="selection" id="train-origin" class="form-control" required>
                     <option value="HWH" selected>Howrah (HWH) - Kolkata</option>
                     <option value="SDAH">Sealdah (SDAH) - Kolkata</option>
                     <option value="KOAA">Kolkata (KOAA) - Chitpur</option>
@@ -78,7 +80,7 @@
                 </div>
                 <div class="form-group">
                   <label><i class="fas fa-train-subway"></i> To Station</label>
-                  <select id="train-destination" class="form-control" required>
+                  <select name="selection" id="train-destination" class="form-control" required>
                     <option value="NDLS">New Delhi (NDLS) - Rajdhani Route</option>
                     <option value="NJP" selected>New Jalpaiguri (NJP) - Siliguri (Darjeeling/Sikkim)</option>
                     <option value="HW">Haridwar (HW) - Dehradun (Chardham Gateway)</option>
@@ -95,11 +97,11 @@
               <div class="form-group-row" style="margin-bottom: 15px;">
                 <div class="form-group">
                   <label><i class="fas fa-calendar-day"></i> Travel Date</label>
-                  <input type="date" class="form-control" required>
+                  <input name="travel_date" type="date" class="form-control" required>
                 </div>
                 <div class="form-group">
                   <label><i class="fas fa-couch"></i> Class Selection</label>
-                  <select class="form-control">
+                  <select name="selection" class="form-control">
                     <option value="1AC">AC First Class (1A)</option>
                     <option value="2AC">AC 2 Tier (2A)</option>
                     <option value="3AC" selected>AC 3 Tier (3A)</option>
@@ -112,7 +114,7 @@
               <div class="form-group-row" style="margin-bottom: 20px;">
                 <div class="form-group">
                   <label><i class="fas fa-users"></i> Number of Passengers</label>
-                  <select class="form-control">
+                  <select name="selection" class="form-control">
                     <option value="1">1 Passenger</option>
                     <option value="2">2 Passengers</option>
                     <option value="3">3 Passengers</option>
@@ -122,7 +124,7 @@
                 </div>
                 <div class="form-group">
                   <label><i class="fas fa-id-card"></i> Booking Quota</label>
-                  <select class="form-control">
+                  <select name="selection" class="form-control">
                     <option value="GN">General Quota</option>
                     <option value="LD">Ladies Quota</option>
                     <option value="TQ">Tatkal Assistance</option>
@@ -135,8 +137,8 @@
               <div style="background-color: var(--bg-secondary); padding: 15px; border-radius: var(--radius-sm); margin-bottom: 20px; border-left: 4px solid var(--accent-color);">
                 <h4 style="font-size: 0.95rem; color: var(--primary-color); margin-bottom: 10px;">Contact Details for Reservation Update</h4>
                 <div class="form-group-row">
-                  <input type="tel" class="form-control" placeholder="10-digit mobile number" required pattern="[0-9]{10}">
-                  <input type="email" class="form-control" placeholder="Email address" required>
+                  <input name="phone" type="tel" class="form-control" placeholder="10-digit mobile number" required pattern="[0-9]{10}">
+                  <input name="email" type="email" class="form-control" placeholder="Email address" required>
                 </div>
               </div>
 

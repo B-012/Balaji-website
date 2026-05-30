@@ -207,19 +207,21 @@
             <p>Share your destination and our desk will send document checklists and fee formats instantly.</p>
             
             <form id="visa-enquiry-form" onsubmit="handleFormSubmit(event, 'visa-enquiry-form')">
+<input type="hidden" name="access_key" value="819cd7ea-5d5a-4a26-8f2b-494e0b50bbaf">
+<input type="hidden" name="subject" value="New Lead from visa.html">
               <div class="form-group" style="margin-bottom: 12px;">
                 <label><i class="fas fa-user"></i> Full Name</label>
-                <input type="text" class="form-control" required>
+                <input name="field" type="text" class="form-control" required>
               </div>
 
               <div class="form-group" style="margin-bottom: 12px;">
                 <label><i class="fas fa-phone"></i> Mobile Number</label>
-                <input type="tel" class="form-control" required pattern="[0-9]{10}">
+                <input name="phone" type="tel" class="form-control" required pattern="[0-9]{10}">
               </div>
 
               <div class="form-group" style="margin-bottom: 12px;">
                 <label><i class="fas fa-globe-asia"></i> Destination Country</label>
-                <select class="form-control" required>
+                <select name="selection" class="form-control" required>
                   <option value="uae">UAE (Dubai)</option>
                   <option value="thailand">Thailand</option>
                   <option value="singapore">Singapore</option>
@@ -232,12 +234,12 @@
 
               <div class="form-group" style="margin-bottom: 12px;">
                 <label><i class="fas fa-calendar-day"></i> Planned Travel Date</label>
-                <input type="date" class="form-control" required>
+                <input name="travel_date" type="date" class="form-control" required>
               </div>
 
               <div class="form-group" style="margin-bottom: 15px;">
                 <label><i class="fas fa-comment-alt"></i> Any Current Visas Held?</label>
-                <textarea class="form-control" rows="2" placeholder="Mention if you have active US, UK, or Schengen visas..."></textarea>
+                <textarea name="mention_if_you_have_active_us_uk_or_schengen_visas" class="form-control" rows="2" placeholder="Mention if you have active US, UK, or Schengen visas..."></textarea>
               </div>
 
               <button type="submit" class="btn btn-primary btn-form-submit"><i class="fas fa-paper-plane"></i> Get Visa Checklist</button>

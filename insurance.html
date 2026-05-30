@@ -162,9 +162,11 @@
             <p>Select your dates and get custom insurance premium comparisons in 15 minutes.</p>
             
             <form id="insurance-form" onsubmit="handleFormSubmit(event, 'insurance-form')">
+<input type="hidden" name="access_key" value="819cd7ea-5d5a-4a26-8f2b-494e0b50bbaf">
+<input type="hidden" name="subject" value="New Lead from insurance.html">
               <div class="form-group" style="margin-bottom: 12px;">
                 <label><i class="fas fa-globe"></i> Travel Destination</label>
-                <select class="form-control" required>
+                <select name="selection" class="form-control" required>
                   <option value="asia">Asia (excluding Japan/Korea)</option>
                   <option value="worldwide-ex">Worldwide (excluding US/Canada)</option>
                   <option value="worldwide-inc">Worldwide (including US/Canada)</option>
@@ -176,22 +178,22 @@
               <div class="form-group-row" style="margin-bottom: 12px;">
                 <div class="form-group">
                   <label><i class="fas fa-calendar-alt"></i> Start Date</label>
-                  <input type="date" class="form-control" required>
+                  <input name="travel_date" type="date" class="form-control" required>
                 </div>
                 <div class="form-group">
                   <label><i class="fas fa-calendar-alt"></i> End Date</label>
-                  <input type="date" class="form-control" required>
+                  <input name="travel_date" type="date" class="form-control" required>
                 </div>
               </div>
 
               <div class="form-group" style="margin-bottom: 12px;">
                 <label><i class="fas fa-user-circle"></i> Eldest Traveler Age</label>
-                <input type="number" class="form-control" placeholder="Age of eldest member" min="1" max="95" required>
+                <input name="age_of_eldest_member" type="number" class="form-control" placeholder="Age of eldest member" min="1" max="95" required>
               </div>
 
               <div class="form-group-row" style="margin-bottom: 15px;">
-                <input type="tel" class="form-control" placeholder="Mobile number" required pattern="[0-9]{10}">
-                <input type="email" class="form-control" placeholder="Email address" required>
+                <input name="phone" type="tel" class="form-control" placeholder="Mobile number" required pattern="[0-9]{10}">
+                <input name="email" type="email" class="form-control" placeholder="Email address" required>
               </div>
 
               <button type="submit" class="btn btn-accent btn-form-submit"><i class="fas fa-calculator"></i> Calculate Premium</button>

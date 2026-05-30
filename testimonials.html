@@ -73,19 +73,21 @@
             <p>We would love to hear about your recent trip with us! Your feedback helps us improve our services.</p>
             
             <form id="submit-review-form" onsubmit="submitClientReview(event)">
+<input type="hidden" name="access_key" value="819cd7ea-5d5a-4a26-8f2b-494e0b50bbaf">
+<input type="hidden" name="subject" value="New Lead from testimonials.html">
               <div class="form-group" style="margin-bottom: 12px;">
                 <label><i class="fas fa-user"></i> Your Name</label>
-                <input type="text" id="review-name" class="form-control" placeholder="Enter your name" required>
+                <input name="enter_your_name" type="text" id="review-name" class="form-control" placeholder="Enter your name" required>
               </div>
 
               <div class="form-group-row" style="margin-bottom: 12px;">
                 <div class="form-group">
                   <label><i class="fas fa-plane-arrival"></i> Trip Taken</label>
-                  <input type="text" id="review-trip" class="form-control" placeholder="e.g., Kashmir Tour" required>
+                  <input name="e_g_kashmir_tour" type="text" id="review-trip" class="form-control" placeholder="e.g., Kashmir Tour" required>
                 </div>
                 <div class="form-group">
                   <label><i class="fas fa-calendar-alt"></i> Trip Date</label>
-                  <input type="text" id="review-date" class="form-control" placeholder="e.g., May 2026" required>
+                  <input name="e_g_may_2026" type="text" id="review-date" class="form-control" placeholder="e.g., May 2026" required>
                 </div>
               </div>
 
@@ -102,7 +104,7 @@
 
               <div class="form-group" style="margin-bottom: 15px;">
                 <label><i class="fas fa-comment-dots"></i> Review Details</label>
-                <textarea id="review-text" class="form-control" rows="4" placeholder="Write about your flight, hotels, food, and tour manager..." required></textarea>
+                <textarea name="write_about_your_flight_hotels_food_and_tour_manager" id="review-text" class="form-control" rows="4" placeholder="Write about your flight, hotels, food, and tour manager..." required></textarea>
               </div>
 
               <button type="submit" class="btn btn-primary btn-form-submit" style="width: 100%;"><i class="fas fa-share-square"></i> Submit Review</button>

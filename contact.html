@@ -176,36 +176,38 @@
             <p>Get instant customized itineraries with fully optimized quotes directly in your inbox.</p>
             
             <form id="contact-page-form" onsubmit="handleFormSubmit(event, 'contact-page-form')">
+<input type="hidden" name="access_key" value="819cd7ea-5d5a-4a26-8f2b-494e0b50bbaf">
+<input type="hidden" name="subject" value="New Lead from contact.html">
               <div class="form-group" style="margin-bottom: 12px;">
                 <label><i class="fas fa-user"></i> Full Name</label>
-                <input type="text" class="form-control" placeholder="Enter your full name" required>
+                <input name="enter_your_full_name" type="text" class="form-control" placeholder="Enter your full name" required>
               </div>
 
               <div class="form-group-row" style="margin-bottom: 12px;">
                 <div class="form-group">
                   <label><i class="fas fa-envelope"></i> Email Address</label>
-                  <input type="email" class="form-control" placeholder="Enter email address" required>
+                  <input name="email" type="email" class="form-control" placeholder="Enter email address" required>
                 </div>
                 <div class="form-group">
                   <label><i class="fas fa-phone"></i> Mobile Number</label>
-                  <input type="tel" class="form-control" placeholder="Enter 10-digit number" required pattern="[0-9]{10}">
+                  <input name="phone" type="tel" class="form-control" placeholder="Enter 10-digit number" required pattern="[0-9]{10}">
                 </div>
               </div>
 
               <div class="form-group-row" style="margin-bottom: 12px;">
                 <div class="form-group">
                   <label><i class="fas fa-map-marker-alt"></i> Destination of Choice</label>
-                  <input type="text" class="form-control" placeholder="e.g., Kashmir, Dubai" required>
+                  <input name="e_g_kashmir_dubai" type="text" class="form-control" placeholder="e.g., Kashmir, Dubai" required>
                 </div>
                 <div class="form-group">
                   <label><i class="fas fa-calendar-day"></i> Planned Travel Date</label>
-                  <input type="date" class="form-control" required>
+                  <input name="travel_date" type="date" class="form-control" required>
                 </div>
               </div>
 
               <div class="form-group" style="margin-bottom: 18px;">
                 <label><i class="fas fa-comment-alt"></i> Details of travel requirements</label>
-                <textarea class="form-control" rows="3" placeholder="Tell us about the number of adults/kids, hotel class preference (3★/4★/5★), or any custom flight schedules..." required></textarea>
+                <textarea name="tell_us_about_the_number_of_adults_kids_hotel_class_preference_3_4_5_or_any_custom_flight_schedules" class="form-control" rows="3" placeholder="Tell us about the number of adults/kids, hotel class preference (3★/4★/5★), or any custom flight schedules..." required></textarea>
               </div>
 
               <button type="submit" class="btn btn-accent btn-form-submit"><i class="fas fa-paper-plane"></i> Send Enquiry Request</button>

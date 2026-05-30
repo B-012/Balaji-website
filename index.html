@@ -113,17 +113,19 @@
     <div class="container">
       <div class="search-bar-container">
         <form class="search-form" id="home-search-form" onsubmit="handleFormSubmit(event, 'home-search-form')">
+<input type="hidden" name="access_key" value="819cd7ea-5d5a-4a26-8f2b-494e0b50bbaf">
+<input type="hidden" name="subject" value="New Lead from index.html">
           <div class="form-group">
             <label><i class="fas fa-map-marker-alt"></i> Destination</label>
-            <input type="text" class="form-control" placeholder="Where do you want to go?" required>
+            <input name="where_do_you_want_to_go" type="text" class="form-control" placeholder="Where do you want to go?" required>
           </div>
           <div class="form-group">
             <label><i class="fas fa-calendar-alt"></i> Travel Date</label>
-            <input type="date" class="form-control" required>
+            <input name="travel_date" type="date" class="form-control" required>
           </div>
           <div class="form-group">
             <label><i class="fas fa-users"></i> No. of Travelers</label>
-            <select class="form-control" required>
+            <select name="selection" class="form-control" required>
               <option value="1">1 Person</option>
               <option value="2">2 Persons (Couple)</option>
               <option value="3-5">3-5 Persons (Family)</option>
@@ -132,7 +134,7 @@
           </div>
           <div class="form-group">
             <label><i class="fas fa-suitcase"></i> Package Type</label>
-            <select class="form-control" required>
+            <select name="selection" class="form-control" required>
               <option value="domestic">Domestic Holidays</option>
               <option value="international">International Tours</option>
               <option value="religious">Spiritual / Pilgrimage</option>
