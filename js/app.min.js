@@ -63,7 +63,7 @@ function loadSharedLayouts() {
       <header id="main-header">
         <div class="container">
           <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 10px;">
-            <img src="logo.png" alt="Balaji Travels Logo" style="height: 70px; width: auto; max-width: 100%; object-fit: contain;">
+            <img src="images/logo.png" alt="Balaji Travels Logo" style="height: 70px; width: auto; max-width: 100%; object-fit: contain;">
           </a>
           <nav>
             <ul class="nav-menu" id="nav-menu">
@@ -133,7 +133,7 @@ function loadSharedLayouts() {
           <div class="footer-grid">
             <div class="footer-col footer-about">
               <a href="index.html" class="logo" style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
-                <img src="logo.png" alt="Balaji Travels Logo" style="height: 70px; width: auto; max-width: 100%; object-fit: contain;">
+                <img src="images/logo.png" alt="Balaji Travels Logo" style="height: 70px; width: auto; max-width: 100%; object-fit: contain;">
               </a>
               <p>Your Journey, Our Passion — Explore the World with Balaji Travels. The most trusted premium tour operator and booking assistant based in Kolkata, West Bengal.</p>
               <div class="social-links" style="margin-bottom: 20px;">
