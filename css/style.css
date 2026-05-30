@@ -263,16 +263,26 @@ header .container {
 }
 
 .logo img {
-  height: 70px;
+  height: 80px;
   width: auto;
-  max-width: 100%;
+  max-width: 220px;
   object-fit: contain;
+  object-position: left center;
   transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
   display: block;
+  /* Remove white background/padding around generated logo */
+  mix-blend-mode: multiply;
 }
 
 .logo:hover img {
   transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    height: 55px;
+    max-width: 160px;
+  }
 }
 
 .logo i {
