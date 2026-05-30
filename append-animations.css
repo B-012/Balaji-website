@@ -1,0 +1,73 @@
+
+/* --- PREMIUM MICRO-ANIMATIONS & UX ENHANCEMENTS --- */
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Button Pulse on Hover */
+.btn:hover {
+  animation: btnPulse 1s infinite;
+}
+@keyframes btnPulse {
+  0% { box-shadow: 0 0 0 0 rgba(29, 133, 252, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(29, 133, 252, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(29, 133, 252, 0); }
+}
+
+/* Nav Link Hover Underline Sweep */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 50%;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease, left 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Hero Background Zoom (Ken Burns) */
+@keyframes kenBurns {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.08); }
+}
+.hero-slide {
+  animation: kenBurns 15s ease-out forwards;
+}
+
+/* Floating Agent Bounce Indicator */
+@keyframes widgetBounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-12px); }
+  60% { transform: translateY(-6px); }
+}
+.floating-whatsapp {
+  animation: widgetBounce 3s infinite;
+}
+
+/* Card Hover 3D Lift */
+.package-card, .service-card, .destination-item {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease !important;
+}
+.package-card:hover, .service-card:hover, .destination-item:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Staggered Loading Animations for Data Cards */
+@keyframes cardFadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.package-card {
+  animation: cardFadeIn 0.6s ease forwards;
+}

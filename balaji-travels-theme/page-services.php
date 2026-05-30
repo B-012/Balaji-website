@@ -1,0 +1,153 @@
+<?php
+/**
+ * Template Name: Services Template
+ * Description: Custom page layout containing searchable/filterable details for all 26 services.
+ */
+get_header(); ?>
+
+  <!-- Subpage Hero / Breadcrumbs -->
+  <section class="sub-hero">
+    <div class="container">
+      <h1>Our Travel Services</h1>
+      <div class="breadcrumbs">
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a>
+        <i class="fas fa-chevron-right" style="font-size: 0.75rem; align-self: center;"></i>
+        <span>Services</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service List & Dynamic Search Section -->
+  <section class="section-bg" style="padding-top: 60px;">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 30px;">
+        <span class="section-subtitle">26 Specialized Services</span>
+        <h2 class="section-title">Explore What We Do</h2>
+        <p class="section-desc">We offer highly specialized support at every stage of your trip. Use the search or filter below to explore our services.</p>
+      </div>
+
+      <!-- Live Search Box -->
+      <div class="services-search-wrapper" style="max-width: 600px; margin: 0 auto 40px auto; position: relative;">
+        <i class="fas fa-search" style="position: absolute; top: 50%; left: 15px; transform: translateY(-50%); color: var(--primary-color); font-size: 1.1rem;"></i>
+        <input type="text" id="services-search" class="form-control" style="padding-left: 45px; font-size: 1.05rem; border-radius: 50px; box-shadow: var(--shadow-sm);" placeholder="Search services (e.g., flights, train bookings, Tatkal, visa)..." oninput="filterServices()">
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="filter-tabs-container">
+        <span class="filter-tab active" onclick="setServiceCategory(this, 'all')">All Services</span>
+        <span class="filter-tab" onclick="setServiceCategory(this, 'tours')">Tour Packages</span>
+        <span class="filter-tab" onclick="setServiceCategory(this, 'ticketing')">Ticketing & Rail</span>
+        <span class="filter-tab" onclick="setServiceCategory(this, 'booking')">Booking & Support</span>
+        <span class="filter-tab" onclick="setServiceCategory(this, 'business')">Corporate</span>
+        <span class="filter-tab" onclick="setServiceCategory(this, 'religious')">Religious</span>
+      </div>
+
+      <!-- Services Grid (Loaded Dynamically) -->
+      <div class="services-grid" id="services-target-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+        <!-- JS inserts 26 service cards here -->
+      </div>
+      
+      <!-- No Results Message -->
+      <div id="no-services-msg" style="display: none; text-align: center; padding: 50px 0; color: var(--text-muted); font-size: 1.1rem;">
+        <i class="fas fa-folder-open" style="font-size: 3rem; color: var(--border-color); display: block; margin-bottom: 15px;"></i>
+        No matching services found. Please check your keywords or try another category.
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Feature Split section -->
+  <section class="detailed-services-info">
+    <div class="container">
+      <div class="grid-split-1-1">
+        <div>
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop" alt="Balaji Travels Travel Desk" style="border-radius: var(--radius-md); box-shadow: var(--shadow-lg); width: 100%;">
+        </div>
+        <div>
+          <span class="section-subtitle">Kolkata's Elite Booking Partner</span>
+          <h2 class="section-title" style="margin-bottom: 25px;">Streamlined Travel Planning</h2>
+          
+          <div class="detail-feature-box">
+            <div class="detail-feature-icon"><i class="fas fa-clipboard-check"></i></div>
+            <div class="detail-feature-content">
+              <h4>Hassle-Free Documentation</h4>
+              <p>We handle all documentation checks for visas, train waiting clearance lists, and travel insurances directly, minimizing any application rejection rates.</p>
+            </div>
+          </div>
+          
+          <div class="detail-feature-box">
+            <div class="detail-feature-icon"><i class="fas fa-percentage"></i></div>
+            <div class="detail-feature-content">
+              <h4>Direct Agency Slashed Prices</h4>
+              <p>As certified GDS partners and IATA agents, we gain access to seasonal bulk prices, giving you fares far lower than online ticketing outlets.</p>
+            </div>
+          </div>
+          
+          <div class="detail-feature-box">
+            <div class="detail-feature-icon"><i class="fas fa-clock"></i></div>
+            <div class="detail-feature-content">
+              <h4>24x7 Active Emergency Desk</h4>
+              <p>In case of flight delays, waitlist status slips, or sudden medical emergencies on-tour, our team in Kolkata is always online to support.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic Services Rendering Logic script -->
+  <script>
+    let activeServiceCategory = "all";
+
+    document.addEventListener("DOMContentLoaded", () => {
+      renderServices();
+    });
+
+    function renderServices() {
+      const grid = document.getElementById("services-target-grid");
+      const noResults = document.getElementById("no-services-msg");
+      const searchVal = document.getElementById("services-search").value.toLowerCase();
+      
+      if (!grid || !window.travelData) return;
+
+      const services = window.travelData.services;
+
+      const filtered = services.filter(s => {
+        const matchesCategory = (activeServiceCategory === "all" || s.category === activeServiceCategory);
+        const matchesSearch = s.title.toLowerCase().includes(searchVal) || s.description.toLowerCase().includes(searchVal);
+        return matchesCategory && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        grid.style.display = "none";
+        noResults.style.display = "block";
+      } else {
+        grid.style.display = "grid";
+        noResults.style.display = "none";
+
+        grid.innerHTML = filtered.map(s => `
+          <div class="service-card" style="text-align: left; display: flex; flex-direction: column;">
+            <div class="service-icon" style="text-align: left; margin-bottom: 15px;"><i class="fas ${s.icon}"></i></div>
+            <h3 style="font-size: 1.15rem; color: var(--primary-color); margin-bottom: 10px;">${s.title}</h3>
+            <p style="font-size: 0.88rem; flex-grow: 1; margin-bottom: 20px;">${s.description}</p>
+            <div>
+              <button class="btn btn-accent btn-sm" onclick="openBookingModal('${s.title}')" style="width: 100%; border-radius: 4px;">Enquire Service <i class="fas fa-chevron-right" style="font-size: 0.75rem;"></i></button>
+            </div>
+          </div>
+        `).join('');
+      }
+    }
+
+    function setServiceCategory(element, category) {
+      document.querySelectorAll(".filter-tab").forEach(tab => tab.classList.remove("active"));
+      element.classList.add("active");
+      
+      activeServiceCategory = category;
+      renderServices();
+    }
+
+    function filterServices() {
+      renderServices();
+    }
+  </script>
+
+<?php get_footer(); ?>

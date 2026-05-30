@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tour Packages from Kolkata | Balaji Travels</title>
+  
+  <meta name="description" content="Browse our 13 handcrafted holiday tour packages from Kolkata. Special discounts on Kashmir, Chardham Yatra, Rajasthan, Goa, Kerala, Dubai, Thailand, Europe, and Maldives. Premium hotels and meals included.">
+  <meta name="keywords" content="tour packages from Kolkata, Kashmir package from Kolkata, Chardham yatra package West Bengal, international tour packages West Bengal, Maldives packages">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+  <!-- Shared Header Loaders -->
+  <div id="top-bar-placeholder"></div>
+  <div id="header-placeholder"></div>
+
+  <!-- Subpage Hero / Breadcrumbs -->
+  <section class="sub-hero">
+    <div class="container">
+      <h1>Custom Tour Packages</h1>
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <i class="fas fa-chevron-right" style="font-size: 0.75rem; align-self: center;"></i>
+        <span>Tour Packages</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter & Packages Grid Section -->
+  <section class="section-bg" style="padding-top: 60px;">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 30px;">
+        <span class="section-subtitle">Aspirational Itineraries</span>
+        <h2 class="section-title">Explore Our 13 Hot Holidays</h2>
+        <p class="section-desc">We offer customized layouts with premium hotels, private cars, flights, and meals included. Filter by categories below to find your perfect holiday.</p>
+      </div>
+
+      <!-- Advanced Filter Tabs -->
+      <div class="filter-tabs-container" id="packages-filter-tabs">
+        <span class="filter-tab active" onclick="setPackageCategory(this, 'all')">All Holiday Deals</span>
+        <span class="filter-tab" onclick="setPackageCategory(this, 'domestic')">Domestic Getaways</span>
+        <span class="filter-tab" onclick="setPackageCategory(this, 'international')">International Escapes</span>
+        <span class="filter-tab" onclick="setPackageCategory(this, 'religious')">Spiritual Pilgrimages</span>
+        <span class="filter-tab" onclick="setPackageCategory(this, 'honeymoon')">Honeymoon Specials</span>
+        <span class="filter-tab" onclick="setPackageCategory(this, 'group')">Escorted Group Tours</span>
+      </div>
+
+      <!-- Packages Grid Target -->
+      <div class="packages-grid" id="packages-target-grid">
+        <!-- Rendered Dynamically via JS data -->
+      </div>
+      
+      <!-- No Packages Found -->
+      <div id="no-packages-msg" style="display: none; text-align: center; padding: 50px 0; color: var(--text-muted); font-size: 1.1rem;">
+        <i class="fas fa-search-location" style="font-size: 3.5rem; color: var(--border-color); display: block; margin-bottom: 15px;"></i>
+        No matching holiday packages found. Please check back later or try another filter!
+      </div>
+    </div>
+  </section>
+
+  <!-- International Tours Destination Grid -->
+  <section style="padding: 70px 0; background: #eef2ff;">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 40px;">
+        <span class="section-subtitle" style="letter-spacing: 3px;">GREAT PLACES TO VISIT</span>
+        <h2 class="section-title">International Tours</h2>
+      </div>
+      <div class="grid-4" style="gap: 16px;">
+        <!-- Australia -->
+        <div style="position:relative; border-radius: 10px; overflow: hidden; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.15);" onclick="location.href='packages.html'">
+          <img src="images/packages/australia.jpg" alt="Australia" style="width:100%; height:200px; object-fit:cover; display:block; transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          <div style="position:absolute; bottom:0; left:0; right:0; background:rgba(0,0,0,0.7); color:#fff; text-align:center; padding:10px; font-weight:800; font-size:0.85rem; letter-spacing:2px;">AUSTRALIA</div>
+        </div>
+        <!-- Bhutan -->
+        <div style="position:relative; border-radius: 10px; overflow: hidden; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.15);" onclick="location.href='packages.html'">
+          <img src="images/packages/bhutan.jpg" alt="Bhutan" style="width:100%; height:200px; object-fit:cover; display:block; transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          <div style="position:absolute; bottom:0; left:0; right:0; background:rgba(0,0,0,0.7); color:#fff; text-align:center; padding:10px; font-weight:800; font-size:0.85rem; letter-spacing:2px;">BHUTAN</div>
+        </div>
+        <!-- Croatia -->
+        <div style="position:relative; border-radius: 10px; overflow: hidden; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.15);" onclick="location.href='packages.html'">
+          <img src="images/packages/croatia.jpg" alt="Croatia" style="width:100%; height:200px; object-fit:cover; display:block; transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          <div style="position:absolute; bottom:0; left:0; right:0; background:rgba(0,0,0,0.7); color:#fff; text-align:center; padding:10px; font-weight:800; font-size:0.85rem; letter-spacing:2px;">CROATIA</div>
+        </div>
+        <!-- Fiji -->
+        <div style="position:relative; border-radius: 10px; overflow: hidden; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.15);" onclick="location.href='packages.html'">
+          <img src="images/packages/fiji.jpg" alt="Fiji" style="width:100%; height:200px; object-fit:cover; display:block; transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          <div style="position:absolute; bottom:0; left:0; right:0; background:rgba(0,0,0,0.7); color:#fff; text-align:center; padding:10px; font-weight:800; font-size:0.85rem; letter-spacing:2px;">FIJI</div>
+        </div>
+        <!-- Dubai -->
+        <div style="position:relative; border-radius: 10px; overflow: hidden; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.15);" onclick="location.href='packages.html'">
+          <img src="images/packages/dubai.jpg" alt="Dubai" style="width:100%; height:200px; object-fit:cover; display:block; transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          <div style="position:absolute; bottom:0; left:0; right:0; background:rgba(0,0,0,0.7); color:#fff; text-align:center; padding:10px; font-weight:800; font-size:0.85rem; letter-spacing:2px;">DUBAI</div>
+        </div>
+        <!-- Finland -->
+        <div style="position:relative; border-radius: 10px; overflow: hidden; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.15);" onclick="location.href='packages.html'">
+          <img src="images/packages/finland.jpg" alt="Finland" style="width:100%; height:200px; object-fit:cover; display:block; transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          <div style="position:absolute; bottom:0; left:0; right:0; background:rgba(0,0,0,0.7); color:#fff; text-align:center; padding:10px; font-weight:800; font-size:0.85rem; letter-spacing:2px;">FINLAND</div>
+        </div>
+        <!-- France -->
+        <div style="position:relative; border-radius: 10px; overflow: hidden; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.15);" onclick="location.href='packages.html'">
+          <img src="images/packages/france.jpg" alt="France" style="width:100%; height:200px; object-fit:cover; display:block; transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          <div style="position:absolute; bottom:0; left:0; right:0; background:rgba(0,0,0,0.7); color:#fff; text-align:center; padding:10px; font-weight:800; font-size:0.85rem; letter-spacing:2px;">FRANCE</div>
+        </div>
+        <!-- Egypt -->
+        <div style="position:relative; border-radius: 10px; overflow: hidden; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.15);" onclick="location.href='packages.html'">
+          <img src="images/packages/egypt.jpg" alt="Egypt" style="width:100%; height:200px; object-fit:cover; display:block; transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          <div style="position:absolute; bottom:0; left:0; right:0; background:rgba(0,0,0,0.7); color:#fff; text-align:center; padding:10px; font-weight:800; font-size:0.85rem; letter-spacing:2px;">EGYPT</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Domestic Tours Destination Grid -->
+  <section style="padding: 70px 0; background: #eef2ff;">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 40px;">
+        <span class="section-subtitle" style="letter-spacing: 3px;">GREAT PLACES TO VISIT</span>
+        <h2 class="section-title">Domestic Tours</h2>
+      </div>
+      <div class="grid-4" style="gap: 16px;">
+        <!-- Andaman -->
+        <div style="position:relative; border-radius: 10px; overflow: hidden; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.15);" onclick="location.href='packages.html'">
+          <img src="images/packages/andaman.jpg" alt="Andaman" style="width:100%; height:200px; object-fit:cover; display:block; transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          <div style="position:absolute; bottom:0; left:0; right:0; background:rgba(0,0,0,0.7); color:#fff; text-align:center; padding:10px; font-weight:800; font-size:0.85rem; letter-spacing:2px;">ANDAMAN</div>
+        </div>
+        <!-- Kerala -->
+        <div style="position:relative; border-radius: 10px; overflow: hidden; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.15);" onclick="location.href='packages.html'">
+          <img src="images/packages/kerala.jpg" alt="Kerala" style="width:100%; height:200px; object-fit:cover; display:block; transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          <div style="position:absolute; bottom:0; left:0; right:0; background:rgba(0,0,0,0.7); color:#fff; text-align:center; padding:10px; font-weight:800; font-size:0.85rem; letter-spacing:2px;">KERALA</div>
+        </div>
+        <!-- Darjeeling -->
+        <div style="position:relative; border-radius: 10px; overflow: hidden; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.15);" onclick="location.href='packages.html'">
+          <img src="images/packages/darjeeling.jpg" alt="Darjeeling" style="width:100%; height:200px; object-fit:cover; display:block; transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          <div style="position:absolute; bottom:0; left:0; right:0; background:rgba(0,0,0,0.7); color:#fff; text-align:center; padding:10px; font-weight:800; font-size:0.85rem; letter-spacing:2px;">DARJEELING</div>
+        </div>
+        <!-- Chardham -->
+        <div style="position:relative; border-radius: 10px; overflow: hidden; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.15);" onclick="location.href='packages.html'">
+          <img src="images/packages/chardham.jpg" alt="Chardham" style="width:100%; height:200px; object-fit:cover; display:block; transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          <div style="position:absolute; bottom:0; left:0; right:0; background:rgba(0,0,0,0.7); color:#fff; text-align:center; padding:10px; font-weight:800; font-size:0.85rem; letter-spacing:2px;">CHARDHAM</div>
+        </div>
+        <!-- Uttarakhand -->
+        <div style="position:relative; border-radius: 10px; overflow: hidden; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.15);" onclick="location.href='packages.html'">
+          <img src="images/packages/uttarakhand.jpg" alt="Uttarakhand" style="width:100%; height:200px; object-fit:cover; display:block; transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          <div style="position:absolute; bottom:0; left:0; right:0; background:rgba(0,0,0,0.7); color:#fff; text-align:center; padding:10px; font-weight:800; font-size:0.85rem; letter-spacing:2px;">UTTARAKHAND</div>
+        </div>
+        <!-- Meghalaya -->
+        <div style="position:relative; border-radius: 10px; overflow: hidden; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.15);" onclick="location.href='packages.html'">
+          <img src="images/packages/meghalaya.jpg" alt="Meghalaya" style="width:100%; height:200px; object-fit:cover; display:block; transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          <div style="position:absolute; bottom:0; left:0; right:0; background:rgba(0,0,0,0.7); color:#fff; text-align:center; padding:10px; font-weight:800; font-size:0.85rem; letter-spacing:2px;">MEGHALAYA</div>
+        </div>
+        <!-- Pench National Park -->
+        <div style="position:relative; border-radius: 10px; overflow: hidden; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.15);" onclick="location.href='packages.html'">
+          <img src="images/packages/pench.jpg" alt="Pench National Park" style="width:100%; height:200px; object-fit:cover; display:block; transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          <div style="position:absolute; bottom:0; left:0; right:0; background:rgba(0,0,0,0.7); color:#fff; text-align:center; padding:10px; font-weight:800; font-size:0.85rem; letter-spacing:2px;">PENCH NATIONAL PARK</div>
+        </div>
+        <!-- Kashmir -->
+        <div style="position:relative; border-radius: 10px; overflow: hidden; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.15);" onclick="location.href='packages.html'">
+          <img src="images/packages/kashmir.jpg" alt="Kashmir" style="width:100%; height:200px; object-fit:cover; display:block; transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          <div style="position:absolute; bottom:0; left:0; right:0; background:rgba(0,0,0,0.7); color:#fff; text-align:center; padding:10px; font-weight:800; font-size:0.85rem; letter-spacing:2px;">KASHMIR</div>
+        </div>
+        <!-- Delhi -->
+        <div style="position:relative; border-radius: 10px; overflow: hidden; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.15);" onclick="location.href='packages.html'">
+          <img src="images/packages/delhi.jpg" alt="Delhi" style="width:100%; height:200px; object-fit:cover; display:block; transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          <div style="position:absolute; bottom:0; left:0; right:0; background:rgba(0,0,0,0.7); color:#fff; text-align:center; padding:10px; font-weight:800; font-size:0.85rem; letter-spacing:2px;">DELHI</div>
+        </div>
+        <!-- Kolkata -->
+        <div style="position:relative; border-radius: 10px; overflow: hidden; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.15);" onclick="location.href='packages.html'">
+          <img src="images/packages/kolkata.jpg" alt="Kolkata" style="width:100%; height:200px; object-fit:cover; display:block; transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          <div style="position:absolute; bottom:0; left:0; right:0; background:rgba(0,0,0,0.7); color:#fff; text-align:center; padding:10px; font-weight:800; font-size:0.85rem; letter-spacing:2px;">KOLKATA</div>
+        </div>
+        <!-- Jaipur -->
+        <div style="position:relative; border-radius: 10px; overflow: hidden; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.15);" onclick="location.href='packages.html'">
+          <img src="images/packages/jaipur.jpg" alt="Jaipur" style="width:100%; height:200px; object-fit:cover; display:block; transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">>
+          <div style="position:absolute; bottom:0; left:0; right:0; background:rgba(0,0,0,0.7); color:#fff; text-align:center; padding:10px; font-weight:800; font-size:0.85rem; letter-spacing:2px;">JAIPUR</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Returns, Refunds & Cancellation Policy Section -->
+  <section style="padding: 60px 0; background: #f8f9ff;">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 30px; text-align: center;">
+        <h2 style="font-size: 2rem; color: var(--text-dark);">Returns, Refunds &amp; Cancellation Policy</h2>
+      </div>
+      <div style="background: white; border-radius: var(--radius-md); padding: 40px; box-shadow: var(--shadow-sm); max-width: 800px; margin: 0 auto;">
+        <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.9; margin-bottom: 20px;">
+          Returns, Refunds &amp; Cancellation solely depends upon the policy on the Airline Company &amp; Hotels.
+        </p>
+        <div style="display: flex; flex-direction: column; gap: 15px;">
+          <div style="display: flex; gap: 15px; align-items: flex-start; padding: 15px; background: var(--bg-secondary); border-radius: var(--radius-sm);">
+            <i class="fas fa-plane-departure" style="color: var(--accent-color); font-size: 1.3rem; margin-top: 2px;"></i>
+            <p style="margin: 0; color: var(--text-dark); font-size: 0.95rem; line-height: 1.7;"><strong>Flight Cancellation:</strong> Cancellation charges and refund timelines are governed exclusively by the respective airline's fare rules at the time of booking.</p>
+          </div>
+          <div style="display: flex; gap: 15px; align-items: flex-start; padding: 15px; background: var(--bg-secondary); border-radius: var(--radius-sm);">
+            <i class="fas fa-hotel" style="color: var(--accent-color); font-size: 1.3rem; margin-top: 2px;"></i>
+            <p style="margin: 0; color: var(--text-dark); font-size: 0.95rem; line-height: 1.7;"><strong>Hotel Cancellation:</strong> Hotel refunds are subject to individual property cancellation policies. Non-refundable rates will not be refunded upon cancellation.</p>
+          </div>
+          <div style="display: flex; gap: 15px; align-items: flex-start; padding: 15px; background: var(--bg-secondary); border-radius: var(--radius-sm);">
+            <i class="fas fa-suitcase-rolling" style="color: var(--accent-color); font-size: 1.3rem; margin-top: 2px;"></i>
+            <p style="margin: 0; color: var(--text-dark); font-size: 0.95rem; line-height: 1.7;"><strong>Tour Package Cancellation:</strong> For customized tour packages, our service fee is non-refundable. Any refunds received from airlines or hotels will be passed on to the client after deduction of processing charges.</p>
+          </div>
+          <div style="display: flex; gap: 15px; align-items: flex-start; padding: 15px; background: var(--bg-secondary); border-radius: var(--radius-sm);">
+            <i class="fas fa-info-circle" style="color: var(--primary-color); font-size: 1.3rem; margin-top: 2px;"></i>
+            <p style="margin: 0; color: var(--text-dark); font-size: 0.95rem; line-height: 1.7;">For queries, please contact us at <a href="tel:+919339288770" style="color: var(--accent-color); font-weight: 600;">+91 93392 88770</a> or email <a href="mailto:balajitravels94@gmail.com" style="color: var(--accent-color); font-weight: 600;">balajitravels94@gmail.com</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Banner -->
+  <section class="cta-banner" style="background-color: var(--primary-dark);">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Want a Custom 100% Personalized Plan?</h2>
+        <p>If you don't find a package matching your exact date or itinerary, our destination experts in Kolkata can design one in less than 2 hours.</p>
+        <div class="cta-actions" style="justify-content: center; margin-top: 25px;">
+          <button class="btn btn-accent" onclick="openBookingModal()"><i class="fas fa-sliders"></i> Customize My Trip</button>
+          <a href="tel:+919339288770" class="btn btn-outline" style="border-color: white; color: white;"><i class="fas fa-phone-alt"></i> Call Support Desk</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer, Floating Widgets, Modal Placeholders -->
+  <div id="footer-placeholder"></div>
+  <div id="floating-actions" class="floating-widget-container"></div>
+  <div id="modal-placeholder"></div>
+
+  <!-- Script files -->
+  <script src="js/data.js"></script>
+  <script src="js/app.min.js"></script>
+  <script>
+
+
+    let activePkgCategory = "all";
+
+    document.addEventListener("DOMContentLoaded", () => {
+      // Handle potential URL deep links (e.g. packages.html?filter=domestic)
+      const params = new URLSearchParams(window.location.search);
+      const categoryParam = params.get("filter");
+      
+      if (categoryParam) {
+        activePkgCategory = categoryParam;
+        
+        // Highlight active filter tab
+        const tabs = document.querySelectorAll(".filter-tab");
+        tabs.forEach(tab => {
+          const onclickAttr = tab.getAttribute("onclick");
+          if (onclickAttr && onclickAttr.includes(`'${categoryParam}'`)) {
+            tabs.forEach(t => t.classList.remove("active"));
+            tab.classList.add("active");
+          }
+        });
+      }
+
+      renderPackages();
+    });
+
+    function renderPackages() {
+      const grid = document.getElementById("packages-target-grid");
+      const noResults = document.getElementById("no-packages-msg");
+      
+      if (!grid || !window.travelData) return;
+
+      const packages = window.travelData.packages;
+
+      // Category matching logic
+      const filtered = packages.filter(p => {
+        if (activePkgCategory === "all") return true;
+        if (activePkgCategory === "domestic") return p.category === "domestic" || p.category === "religious";
+        if (activePkgCategory === "international") return p.category === "international";
+        if (activePkgCategory === "religious") return p.category === "religious";
+        if (activePkgCategory === "honeymoon") return p.type.toLowerCase().includes("honeymoon");
+        if (activePkgCategory === "group") return p.type.toLowerCase().includes("group");
+        return false;
+      });
+
+      if (filtered.length === 0) {
+        grid.style.display = "none";
+        noResults.style.display = "block";
+      } else {
+        grid.style.display = "grid";
+        noResults.style.display = "none";
+
+        grid.innerHTML = filtered.map(p => `
+          <div class="package-card" style="animation: fadeInUp 0.4s ease-in-out;">
+            <div class="package-img-wrapper">
+              <span class="package-tag">${p.type}</span>
+              <img loading="lazy" src="${p.image || 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800'}" alt="${p.title}">
+              <span class="package-duration">${p.duration}</span>
+            </div>
+            <div class="package-body">
+              <h3>${p.title}</h3>
+              <p class="package-desc">${p.description}</p>
+              <div style="font-size: 0.82rem; font-weight: 700; color: var(--primary-light); margin-bottom: 12px;">
+                <i class="fas fa-star" style="color: var(--accent-color);"></i> Highlights: ${p.highlights}
+              </div>
+              <div class="package-inclusions" style="margin-top: auto;">
+                ${p.inclusions.map(inc => `<span class="inclusion-tag">${inc}</span>`).join('')}
+              </div>
+              <div class="package-footer" style="padding-top: 15px; border-top: 1px solid var(--border-color);">
+                <div class="package-price">
+                  Starting Price <span>₹${p.price.toLocaleString('en-IN')}</span>
+                  <small style="font-size: 0.7rem; color: #999;">per person on twin sharing</small>
+                </div>
+                <button class="btn btn-accent btn-sm" onclick="openBookingModal('${p.title}')">Enquire Now</button>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+    }
+
+    function setPackageCategory(element, category) {
+      document.querySelectorAll(".filter-tab").forEach(tab => tab.classList.remove("active"));
+      element.classList.add("active");
+      
+      activePkgCategory = category;
+      renderPackages();
+    }
+  </script>
+</body>
+</html>

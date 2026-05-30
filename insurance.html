@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Insurance Protection Plans | Balaji Travels Kolkata</title>
+  
+  <meta name="description" content="Secure your global vacation with Balaji Travels. Comprehensive travel insurance plans for medical emergencies, flight delays, lost baggage, and trip cancellations from Kolkata.">
+  <meta name="keywords" content="travel insurance Kolkata, international travel insurance policy, cheap travel insurance, student travel cover, senior citizen travel insurance">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <style>
+    .insurance-benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin-bottom: 50px;
+    }
+    .benefit-item {
+      background: var(--white);
+      padding: 25px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      border-top: 4px solid var(--primary-color);
+    }
+    .benefit-item i {
+      font-size: 2rem;
+      color: var(--accent-color);
+      margin-bottom: 15px;
+    }
+    .benefit-item h4 {
+      font-size: 1.15rem;
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
+    .benefit-item p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    @media (max-width: 768px) {
+      .insurance-benefit-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar & Header Loaders -->
+  <div id="top-bar-placeholder"></div>
+  <div id="header-placeholder"></div>
+
+  <!-- Subpage Hero / Breadcrumbs -->
+  <section class="sub-hero">
+    <div class="container">
+      <h1>Travel Insurance Plans</h1>
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <i class="fas fa-chevron-right" style="font-size: 0.75rem; align-self: center;"></i>
+        <span>Insurance</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Benefits Grid Section -->
+  <section class="benefits-section" style="padding-bottom: 40px;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Secure Your Journey</span>
+        <h2 class="section-title">Why Buy Travel Insurance?</h2>
+        <p class="section-desc">Don't let unforeseen flight delays, lost suitcases, or medical emergencies ruin your high-value holiday plans.</p>
+      </div>
+
+      <div class="insurance-benefit-grid">
+        <div class="benefit-item">
+          <i class="fas fa-briefcase-medical"></i>
+          <h4>Global Medical Coverage</h4>
+          <p>Cashless hospitalization, emergency outpatient treatments, and medical evacuation across top-tier international medical hubs.</p>
+        </div>
+
+        <div class="benefit-item">
+          <i class="fas fa-plane-slash"></i>
+          <h4>Flight Delay / Cancellation</h4>
+          <p>Reimbursement of expenses incurred due to long flight delays, missed connection flights, or sudden carrier cancellations.</p>
+        </div>
+
+        <div class="benefit-item">
+          <i class="fas fa-suitcase-rolling"></i>
+          <h4>Baggage & Passport Loss</h4>
+          <p>Financial coverages for permanent baggage losses, baggage delays, or expenses related to emergency duplicate passport creations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Insurance Types & Quote Calculator Section -->
+  <section class="section-bg" style="padding-top: 60px;">
+    <div class="container">
+      <div class="grid-split-1.6-1">
+        <div>
+          <h3 style="color: var(--primary-color); margin-bottom: 25px;"><i class="fas fa-shield"></i> Customized Insurance Products</h3>
+          
+          <div style="display: grid; grid-template-columns: 1fr; gap: 20px;">
+            <div class="detail-feature-box" style="margin-bottom: 0;">
+              <div class="detail-feature-icon"><i class="fas fa-users"></i></div>
+              <div class="detail-feature-content">
+                <h4>Family Floater Cover</h4>
+                <p>Covers self, spouse, and dependent kids in a single premium card, ensuring perfect vacation peace of mind.</p>
+              </div>
+            </div>
+
+            <div class="detail-feature-box" style="margin-bottom: 0;">
+              <div class="detail-feature-icon"><i class="fas fa-graduation-cap"></i></div>
+              <div class="detail-feature-content">
+                <h4>Student Travel Guard</h4>
+                <p>Tailored long-term insurance policies satisfying Schengen and US university guidelines, including sponsor coverages.</p>
+              </div>
+            </div>
+
+            <div class="detail-feature-box" style="margin-bottom: 0;">
+              <div class="detail-feature-icon"><i class="fas fa-blind"></i></div>
+              <div class="detail-feature-content">
+                <h4>Senior Citizen Care</h4>
+                <p>Specially mapped medical covers for travelers aged 60 to 85, safeguarding them from pre-existing medical flares.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <!-- Insurance form card -->
+          <div class="enquiry-form-card" style="border-top-color: var(--accent-color);">
+            <h3>Get Insurance Quote</h3>
+            <p>Select your dates and get custom insurance premium comparisons in 15 minutes.</p>
+            
+            <form id="insurance-form" onsubmit="handleFormSubmit(event, 'insurance-form')">
+              <div class="form-group" style="margin-bottom: 12px;">
+                <label><i class="fas fa-globe"></i> Travel Destination</label>
+                <select class="form-control" required>
+                  <option value="asia">Asia (excluding Japan/Korea)</option>
+                  <option value="worldwide-ex">Worldwide (excluding US/Canada)</option>
+                  <option value="worldwide-inc">Worldwide (including US/Canada)</option>
+                  <option value="schengen">Schengen Europe Countries</option>
+                  <option value="domestic">Domestic Travel India</option>
+                </select>
+              </div>
+
+              <div class="form-group-row" style="margin-bottom: 12px;">
+                <div class="form-group">
+                  <label><i class="fas fa-calendar-alt"></i> Start Date</label>
+                  <input type="date" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label><i class="fas fa-calendar-alt"></i> End Date</label>
+                  <input type="date" class="form-control" required>
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 12px;">
+                <label><i class="fas fa-user-circle"></i> Eldest Traveler Age</label>
+                <input type="number" class="form-control" placeholder="Age of eldest member" min="1" max="95" required>
+              </div>
+
+              <div class="form-group-row" style="margin-bottom: 15px;">
+                <input type="tel" class="form-control" placeholder="Mobile number" required pattern="[0-9]{10}">
+                <input type="email" class="form-control" placeholder="Email address" required>
+              </div>
+
+              <button type="submit" class="btn btn-accent btn-form-submit"><i class="fas fa-calculator"></i> Calculate Premium</button>
+              <div class="form-success-message" id="insurance-form-success"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer, Floating Widgets, Modal Placeholders -->
+  <div id="footer-placeholder"></div>
+  <div id="floating-actions" class="floating-widget-container"></div>
+  <div id="modal-placeholder"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.min.js"></script>
+</body>
+</html>

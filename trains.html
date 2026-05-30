@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IRCTC Train Ticket Booking Assistance | Balaji Travels Kolkata</title>
+  
+  <meta name="description" content="Authorized IRCTC train booking and reservation desk in Kolkata. Tatkal train ticket booking assistance, tour trains, Shatabdi, Rajdhani, and international rail tickets.">
+  <meta name="keywords" content="train ticket booking Kolkata, Tatkal ticket agent Kolkata, IRCTC rail tour West Bengal, Rajdhani booking assistance, Eurostar tickets Kolkata">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+  <!-- Top Bar & Header Loaders -->
+  <div id="top-bar-placeholder"></div>
+  <div id="header-placeholder"></div>
+
+  <!-- Subpage Hero / Breadcrumbs -->
+  <section class="sub-hero">
+    <div class="container">
+      <h1>IRCTC Train Bookings & Rail Tickets</h1>
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <i class="fas fa-chevron-right" style="font-size: 0.75rem; align-self: center;"></i>
+        <span>Trains</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rail search form section -->
+  <section class="section-bg" style="padding-top: 60px;">
+    <div class="container">
+      <div class="grid-split-1.6-1">
+        <div>
+          <!-- Search Panel Card -->
+          <div class="enquiry-form-card" style="border-top-color: var(--primary-color);">
+            <h3 style="margin-bottom: 20px;"><i class="fas fa-train"></i> Train Ticket Booking Assistance</h3>
+            
+            <form id="train-booking-form" onsubmit="searchTrains(event)">
+              <div class="form-group-row" style="margin-bottom: 15px;">
+                <div class="form-group">
+                  <label><i class="fas fa-train-subway"></i> From Station</label>
+                  <select id="train-origin" class="form-control" required>
+                    <option value="HWH" selected>Howrah (HWH) - Kolkata</option>
+                    <option value="SDAH">Sealdah (SDAH) - Kolkata</option>
+                    <option value="KOAA">Kolkata (KOAA) - Chitpur</option>
+                    <option value="SHM">Shalimar (SHM) - Howrah</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label><i class="fas fa-train-subway"></i> To Station</label>
+                  <select id="train-destination" class="form-control" required>
+                    <option value="NDLS">New Delhi (NDLS) - Rajdhani Route</option>
+                    <option value="NJP" selected>New Jalpaiguri (NJP) - Siliguri (Darjeeling/Sikkim)</option>
+                    <option value="HW">Haridwar (HW) - Dehradun (Chardham Gateway)</option>
+                    <option value="JAT">Jammu Tawi (JAT) - Kashmir Gateway</option>
+                    <option value="PURI">Puri (PURI) - Jagannath Temple Gateway</option>
+                    <option value="JP">Jaipur (JP) - Rajasthan Gateway</option>
+                    <option value="BOM">Mumbai Central (MMCT)</option>
+                    <option value="SBC">KSR Bengaluru (SBC)</option>
+                    <option value="MAS">MGR Chennai Central (MAS)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group-row" style="margin-bottom: 15px;">
+                <div class="form-group">
+                  <label><i class="fas fa-calendar-day"></i> Travel Date</label>
+                  <input type="date" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label><i class="fas fa-couch"></i> Class Selection</label>
+                  <select class="form-control">
+                    <option value="1AC">AC First Class (1A)</option>
+                    <option value="2AC">AC 2 Tier (2A)</option>
+                    <option value="3AC" selected>AC 3 Tier (3A)</option>
+                    <option value="CC">AC Chair Car (CC)</option>
+                    <option value="SL">Sleeper Class (SL)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group-row" style="margin-bottom: 20px;">
+                <div class="form-group">
+                  <label><i class="fas fa-users"></i> Number of Passengers</label>
+                  <select class="form-control">
+                    <option value="1">1 Passenger</option>
+                    <option value="2">2 Passengers</option>
+                    <option value="3">3 Passengers</option>
+                    <option value="4">4 Passengers</option>
+                    <option value="5+">5+ Passengers (Bulk)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label><i class="fas fa-id-card"></i> Booking Quota</label>
+                  <select class="form-control">
+                    <option value="GN">General Quota</option>
+                    <option value="LD">Ladies Quota</option>
+                    <option value="TQ">Tatkal Assistance</option>
+                    <option value="SR">Senior Citizen</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Customer Contact Details for Quote -->
+              <div style="background-color: var(--bg-secondary); padding: 15px; border-radius: var(--radius-sm); margin-bottom: 20px; border-left: 4px solid var(--accent-color);">
+                <h4 style="font-size: 0.95rem; color: var(--primary-color); margin-bottom: 10px;">Contact Details for Reservation Update</h4>
+                <div class="form-group-row">
+                  <input type="tel" class="form-control" placeholder="10-digit mobile number" required pattern="[0-9]{10}">
+                  <input type="email" class="form-control" placeholder="Email address" required>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-accent btn-form-submit" style="width: 100%;"><i class="fas fa-train"></i> Search Available Trains</button>
+            </form>
+          </div>
+
+          <!-- Train Search Results Deck (Target) -->
+          <div id="train-results-deck" style="margin-top: 30px; display: none;"></div>
+        </div>
+
+        <div>
+          <!-- Sidebar Info Box -->
+          <div style="background: var(--white); border-radius: var(--radius-md); padding: 30px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); margin-bottom: 30px;">
+            <h3 style="color: var(--primary-color); font-size: 1.3rem; margin-bottom: 15px;"><i class="fas fa-train"></i> Indian Railways Assistance</h3>
+            <ul style="padding-left: 0; color: var(--text-muted); font-size: 0.95rem;">
+              <li style="margin-bottom: 15px; display: flex; gap: 10px;">
+                <i class="fas fa-check-circle" style="color: #2ecc71; margin-top: 4px;"></i>
+                <span><strong>Authorized Tatkal Assistance</strong>: Our desk assists you in preparing and organizing Tatkal queues to maximize booking success.</span>
+              </li>
+              <li style="margin-bottom: 15px; display: flex; gap: 10px;">
+                <i class="fas fa-check-circle" style="color: #2ecc71; margin-top: 4px;"></i>
+                <span><strong>Waitlist Clearance Checking</strong>: Accurate updates and smart forecasting regarding your waitlist clearance possibilities.</span>
+              </li>
+              <li style="margin-bottom: 15px; display: flex; gap: 10px;">
+                <i class="fas fa-check-circle" style="color: #2ecc71; margin-top: 4px;"></i>
+                <span><strong>Special Tourist Train Booking</strong>: Authorized bookings for luxury trains like Palace on Wheels, Maharaja Express, or Bharat Gaurav Tourist trains.</span>
+              </li>
+              <li style="display: flex; gap: 10px;">
+                <i class="fas fa-check-circle" style="color: #2ecc71; margin-top: 4px;"></i>
+                <span><strong>Group Boarding Assistance</strong>: Dedicated bookings and seat alignments for large school excursions, religious groups, or marriage parties.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- International Rail Options Section -->
+  <section class="intl-railways-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Global Connect</span>
+        <h2 class="section-title">International Rail Ticketing</h2>
+        <p class="section-desc">We issue official tickets and travel passes for the world's most scenic and highly efficient high-speed railway networks.</p>
+      </div>
+
+      <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <div class="service-card" style="text-align: left; display: flex; flex-direction: column;">
+          <div class="service-icon" style="color: var(--primary-color);"><i class="fas fa-train-tram"></i></div>
+          <h3 style="color: var(--primary-color); margin-bottom: 8px;">Swiss Travel Pass</h3>
+          <p class="package-desc" style="flex-grow:1; font-size: 0.88rem;">Unlimited travel by train, bus, and boat across Switzerland, including scenic panorama routes.</p>
+          <button class="btn btn-outline btn-sm" onclick="openBookingModal('Swiss Travel Pass')" style="width: 100%; border-radius: 4px; margin-top: 15px;">Book Tickets</button>
+        </div>
+
+        <div class="service-card" style="text-align: left; display: flex; flex-direction: column;">
+          <div class="service-icon" style="color: var(--primary-color);"><i class="fas fa-subway"></i></div>
+          <h3 style="color: var(--primary-color); margin-bottom: 8px;">Eurostar (Europe)</h3>
+          <p class="package-desc" style="flex-grow:1; font-size: 0.88rem;">High-speed passenger rail service connecting London with Paris, Brussels, and Amsterdam seamlessly.</p>
+          <button class="btn btn-outline btn-sm" onclick="openBookingModal('Eurostar tickets')" style="width: 100%; border-radius: 4px; margin-top: 15px;">Book Tickets</button>
+        </div>
+
+        <div class="service-card" style="text-align: left; display: flex; flex-direction: column;">
+          <div class="service-icon" style="color: var(--primary-color);"><i class="fas fa-rocket"></i></div>
+          <h3 style="color: var(--primary-color); margin-bottom: 8px;">Japan Bullet Train (Shinkansen)</h3>
+          <p class="package-desc" style="flex-grow:1; font-size: 0.88rem;">Official JR Pass booking and individual route tickets for Japan's ultra high-speed bullet trains.</p>
+          <button class="btn btn-outline btn-sm" onclick="openBookingModal('Japan Shinkansen Bullet Train Ticket')" style="width: 100%; border-radius: 4px; margin-top: 15px;">Book Tickets</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer, Floating Widgets, Modal Placeholders -->
+  <div id="footer-placeholder"></div>
+  <div id="floating-actions" class="floating-widget-container"></div>
+  <div id="modal-placeholder"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.min.js"></script>
+  <script>
+    function searchTrains(event) {
+      event.preventDefault();
+      
+      const originSelect = document.getElementById("train-origin");
+      const destSelect = document.getElementById("train-destination");
+      
+      const originCode = originSelect.value;
+      const originText = originSelect.options[originSelect.selectedIndex].text.split(' - ')[0];
+      const destCode = destSelect.value;
+      const destText = destSelect.options[destSelect.selectedIndex].text.split(' - ')[0];
+      
+      const travelDate = document.querySelector("#train-booking-form input[type='date']").value || "Soon";
+      
+      const resultsDeck = document.getElementById("train-results-deck");
+      const submitBtn = document.querySelector("#train-booking-form button[type='submit']");
+      const originalText = submitBtn.innerHTML;
+      
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Checking Seat Availability...`;
+      
+      setTimeout(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+        
+        resultsDeck.style.display = "block";
+        
+        let trains = [];
+        
+        if (destCode === "NJP") {
+          trains = [
+            {
+              number: "12307",
+              name: "Howrah - NJP Vande Bharat Express",
+              depTime: "05:55 AM",
+              arrTime: "01:25 PM",
+              duration: "7h 30m",
+              runs: "Daily except Wednesday",
+              classes: [
+                { name: "CC", price: 1565, seats: "120 Available" },
+                { name: "EC", price: 2825, seats: "15 Available" }
+              ]
+            },
+            {
+              number: "12041",
+              name: "Howrah - NJP Shatabdi Express",
+              depTime: "02:15 PM",
+              arrTime: "10:30 PM",
+              duration: "8h 15m",
+              runs: "Daily except Sunday",
+              classes: [
+                { name: "CC", price: 1450, seats: "24 Available" },
+                { name: "EC", price: 2100, seats: "8 Available" }
+              ]
+            },
+            {
+              number: "12343",
+              name: "Darjeeling Mail",
+              depTime: "10:05 PM",
+              arrTime: "08:00 AM",
+              duration: "9h 55m",
+              runs: "Daily Runs",
+              classes: [
+                { name: "SL", price: 620, seats: "WL 12 (Chance 89%)" },
+                { name: "3A", price: 1250, seats: "42 Available" }
+              ]
+            }
+          ];
+        } else if (destCode === "NDLS") {
+          trains = [
+            {
+              number: "12301",
+              name: "Howrah Rajdhani Express (via Gaya)",
+              depTime: "04:50 PM",
+              arrTime: "09:55 AM",
+              duration: "17h 05m",
+              runs: "Daily Runs",
+              classes: [
+                { name: "3A", price: 2850, seats: "32 Available" },
+                { name: "2A", price: 3980, seats: "12 Available" },
+                { name: "1A", price: 4890, seats: "2 Available" }
+              ]
+            },
+            {
+              number: "12313",
+              name: "Sealdah Rajdhani Express",
+              depTime: "04:50 PM",
+              arrTime: "10:50 AM",
+              duration: "18h 00m",
+              runs: "Daily Runs",
+              classes: [
+                { name: "3A", price: 2780, seats: "18 Available" },
+                { name: "2A", price: 3890, seats: "5 Available" },
+                { name: "1A", price: 4750, seats: "1 Available" }
+              ]
+            },
+            {
+              number: "12381",
+              name: "Poorva Express (via Patna)",
+              depTime: "08:15 AM",
+              arrTime: "06:00 AM",
+              duration: "21h 45m",
+              runs: "Wed, Thu, Sun",
+              classes: [
+                { name: "SL", price: 590, seats: "WL 45 (Chance 65%)" },
+                { name: "3A", price: 1540, seats: "14 Available" }
+              ]
+            }
+          ];
+        } else {
+          // General Catch-all trains
+          const runsStr = ["Daily Runs", "Mon, Wed, Fri", "Tue, Thu, Sat"][Math.floor(Math.random() * 3)];
+          trains = [
+            {
+              number: "12249",
+              name: `${originText.split(' (')[0]} - ${destText.split(' (')[0]} Duronto Express`,
+              depTime: "01:15 PM",
+              arrTime: "10:30 AM",
+              duration: "21h 15m",
+              runs: "Bi-Weekly Special",
+              classes: [
+                { name: "3A", price: 1850, seats: "22 Available" },
+                { name: "2A", price: 2650, seats: "8 Available" }
+              ]
+            },
+            {
+              number: "12321",
+              name: `${originText.split(' (')[0]} - ${destText.split(' (')[0]} Superfast Express`,
+              depTime: "09:30 PM",
+              arrTime: "06:00 PM",
+              duration: "20h 30m",
+              runs: runsStr,
+              classes: [
+                { name: "SL", price: 680, seats: "WL 8 (Chance 92%)" },
+                { name: "3A", price: 1720, seats: "11 Available" }
+              ]
+            },
+            {
+              number: "22857",
+              name: `${originText.split(' (')[0]} - ${destText.split(' (')[0]} Humsafar Express`,
+              depTime: "06:00 AM",
+              arrTime: "11:45 PM",
+              duration: "17h 45m",
+              runs: "Weekly Express",
+              classes: [
+                { name: "3A", price: 1910, seats: "64 Available" }
+              ]
+            }
+          ];
+        }
+        
+        resultsDeck.innerHTML = `
+          <div style="background: var(--white); border-radius: var(--radius-md); padding: 25px; box-shadow: var(--shadow-md); border-top: 5px solid var(--accent-color); margin-bottom: 25px; animation: fadeIn 0.5s ease;">
+            <h4 style="color: var(--primary-color); font-size: 1.15rem; margin-bottom: 15px; display: flex; align-items: center; justify-content: space-between;">
+              <span><i class="fas fa-train"></i> Seat Availability: ${originCode} to ${destCode}</span>
+              <span style="background-color: var(--accent-color); color: var(--text-dark); font-size: 0.75rem; padding: 2px 10px; border-radius: 50px; font-weight: 800;">LIVE TATKAL/GENERAL</span>
+            </h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px;">
+              <i class="fas fa-calendar-day"></i> Journey Date: <strong>${travelDate}</strong> | Origin: <strong>${originText}</strong> | Destination: <strong>${destText}</strong>
+            </p>
+            
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+              ${trains.map(t => `
+                <div class="train-result-card" style="background: var(--bg-secondary); padding: 20px; border-radius: var(--radius-sm); border: 1px solid var(--border-color); display: flex; flex-direction: column; gap: 15px;">
+                  
+                  <!-- Top Row: Train details -->
+                  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; border-bottom: 1px solid var(--border-color); padding-bottom: 12px;">
+                    <div>
+                      <span style="background: var(--primary-color); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 700; margin-right: 8px;">${t.number}</span>
+                      <strong style="color: var(--primary-color); font-size: 1.05rem;">${t.name}</strong>
+                    </div>
+                    <div style="font-size: 0.8rem; color: var(--text-muted);">
+                      Runs On: <strong style="color: var(--text-dark);">${t.runs}</strong>
+                    </div>
+                  </div>
+                  
+                  <!-- Middle Row: Timing & Route -->
+                  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; text-align: center;">
+                    <div style="text-align: left; min-width: 100px;">
+                      <div style="font-size: 1.15rem; font-weight: 700; color: var(--text-dark);">${t.depTime}</div>
+                      <div style="font-size: 0.8rem; color: var(--text-muted);">${originText.split(' (')[0]} (${originCode})</div>
+                    </div>
+                    
+                    <div style="flex-grow: 1; position: relative; max-width: 200px;">
+                      <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 4px;">${t.duration}</div>
+                      <div style="height: 2px; background: var(--border-color); position: relative;">
+                        <i class="fas fa-circle" style="font-size: 0.4rem; color: var(--border-color); position: absolute; left: 0; top: -2px;"></i>
+                        <i class="fas fa-train" style="font-size: 0.8rem; color: var(--accent-color); position: absolute; left: 50%; top: -6px; transform: translateX(-50%);"></i>
+                        <i class="fas fa-circle" style="font-size: 0.4rem; color: var(--border-color); position: absolute; right: 0; top: -2px;"></i>
+                      </div>
+                    </div>
+                    
+                    <div style="text-align: right; min-width: 100px;">
+                      <div style="font-size: 1.15rem; font-weight: 700; color: var(--text-dark);">${t.arrTime}</div>
+                      <div style="font-size: 0.8rem; color: var(--text-muted);">${destText.split(' (')[0]} (${destCode})</div>
+                    </div>
+                  </div>
+                  
+                  <!-- Bottom Row: Classes and Availability blocks -->
+                  <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: space-between; align-items: center; margin-top: 5px; background: var(--white); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                      ${t.classes.map(c => {
+                        const isWL = c.seats.startsWith("WL");
+                        const statusColor = isWL ? "#e67e22" : "#27ae60";
+                        const bgColor = isWL ? "rgba(230, 126, 34, 0.05)" : "rgba(39, 174, 96, 0.05)";
+                        return `
+                          <div style="border: 1px solid ${statusColor}; background: ${bgColor}; border-radius: 6px; padding: 8px 12px; min-width: 110px; cursor: pointer; transition: all 0.2s;" 
+                               onclick="openBookingModal('Train ${t.number} - ${t.name} (Class: ${c.name}) from ${originCode} to ${destCode} on ${travelDate} - Fare: ₹${c.price}')">
+                            <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 0.9rem; color: var(--primary-color);">
+                              <span>Class: ${c.name}</span>
+                              <span style="color: ${statusColor};">₹${c.price}</span>
+                            </div>
+                            <div style="font-size: 0.75rem; color: ${statusColor}; font-weight: 600; margin-top: 4px;">
+                              ${c.seats}
+                            </div>
+                          </div>
+                        `;
+                      }).join('')}
+                    </div>
+                    
+                    <button class="btn btn-accent btn-sm" onclick="openBookingModal('Train ${t.number} - ${t.name} from ${originCode} to ${destCode} on ${travelDate}')" style="border-radius: 4px; padding: 10px 20px;">
+                      Book Ticket Assistance
+                    </button>
+                  </div>
+                  
+                </div>
+              `).join('')}
+            </div>
+            
+            <div style="margin-top: 20px; background-color: rgba(46, 204, 113, 0.1); padding: 12px; border-radius: 4px; display: flex; align-items: center; gap: 10px; color: #27ae60; font-size: 0.82rem; font-weight: 700;">
+              <i class="fas fa-shield-alt"></i> IRCTC Premium booking service. Slashed reservation markup applies. Direct ticket copy delivered via WhatsApp and Email.
+            </div>
+          </div>
+        `;
+        
+        resultsDeck.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 1200);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,673 @@
+<?php
+/**
+ * Template Name: Hotels Template
+ * Description: Custom page layout containing hotel searches, deal panels, and verified listings.
+ */
+get_header(); ?>
+
+  <!-- Subpage Hero / Breadcrumbs -->
+  <section class="sub-hero">
+    <div class="container">
+      <h1>Hotel Bookings & Reservations</h1>
+      <div class="breadcrumbs">
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a>
+        <i class="fas fa-chevron-right" style="font-size: 0.75rem; align-self: center;"></i>
+        <span>Hotels</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hotel search form section -->
+  <section class="section-bg" style="padding-top: 60px;">
+    <div class="container">
+      <div class="grid-split-1.6-1">
+        <div>
+          <!-- Search Panel Card -->
+          <div class="enquiry-form-card" style="border-top-color: var(--accent-color);">
+            <h3 style="margin-bottom: 20px;"><i class="fas fa-hotel"></i> Find Best Hotel Deals</h3>
+            
+            <form id="hotel-booking-form" onsubmit="searchHotels(event)">
+              <div class="form-group" style="margin-bottom: 15px;">
+                <label><i class="fas fa-map-marker-alt"></i> Destination City or Specific Hotel Area</label>
+                <select id="hotel-destination" class="form-control" required>
+                  <optgroup label="Popular Domestic Sectors">
+                    <option value="GOA" selected>Goa (Beach Resorts & Luxury Villas)</option>
+                    <option value="KASHMIR">Kashmir (Srinagar, Gulmarg & Pahalgam Stays)</option>
+                    <option value="DARJEELING">Darjeeling & Kalimpong (Himalayan Resorts)</option>
+                    <option value="SIKKIM">Gangtok & Sikkim (Mountain Retreats)</option>
+                    <option value="KERALA">Kerala (Munnar Hills, Alleppey Houseboats & Kochi)</option>
+                    <option value="RAJASTHAN">Rajasthan (Jaipur, Udaipur & Jodhpur Heritage Palaces)</option>
+                    <option value="HIMACHAL">Himachal Pradesh (Shimla, Manali & Dharamshala)</option>
+                    <option value="UTTARAKHAND">Uttarakhand (Nainital, Mussoorie & Rishikesh Spa)</option>
+                    <option value="ANDAMAN">Andaman Islands (Port Blair & Havelock Beach Stays)</option>
+                    <option value="DIGHA_SUNDARBANS">Sundarbans & Digha (Eco-Resorts & Coastal Hotels)</option>
+                    <option value="OOTY">Ooty & Kodaikanal (South Hills Stays)</option>
+                  </optgroup>
+                  <optgroup label="Popular International Sectors">
+                    <option value="DUBAI">Dubai & Abu Dhabi (Burj Views & Desert Safaris)</option>
+                    <option value="BANGKOK">Thailand (Bangkok, Phuket, Krabi & Pattaya)</option>
+                    <option value="SINGAPORE">Singapore City (Marina Bay & Sentosa Hotels)</option>
+                    <option value="MALAYSIA">Malaysia (Kuala Lumpur, Genting & Langkawi)</option>
+                    <option value="BALI">Bali & Ubud (Tropical Resorts & Beach Villas)</option>
+                    <option value="MALDIVES">Maldives (Male & Overwater Private Islands)</option>
+                    <option value="LONDON">United Kingdom (London, Edinburgh & Cotswolds)</option>
+                    <option value="PARIS">France (Paris Seine Views & Riviera Stays)</option>
+                    <option value="ITALY">Italy (Rome, Florence & Venice Historic Hotels)</option>
+                    <option value="USA">United States (New York, Orlando & Las Vegas)</option>
+                    <option value="JAPAN">Japan (Tokyo, Kyoto & Osaka Ryokan Stays)</option>
+                    <option value="SWITZERLAND">Switzerland (Zurich, Interlaken & Alps Resorts)</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <div class="form-group-row" style="margin-bottom: 15px;">
+                <div class="form-group">
+                  <label><i class="fas fa-calendar-alt"></i> Check-In Date</label>
+                  <input type="date" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label><i class="fas fa-calendar-alt"></i> Check-Out Date</label>
+                  <input type="date" class="form-control" required>
+                </div>
+              </div>
+
+              <div class="form-group-row" style="margin-bottom: 20px;">
+                <div class="form-group">
+                  <label><i class="fas fa-bed"></i> Rooms Required</label>
+                  <select class="form-control">
+                    <option value="1">1 Room</option>
+                    <option value="2">2 Rooms</option>
+                    <option value="3">3 Rooms</option>
+                    <option value="4+">4+ Rooms</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label><i class="fas fa-users"></i> Guests (Adults + Kids)</label>
+                  <select class="form-control">
+                    <option value="1">1 Adult</option>
+                    <option value="2">2 Adults</option>
+                    <option value="3">3 Adults (with Triple Bed)</option>
+                    <option value="family">Family (2 Adults + Kids)</option>
+                    <option value="group">Large Group Stay</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label><i class="fas fa-star" style="color: var(--accent-color);"></i> Class Preference</label>
+                  <select class="form-control">
+                    <option value="5-star">5★ Luxury Resorts</option>
+                    <option value="4-star">4★ Premium Stays</option>
+                    <option value="3-star">3★ Deluxe Budget</option>
+                    <option value="heritage">Heritage Havelis</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Customer Contact Details for Quote -->
+              <div style="background-color: var(--bg-secondary); padding: 15px; border-radius: var(--radius-sm); margin-bottom: 20px; border-left: 4px solid var(--primary-color);">
+                <h4 style="font-size: 0.95rem; color: var(--primary-color); margin-bottom: 10px;">Contact Details for Instant Pricing</h4>
+                <div class="form-group-row">
+                  <input type="tel" class="form-control" placeholder="10-digit mobile number" required pattern="[0-9]{10}">
+                  <input type="email" class="form-control" placeholder="Email address" required>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-accent btn-form-submit" style="width: 100%;"><i class="fas fa-search-dollar"></i> Get Best Hotel Deals</button>
+            </form>
+          </div>
+
+          <!-- Hotel Search Results Deck (Target) -->
+          <div id="hotel-results-deck" style="margin-top: 30px; display: none;"></div>
+        </div>
+
+        <div>
+          <!-- Sidebar Info Box -->
+          <div style="background: var(--white); border-radius: var(--radius-md); padding: 30px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); margin-bottom: 30px;">
+            <h3 style="color: var(--primary-color); font-size: 1.3rem; margin-bottom: 15px;"><i class="fas fa-concierge-bell"></i> Luxury Booking Privileges</h3>
+            <ul style="padding-left: 0; color: var(--text-muted); font-size: 0.95rem;">
+              <li style="margin-bottom: 15px; display: flex; gap: 10px;">
+                <i class="fas fa-gift" style="color: var(--accent-color); margin-top: 4px; font-size: 1.1rem;"></i>
+                <span><strong>Complimentary Meal Upgrades</strong>: We secure special breakfast & dinner layouts directly compiled in hotel inventory rates.</span>
+              </li>
+              <li style="margin-bottom: 15px; display: flex; gap: 10px;">
+                <i class="fas fa-door-open" style="color: var(--accent-color); margin-top: 4px; font-size: 1.1rem;"></i>
+                <span><strong>Early Check-in & Late Check-out</strong>: Subject to availability, our agencies negotiate flexible timings so you don't wait at the lounge.</span>
+              </li>
+              <li style="margin-bottom: 15px; display: flex; gap: 10px;">
+                <i class="fas fa-handshake" style="color: var(--accent-color); margin-top: 4px; font-size: 1.1rem;"></i>
+                <span><strong>Personally Verified Stays</strong>: We only book properties showing verified safety compliance certificates and exceptional food reviews.</span>
+              </li>
+              <li style="display: flex; gap: 10px;">
+                <i class="fas fa-shield-alt" style="color: var(--accent-color); margin-top: 4px; font-size: 1.1rem;"></i>
+                <span><strong>Secured Solo & Female Bookings</strong>: Safety is our primary focus. We organize stays in prime premium localities with round-the-clock CCTV guards.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Curated Hotel Destination Cards Grid -->
+  <section class="hotel-destinations-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Exquisite Resorts</span>
+        <h2 class="section-title">Popular Hotel Hotspots</h2>
+        <p class="section-desc">We maintain special corporate contract desks at the finest hospitality clusters across India and abroad.</p>
+      </div>
+
+      <div class="packages-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <div class="package-card">
+          <div class="package-img-wrapper" style="height: 180px;">
+            <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&w=400&auto=format&fit=crop" alt="Luxury Goa Hotels">
+          </div>
+          <div class="package-body" style="padding: 20px;">
+            <h3 style="font-size: 1.1rem; color: var(--primary-color);">Goa Beach Resorts</h3>
+            <p class="package-desc" style="font-size: 0.85rem; margin-bottom: 10px;">North & South Goa five star resorts starting from ₹4,500/night including breakfast.</p>
+            <button class="btn btn-outline btn-sm" onclick="openBookingModal('Goa Beach Hotel')" style="width: 100%;">Enquire Stays</button>
+          </div>
+        </div>
+
+        <div class="package-card">
+          <div class="package-img-wrapper" style="height: 180px;">
+            <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=400&auto=format&fit=crop" alt="Premium Kashmir Stays">
+          </div>
+          <div class="package-body" style="padding: 20px;">
+            <h3 style="font-size: 1.1rem; color: var(--primary-color);">Kashmir Luxury Stays</h3>
+            <p class="package-desc" style="font-size: 0.85rem; margin-bottom: 10px;">Breathtaking valley view hotels in Srinagar & Gulmarg starting from ₹3,800/night.</p>
+            <button class="btn btn-outline btn-sm" onclick="openBookingModal('Kashmir Hotel Stays')" style="width: 100%;">Enquire Stays</button>
+          </div>
+        </div>
+
+        <div class="package-card">
+          <div class="package-img-wrapper" style="height: 180px;">
+            <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=400&auto=format&fit=crop" alt="Resort Stays Maldives">
+          </div>
+          <div class="package-body" style="padding: 20px;">
+            <h3 style="font-size: 1.1rem; color: var(--primary-color);">Maldives Water Villas</h3>
+            <p class="package-desc" style="font-size: 0.85rem; margin-bottom: 10px;">Luxurious overwater lagoons with direct ocean access starting from ₹18,000/night.</p>
+            <button class="btn btn-outline btn-sm" onclick="openBookingModal('Maldives Overwater Resort')" style="width: 100%;">Enquire Stays</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function searchHotels(event) {
+      event.preventDefault();
+      
+      const destSelect = document.getElementById("hotel-destination");
+      const destCode = destSelect.value;
+      const destText = destSelect.options[destSelect.selectedIndex].text.split(' - ')[0];
+      
+      const checkInDate = document.querySelector("#hotel-booking-form input[type='date']:first-of-type").value || "Soon";
+      const checkOutDate = document.querySelector("#hotel-booking-form input[type='date']:last-of-type").value || "Soon";
+      
+      const resultsDeck = document.getElementById("hotel-results-deck");
+      const submitBtn = document.querySelector("#hotel-booking-form button[type='submit']");
+      const originalText = submitBtn.innerHTML;
+      
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Finding Exclusive Rates...`;
+      
+      setTimeout(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+        
+        resultsDeck.style.display = "block";
+        
+        let hotels = [];
+        
+        if (destCode === "GOA") {
+          hotels = [
+            {
+              name: "Taj Exotica Resort & Spa, Goa",
+              stars: "★★★★★",
+              location: "Benaulim, South Goa (Private Beach Access)",
+              desc: "Colonial style resort spread over 56 acres of lush gardens with pristine beach frontage.",
+              image: "https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=500&auto=format&fit=crop",
+              oldPrice: 15000,
+              price: 12500,
+              amenities: ["fa-wifi", "fa-swimming-pool", "fa-spa", "fa-coffee", "fa-glass-martini-alt"]
+            },
+            {
+              name: "Caravela Beach Resort, Goa",
+              stars: "★★★★",
+              location: "Varca Beach, South Goa",
+              desc: "Premium white-sand beachfront property featuring a 9-hole golf course and direct beach bar access.",
+              image: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&w=500&auto=format&fit=crop",
+              oldPrice: 8500,
+              price: 6800,
+              amenities: ["fa-wifi", "fa-swimming-pool", "fa-coffee", "fa-wind"]
+            },
+            {
+              name: "Lemon Tree Amarante Beach Resort",
+              stars: "★★★",
+              location: "Candolim, North Goa (Near Beach)",
+              desc: "Vibrant Portuguese-themed deluxe property situated steps away from the Candolim strip.",
+              image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=500&auto=format&fit=crop",
+              oldPrice: 5500,
+              price: 4200,
+              amenities: ["fa-wifi", "fa-swimming-pool", "fa-coffee"]
+            }
+          ];
+        } else if (destCode === "KASHMIR") {
+          hotels = [
+            {
+              name: "The Khyber Himalayan Resort & Spa",
+              stars: "★★★★★",
+              location: "Gulmarg Valley (Pristine Forest View)",
+              desc: "India's finest luxury ski resort offering unmatched views of the Affarwat peaks and heated indoor infinity pool.",
+              image: "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=500&auto=format&fit=crop",
+              oldPrice: 28000,
+              price: 24000,
+              amenities: ["fa-wifi", "fa-swimming-pool", "fa-spa", "fa-coffee", "fa-snowflake"]
+            },
+            {
+              name: "Radisson Collection Hotel, Srinagar",
+              stars: "★★★★★",
+              location: "Dal Lake Boulevard, Srinagar",
+              desc: "Premium resort sitting right on the banks of Dal Lake, featuring traditional Kashmiri architecture.",
+              image: "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=500&auto=format&fit=crop",
+              oldPrice: 11000,
+              price: 8900,
+              amenities: ["fa-wifi", "fa-spa", "fa-coffee", "fa-concierge-bell"]
+            },
+            {
+              name: "Hotel Heevan Pahalgam",
+              stars: "★★★★",
+              location: "Lidder River Bank, Pahalgam",
+              desc: "Cozy deluxe resort sitting directly on the river Lidder with breathtaking pine tree panoramic viewpoints.",
+              image: "https://images.unsplash.com/photo-1590073844006-33379778ae09?q=80&w=500&auto=format&fit=crop",
+              oldPrice: 8000,
+              price: 6500,
+              amenities: ["fa-wifi", "fa-coffee", "fa-utensils"]
+            }
+          ];
+        } else if (destCode === "DARJEELING") {
+          hotels = [
+            {
+              name: "Windamere Hotel - Heritage Resort",
+              stars: "★★★★★",
+              location: "Observatory Hill, Mall Road, Darjeeling",
+              desc: "The historic hotel of the Raj, maintaining coal fires and high tea ceremonies overlooking Kanchenjunga.",
+              image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=500&auto=format&fit=crop",
+              oldPrice: 12000,
+              price: 9800,
+              amenities: ["fa-wifi", "fa-coffee", "fa-fire", "fa-concierge-bell"]
+            },
+            {
+              name: "Mayfair Darjeeling",
+              stars: "★★★★",
+              location: "Opposite Governor House, Darjeeling",
+              desc: "Colonial style boutique resort featuring high-end spa therapies and beautiful valley viewing platforms.",
+              image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=500&auto=format&fit=crop",
+              oldPrice: 9500,
+              price: 7500,
+              amenities: ["fa-wifi", "fa-spa", "fa-coffee", "fa-child"]
+            }
+          ];
+        } else if (destCode === "SIKKIM") {
+          hotels = [
+            {
+              name: "Mayfair Spa Resort & Casino, Gangtok",
+              stars: "★★★★★",
+              location: "Ranipool, Gangtok",
+              desc: "Award-winning spa resort offering luxury mountain villas and Sikkim's premiere live gaming casino.",
+              image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=500&auto=format&fit=crop",
+              oldPrice: 14000,
+              price: 11200,
+              amenities: ["fa-wifi", "fa-swimming-pool", "fa-spa", "fa-coffee", "fa-gamepad"]
+            },
+            {
+              name: "The Elgin Nor-Khill Heritage Hotel",
+              stars: "★★★★",
+              location: "Paljor Stadium Road, Gangtok",
+              desc: "A heritage hotel built in 1932, showcasing royal Buddhist art, beautiful gardens, and mountain views.",
+              image: "https://images.unsplash.com/photo-1556740761-11b33dec388f?q=80&w=500&auto=format&fit=crop",
+              oldPrice: 9000,
+              price: 7200,
+              amenities: ["fa-wifi", "fa-coffee", "fa-history", "fa-concierge-bell"]
+            }
+          ];
+        } else if (destCode === "KERALA") {
+          hotels = [
+            {
+              name: "Kumarakom Lake Resort, Kerala",
+              stars: "★★★★★",
+              location: "Kottayam, Kerala Backwaters",
+              desc: "Acclaimed luxury resort featuring authentic heritage villas, floating cottages, and direct lake access.",
+              image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=500&auto=format&fit=crop",
+              oldPrice: 18000,
+              price: 14500,
+              amenities: ["fa-wifi", "fa-swimming-pool", "fa-spa", "fa-coffee", "fa-ship"]
+            },
+            {
+              name: "The Panoramic Getaway, Munnar",
+              stars: "★★★★",
+              location: "Chithirapuram, Munnar Hills",
+              desc: "Premium hilltop resort featuring a heated rooftop infinity pool with endless tea garden horizons.",
+              image: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&w=500&auto=format&fit=crop",
+              oldPrice: 9800,
+              price: 7800,
+              amenities: ["fa-wifi", "fa-swimming-pool", "fa-coffee", "fa-leaf"]
+            }
+          ];
+        } else if (destCode === "RAJASTHAN") {
+          hotels = [
+            {
+              name: "Taj Lake Palace, Udaipur",
+              stars: "★★★★★",
+              location: "Lake Pichola, Udaipur (Floating Palace)",
+              desc: "Iconic 18th-century heritage palace built on Lake Pichola, offering signature royal butler service.",
+              image: "https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=500&auto=format&fit=crop",
+              oldPrice: 42000,
+              price: 34000,
+              amenities: ["fa-wifi", "fa-swimming-pool", "fa-spa", "fa-coffee", "fa-crown"]
+            },
+            {
+              name: "Umaid Bhawan Palace, Jodhpur",
+              stars: "★★★★★",
+              location: "Chitar Hills, Jodhpur",
+              desc: "The world's sixth-largest private residence, boasting art deco suites and majestic historic grounds.",
+              image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=500&auto=format&fit=crop",
+              oldPrice: 48000,
+              price: 38000,
+              amenities: ["fa-wifi", "fa-swimming-pool", "fa-spa", "fa-coffee", "fa-history"]
+            }
+          ];
+        } else if (destCode === "HIMACHAL") {
+          hotels = [
+            {
+              name: "Wildflower Hall, An Oberoi Resort, Shimla",
+              stars: "★★★★★",
+              location: "Chharabra, Shimla (Cedar Forest View)",
+              desc: "Unmatched luxury in the Himalayas with cedar views, open-air whirlpools, and historic design.",
+              image: "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=500&auto=format&fit=crop",
+              oldPrice: 32000,
+              price: 26500,
+              amenities: ["fa-wifi", "fa-swimming-pool", "fa-spa", "fa-coffee", "fa-snowflake"]
+            },
+            {
+              name: "Span Resort & Spa, Manali",
+              stars: "★★★★",
+              location: "Beas River Bank, Manali",
+              desc: "Riverside luxury cabins overlooking the snowcapped peaks, offering ultimate privacy and comfort.",
+              image: "https://images.unsplash.com/photo-1590073844006-33379778ae09?q=80&w=500&auto=format&fit=crop",
+              oldPrice: 12000,
+              price: 9500,
+              amenities: ["fa-wifi", "fa-swimming-pool", "fa-spa", "fa-coffee"]
+            }
+          ];
+        } else if (destCode === "UTTARAKHAND") {
+          hotels = [
+            {
+              name: "Ananda in the Himalayas, Rishikesh",
+              stars: "★★★★★",
+              location: "Narendra Nagar Palace estate, Rishikesh",
+              desc: "World-renowned wellness sanctuary and spa palace overlooking the Ganges valley.",
+              image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=500&auto=format&fit=crop",
+              oldPrice: 38000,
+              price: 31000,
+              amenities: ["fa-wifi", "fa-swimming-pool", "fa-spa", "fa-coffee", "fa-leaf"]
+            },
+            {
+              name: "The Naini Retreat, Nainital",
+              stars: "★★★★",
+              location: "Ayarpata Slopes, Nainital",
+              desc: "Historic Tudor-style holiday home of Maharaja of Pilibhit, nestled in pine forests near Naini Lake.",
+              image: "https://images.unsplash.com/photo-1556740761-11b33dec388f?q=80&w=500&auto=format&fit=crop",
+              oldPrice: 9000,
+              price: 7400,
+              amenities: ["fa-wifi", "fa-coffee", "fa-history"]
+            }
+          ];
+        } else if (destCode === "ANDAMAN") {
+          hotels = [
+            {
+              name: "Taj Exotica Resort & Spa, Andamans",
+              stars: "★★★★★",
+              location: "Radhanagar Beach, Havelock Island",
+              desc: "An eco-friendly beach resort built inside 46 acres of coconut groves, directly bordering Havelock beach.",
+              image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=500&auto=format&fit=crop",
+              oldPrice: 28000,
+              price: 23500,
+              amenities: ["fa-wifi", "fa-swimming-pool", "fa-spa", "fa-coffee", "fa-umbrella-beach"]
+            },
+            {
+              name: "Symphony Palms Beach Resort",
+              stars: "★★★★",
+              location: "Govind Nagar Beach, Havelock Island",
+              desc: "Deluxe ocean villas with direct private beachfront and authorized water sports desk assistance.",
+              image: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&w=500&auto=format&fit=crop",
+              oldPrice: 8500,
+              price: 6700,
+              amenities: ["fa-wifi", "fa-coffee", "fa-anchor"]
+            }
+          ];
+        } else if (destCode === "DIGHA_SUNDARBANS") {
+          hotels = [
+            {
+              name: "Sundarban Tiger Roar Eco Resort",
+              stars: "★★★",
+              location: "Jamespur, Sundarban National Park",
+              desc: "Beautiful rustic eco-lodge offering authentic village vibes, river facing decks, and tiger safari assistance.",
+              image: "https://images.unsplash.com/photo-1590073844006-33379778ae09?q=80&w=500&auto=format&fit=crop",
+              oldPrice: 4500,
+              price: 3600,
+              amenities: ["fa-wifi", "fa-coffee", "fa-leaf", "fa-fish"]
+            },
+            {
+              name: "The Peerless Inn Resort, Digha",
+              stars: "★★★",
+              location: "Barrister Colony, Digha Beach",
+              desc: "Highly-rated coastal property with instant beach front lawns, fresh sea food kitchens, and family slides.",
+              image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=500&auto=format&fit=crop",
+              oldPrice: 5000,
+              price: 4100,
+              amenities: ["fa-wifi", "fa-coffee", "fa-swimming-pool"]
+            }
+          ];
+        } else if (destCode === "OOTY") {
+          hotels = [
+            {
+              name: "Savoy - IHCL SeleQtions, Ooty",
+              stars: "★★★★★",
+              location: "Sylvan Lawns, Ooty",
+              desc: "Charming 19th-century colonial cottage resort with lush green lawns and open fires.",
+              image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=500&auto=format&fit=crop",
+              oldPrice: 12500,
+              price: 10200,
+              amenities: ["fa-wifi", "fa-coffee", "fa-fire", "fa-history"]
+            },
+            {
+              name: "The Carlton, Kodaikanal",
+              stars: "★★★★",
+              location: "Lake Road, Kodaikanal",
+              desc: "Premium stone villa resort bordering Kodaikanal lake with boat jetties and mountain viewing lawns.",
+              image: "https://images.unsplash.com/photo-1556740761-11b33dec388f?q=80&w=500&auto=format&fit=crop",
+              oldPrice: 9500,
+              price: 7800,
+              amenities: ["fa-wifi", "fa-coffee", "fa-ship"]
+            }
+          ];
+        } else if (destCode === "MALDIVES") {
+          hotels = [
+            {
+              name: "Kuramathi Maldives Ocean Resort",
+              stars: "★★★★★",
+              location: "Rasdhoo Atoll, Maldives (Private Island)",
+              desc: "Ultra-luxury water villas with direct lagoon descent decks, glass floor panels, and private pools.",
+              image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=500&auto=format&fit=crop",
+              oldPrice: 42000,
+              price: 32000,
+              amenities: ["fa-wifi", "fa-swimming-pool", "fa-spa", "fa-coffee", "fa-fish"]
+            },
+            {
+              name: "Paradise Island Resort & Spa",
+              stars: "★★★★",
+              location: "North Male Atoll, Maldives",
+              desc: "Beachfront villas in an idyllic private island, surrounded by a vibrant coral lagoon with water activities.",
+              image: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&w=500&auto=format&fit=crop",
+              oldPrice: 24000,
+              price: 18500,
+              amenities: ["fa-wifi", "fa-swimming-pool", "fa-spa", "fa-coffee"]
+            }
+          ];
+        } else if (destCode === "BALI") {
+          hotels = [
+            {
+              name: "Ayana Resort and Spa, Bali",
+              stars: "★★★★★",
+              location: "Jimbaran Cliffs, Bali (Ocean View)",
+              desc: "Award-winning clifftop sanctuary featuring the world-famous Rock Bar and stunning multi-tier infinity pools.",
+              image: "https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=500&auto=format&fit=crop",
+              oldPrice: 24000,
+              price: 18900,
+              amenities: ["fa-wifi", "fa-swimming-pool", "fa-spa", "fa-coffee", "fa-glass-martini-alt"]
+            },
+            {
+              name: "The Ubud Village Resort & Spa",
+              stars: "★★★★",
+              location: "Nyuh Kuning, Ubud Jungle",
+              desc: "Exquisite private pool villas set amidst lush terraced rice fields, offering ultimate peace and tranquility.",
+              image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=500&auto=format&fit=crop",
+              oldPrice: 13000,
+              price: 9800,
+              amenities: ["fa-wifi", "fa-swimming-pool", "fa-spa", "fa-coffee", "fa-leaf"]
+            }
+          ];
+        } else if (destCode === "SWITZERLAND") {
+          hotels = [
+            {
+              name: "Grand Hotel Les Trois Rois, Basel",
+              stars: "★★★★★",
+              location: "Rhine River Bank, Switzerland",
+              desc: "One of Europe's oldest grand hotels, offering historic luxury and views of the Rhine River and Alps.",
+              image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=500&auto=format&fit=crop",
+              oldPrice: 42000,
+              price: 34000,
+              amenities: ["fa-wifi", "fa-coffee", "fa-history", "fa-concierge-bell"]
+            },
+            {
+              name: "Hotel Interlaken",
+              stars: "★★★★",
+              location: "Höheweg, Interlaken",
+              desc: "Beautiful heritage hotel dating back to the 14th century, renovated with premium contemporary Swiss style.",
+              image: "https://images.unsplash.com/photo-1556740761-11b33dec388f?q=80&w=500&auto=format&fit=crop",
+              oldPrice: 19000,
+              price: 14500,
+              amenities: ["fa-wifi", "fa-coffee", "fa-history"]
+            }
+          ];
+        } else {
+          // General International & Catch-all Hotels
+          const hotelName = destCode === "DUBAI" ? "JW Marriott Marquis Dubai" : (destCode === "SINGAPORE" ? "Marina Bay Sands Luxury" : `Premium Grand Palace ${destText}`);
+          hotels = [
+            {
+              name: hotelName,
+              stars: "★★★★★",
+              location: `${destText} Central District`,
+              desc: "Award-winning iconic luxury resort with rooftop pool views, custom spas, and global premium restaurants.",
+              image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=500&auto=format&fit=crop",
+              oldPrice: 35000,
+              price: 28500,
+              amenities: ["fa-wifi", "fa-swimming-pool", "fa-spa", "fa-coffee", "fa-globe"]
+            },
+            {
+              name: `City Landmark Plaza, ${destText}`,
+              stars: "★★★★",
+              location: `${destText} Downtown (Near Subway)`,
+              desc: "Highly-rated boutique property perfect for shopping and sightseeing tours, featuring modern deluxe rooms.",
+              image: "https://images.unsplash.com/photo-1556740761-11b33dec388f?q=80&w=500&auto=format&fit=crop",
+              oldPrice: 12000,
+              price: 9200,
+              amenities: ["fa-wifi", "fa-swimming-pool", "fa-coffee", "fa-utensils"]
+            }
+          ];
+        }
+        
+        resultsDeck.innerHTML = `
+          <div style="background: var(--white); border-radius: var(--radius-md); padding: 25px; box-shadow: var(--shadow-md); border-top: 5px solid var(--accent-color); margin-bottom: 25px; animation: fadeIn 0.5s ease;">
+            <h4 style="color: var(--primary-color); font-size: 1.15rem; margin-bottom: 15px; display: flex; align-items: center; justify-content: space-between;">
+              <span><i class="fas fa-hotel"></i> Available Stays in ${destText}</span>
+              <span style="background-color: var(--accent-color); color: var(--text-dark); font-size: 0.75rem; padding: 2px 10px; border-radius: 50px; font-weight: 800;">AGENCY DEALS</span>
+            </h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px;">
+              <i class="fas fa-calendar-alt"></i> Stay: <strong>${checkInDate}</strong> to <strong>${checkOutDate}</strong> | Room Class Preference: <strong>Deluxe/Luxury Selected</strong>
+            </p>
+            
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+              ${hotels.map(h => `
+                <div class="hotel-result-card" style="background: var(--bg-secondary); border-radius: var(--radius-sm); border: 1px solid var(--border-color); overflow: hidden; display: grid; grid-template-columns: 200px 1fr; gap: 20px; transition: all 0.3s;">
+                  
+                  <!-- Left: Image -->
+                  <div style="height: 100%; min-height: 180px; position: relative;">
+                    <img src="${h.image}" alt="${h.name}" style="width: 100%; height: 100%; object-fit: cover; position: absolute; left:0; top:0;">
+                  </div>
+                  
+                  <!-- Right: Content -->
+                  <div style="padding: 20px; display: flex; flex-direction: column; justify-content: space-between; gap: 10px;">
+                    <div>
+                      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 5px;">
+                        <h5 style="margin: 0; color: var(--primary-color); font-size: 1.15rem; font-weight: 800;">${h.name}</h5>
+                        <span style="color: var(--accent-color); font-weight: 800; font-size: 0.95rem;">${h.stars}</span>
+                      </div>
+                      <div style="font-size: 0.82rem; color: var(--text-muted); margin: 4px 0 10px 0;"><i class="fas fa-map-marker-alt" style="color: var(--accent-color);"></i> ${h.location}</div>
+                      <p style="font-size: 0.88rem; color: var(--text-dark); margin: 0 0 12px 0; line-height: 1.4;">${h.desc}</p>
+                      
+                      <!-- Amenities -->
+                      <div style="display: flex; gap: 10px; color: var(--primary-light); font-size: 0.9rem;">
+                        ${h.amenities.map(a => `
+                          <span style="background: var(--white); border: 1px solid var(--border-color); border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;" title="Verified Amenity">
+                            <i class="fas ${a}"></i>
+                          </span>
+                        `).join('')}
+                      </div>
+                    </div>
+                    
+                    <!-- Bottom Price Row -->
+                    <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 15px; border-top: 1px solid var(--border-color); padding-top: 15px; margin-top: 5px;">
+                      <div>
+                        <span style="text-decoration: line-through; color: var(--text-muted); font-size: 0.85rem; margin-right: 8px;">₹${h.oldPrice.toLocaleString('en-IN')}/night</span>
+                        <span style="background: rgba(46, 204, 113, 0.1); color: #27ae60; font-size: 0.72rem; padding: 2px 6px; border-radius: 4px; font-weight: 700;">SAVE ${(Math.round((h.oldPrice - h.price)/h.oldPrice * 100))}%</span>
+                        <div style="font-size: 1.4rem; font-weight: 800; color: var(--primary-color);">₹${h.price.toLocaleString('en-IN')}<span style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted);"> / night</span></div>
+                      </div>
+                      
+                      <button class="btn btn-accent btn-sm" onclick="openBookingModal('Hotel: ${h.name} (${h.stars}) at ${destText} | Stay: ${checkInDate} to ${checkOutDate} - Deal Price: ₹${h.price}/night')" style="border-radius: 4px; padding: 10px 20px;">
+                        Book Room Deal
+                      </button>
+                    </div>
+                    
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+            
+            <div style="margin-top: 20px; background-color: rgba(46, 204, 113, 0.1); padding: 12px; border-radius: 4px; display: flex; align-items: center; gap: 10px; color: #27ae60; font-size: 0.82rem; font-weight: 700;">
+              <i class="fas fa-check-circle"></i> Rates include free cancellation up to 48 hours prior. Balaji Travels private agency benefits included.
+            </div>
+          </div>
+        `;
+        
+        // CSS override check to make sure cards grid behaves nicely in grid/flex layouts
+        const styleEl = document.createElement("style");
+        styleEl.innerHTML = `
+          @media (max-width: 600px) {
+            .hotel-result-card {
+              grid-template-columns: 1fr !important;
+            }
+            .hotel-result-card div:first-child {
+              height: 150px !important;
+            }
+          }
+        `;
+        document.head.appendChild(styleEl);
+        
+        resultsDeck.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 1200);
+    }
+  </script>
+
+<?php get_footer(); ?>

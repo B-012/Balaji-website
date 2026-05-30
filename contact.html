@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Balaji Travels Kolkata - Holiday Planners</title>
+  
+  <meta name="description" content="Get in touch with Balaji Travels in Kolkata. Contact numbers, email, interactive map locations (Crooked Lane & SPM Road), business hours, and instant tour quotation forms.">
+  <meta name="keywords" content="contact Balaji Travels, travel agency in Kolkata address, phone number travel agent Kolkata, Crooked Lane travel agency, Kolkata tour booking office">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <style>
+    .contact-details-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin-bottom: 50px;
+    }
+    .contact-info-card {
+      background: var(--white);
+      padding: 30px 20px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+      border: 1px solid var(--border-color);
+      transition: var(--transition-normal);
+    }
+    .contact-info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent-color);
+    }
+    .contact-info-card i {
+      font-size: 2.2rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+    .contact-info-card h4 {
+      font-size: 1.15rem;
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
+    .contact-info-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .map-container {
+      position: relative;
+      width: 100%;
+      height: 450px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      border: 4px solid var(--white);
+      margin-top: 50px;
+    }
+    @media (max-width: 768px) {
+      .contact-details-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar & Header Loaders -->
+  <div id="top-bar-placeholder"></div>
+  <div id="header-placeholder"></div>
+
+  <!-- Subpage Hero / Breadcrumbs -->
+  <section class="sub-hero">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <i class="fas fa-chevron-right" style="font-size: 0.75rem; align-self: center;"></i>
+        <span>Contact Us</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Quick Information Cards Grid -->
+  <section class="quick-contact-section" style="padding-bottom: 40px;">
+    <div class="container">
+      <div class="contact-details-grid">
+        <!-- Head Office Card -->
+        <div class="contact-info-card">
+          <i class="fas fa-building" style="color: var(--accent-color);"></i>
+          <h4>Head Office</h4>
+          <p>
+            <strong>Address:</strong> 12, Crooked Lane,<br>
+            Kolkata, West Bengal 700069<br><br>
+            <strong>Phone:</strong><br>
+            <a href="tel:+919339288770" style="color: var(--accent-color); font-weight: 600;">+91 93392 88770</a><br>
+            <a href="tel:+918910829412" style="color: var(--accent-color); font-weight: 600;">+91 89108 29412</a>
+          </p>
+        </div>
+
+        <!-- Branch Office Card -->
+        <div class="contact-info-card">
+          <i class="fas fa-map-marked-alt"></i>
+          <h4>Branch Office</h4>
+          <p>
+            <strong>Address:</strong> 8A, Shyama Prosad Mookerjee Road,<br>
+            Kolkata, West Bengal 700025<br><br>
+            <strong>Phone:</strong><br>
+            <a href="tel:+919339288770" style="color: var(--accent-color); font-weight: 600;">+91 93392 88770</a><br>
+            <a href="tel:+918910829412" style="color: var(--accent-color); font-weight: 600;">+91 89108 29412</a>
+          </p>
+        </div>
+
+        <!-- Helplines & Support Card -->
+        <div class="contact-info-card">
+          <i class="fas fa-envelope-open-text"></i>
+          <h4>Support Desk</h4>
+          <p>
+            <strong>Email:</strong><br>
+            <a href="mailto:vkshjoshi@gmail.com" style="color: var(--accent-color); font-weight: 600;">vkshjoshi@gmail.com</a><br><br>
+            <strong>Enquiries:</strong><br>
+            <a href="mailto:info@balajitravels.in" style="color: var(--accent-color);">info@balajitravels.in</a><br>
+            <a href="mailto:travelbalaji19@gmail.com" style="color: var(--accent-color);">travelbalaji19@gmail.com</a><br><br>
+            <strong>Help Desk:</strong><br>
+            <a href="mailto:balajitravelsbookings01@gmail.com" style="color: var(--accent-color);">balajitravelsbookings01@gmail.com</a><br><br>
+            <strong>Support Desk:</strong><br>
+            <a href="mailto:travel.intsec@gmail.com" style="color: var(--accent-color);">travel.intsec@gmail.com</a><br><br>
+            <strong>WhatsApp:</strong><br>
+            <a href="https://wa.me/919339288770" target="_blank" style="color: #25D366; font-weight: 600;">+91 93392 88770</a><br>
+            <a href="https://wa.me/918910829412" target="_blank" style="color: #25D366; font-weight: 600;">+91 89108 29412</a><br>
+            <span style="color: var(--accent-hover); font-weight: 700;">24x7 Support Channel Open</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Map & Form Section -->
+  <section class="section-bg" style="padding-top: 60px;">
+    <div class="container">
+      <div class="grid-split-1-1.2" style="gap: 50px;">
+        <div>
+          <!-- Business description details -->
+          <span class="section-subtitle">Reach Out Instantly</span>
+          <h2 class="section-title" style="margin-bottom: 25px;">Let's Talk About Your Tour Plan</h2>
+          <p style="color: var(--text-muted); margin-bottom: 25px; line-height: 1.7;">
+            We are always happy to welcome you to our agency workspace. Located in prime Kolkata commercial hubs (Crooked Lane & Shyama Prosad Mookerjee Road), you can easily visit us to hand over visa documentation papers, tatkal reservations, or block holiday dates. 
+            Alternatively, fill out our dynamic booking form, and our regional experts will reach you over Phone/WhatsApp within 2 hours.
+          </p>
+
+          <div style="background-color: var(--white); border-radius: var(--radius-md); padding: 25px; box-shadow: var(--shadow-sm); border-left: 5px solid var(--primary-color);">
+            <h4 style="color: var(--primary-color); margin-bottom: 10px; font-size: 1.1rem;"><i class="fab fa-whatsapp" style="color: #25D366;"></i> Custom WhatsApp Channels</h4>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px;">Send your specifications directly to our dynamic customer routing channels:</p>
+            <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+              <a href="https://wa.me/919339288770?text=Hi,%20I'm%20planning%20a%20domestic%20tour." target="_blank" class="btn btn-outline btn-sm" style="border-color:#25D366; color:#075E54;"><i class="fab fa-whatsapp"></i> Domestic Desk</a>
+              <a href="https://wa.me/919339288770?text=Hi,%20I'm%20planning%20an%20international%20tour." target="_blank" class="btn btn-outline btn-sm" style="border-color:#25D366; color:#075E54;"><i class="fab fa-whatsapp"></i> International Desk</a>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <!-- Core Contact Enquiry Form Card -->
+          <div class="enquiry-form-card" style="border-top-color: var(--primary-color);">
+            <h3>Send Message / Query</h3>
+            <p>Get instant customized itineraries with fully optimized quotes directly in your inbox.</p>
+            
+            <form id="contact-page-form" onsubmit="handleFormSubmit(event, 'contact-page-form')">
+              <div class="form-group" style="margin-bottom: 12px;">
+                <label><i class="fas fa-user"></i> Full Name</label>
+                <input type="text" class="form-control" placeholder="Enter your full name" required>
+              </div>
+
+              <div class="form-group-row" style="margin-bottom: 12px;">
+                <div class="form-group">
+                  <label><i class="fas fa-envelope"></i> Email Address</label>
+                  <input type="email" class="form-control" placeholder="Enter email address" required>
+                </div>
+                <div class="form-group">
+                  <label><i class="fas fa-phone"></i> Mobile Number</label>
+                  <input type="tel" class="form-control" placeholder="Enter 10-digit number" required pattern="[0-9]{10}">
+                </div>
+              </div>
+
+              <div class="form-group-row" style="margin-bottom: 12px;">
+                <div class="form-group">
+                  <label><i class="fas fa-map-marker-alt"></i> Destination of Choice</label>
+                  <input type="text" class="form-control" placeholder="e.g., Kashmir, Dubai" required>
+                </div>
+                <div class="form-group">
+                  <label><i class="fas fa-calendar-day"></i> Planned Travel Date</label>
+                  <input type="date" class="form-control" required>
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 18px;">
+                <label><i class="fas fa-comment-alt"></i> Details of travel requirements</label>
+                <textarea class="form-control" rows="3" placeholder="Tell us about the number of adults/kids, hotel class preference (3★/4★/5★), or any custom flight schedules..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-accent btn-form-submit"><i class="fas fa-paper-plane"></i> Send Enquiry Request</button>
+              <div class="form-success-message" id="contact-page-form-success"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Embedded Google Map centered on Crooked Lane Kolkata -->
+      <div class="map-container">
+        <!-- Interactive responsive Iframe centered on Crooked Lane Kolkata -->
+        <iframe 
+          src="https://maps.google.com/maps?q=12,%20Crooked%20Lane,%20Kolkata%20700069&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer, Floating Widgets, Modal Placeholders -->
+  <div id="footer-placeholder"></div>
+  <div id="floating-actions" class="floating-widget-container"></div>
+  <div id="modal-placeholder"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.min.js"></script>
+</body>
+</html>

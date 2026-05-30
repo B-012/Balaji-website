@@ -1,0 +1,316 @@
+<?php
+/**
+ * Template Name: Flights Template
+ * Description: Custom page layout containing flight queries, search inputs, and partner lists.
+ */
+get_header(); ?>
+
+  <!-- Subpage Hero / Breadcrumbs -->
+  <section class="sub-hero">
+    <div class="container">
+      <h1>Flight Tickets & Bookings</h1>
+      <div class="breadcrumbs">
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a>
+        <i class="fas fa-chevron-right" style="font-size: 0.75rem; align-self: center;"></i>
+        <span>Flights</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Flight Booking Search Form Section -->
+  <section class="section-bg" style="padding-top: 60px;">
+    <div class="container">
+      <div class="grid-split-1.6-1">
+        <div>
+          <!-- Search Panel Card -->
+          <div class="enquiry-form-card" style="border-top-color: var(--primary-color);">
+            <h3 style="margin-bottom: 20px;"><i class="fas fa-plane-departure"></i> Search Flights from Kolkata</h3>
+            
+            <div class="trip-type-container" style="display: flex; gap: 20px; margin-bottom: 20px;">
+              <label class="trip-type-label" style="font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                <input type="radio" name="triptype" checked onclick="toggleReturnDate(false)" style="accent-color: var(--primary-color); width: 17px; height: 17px;"> One-Way
+              </label>
+              <label class="trip-type-label" style="font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                <input type="radio" name="triptype" onclick="toggleReturnDate(true)" style="accent-color: var(--primary-color); width: 17px; height: 17px;"> Round-Trip
+              </label>
+            </div>
+
+            <form id="flight-booking-form" onsubmit="searchFlights(event)">
+              <div class="form-group-row" style="margin-bottom: 15px;">
+                <div class="form-group">
+                  <label><i class="fas fa-plane-departure"></i> Departure City / Airport</label>
+                  <input type="text" class="form-control" value="Kolkata (CCU)" required disabled>
+                </div>
+                <div class="form-group">
+                  <label><i class="fas fa-plane-arrival"></i> Destination City / Airport</label>
+                  <select id="flight-destination" class="form-control" required>
+                    <optgroup label="Domestic Flight Sectors">
+                      <option value="DEL" selected>Delhi (DEL) - Indira Gandhi Intl</option>
+                      <option value="BOM">Mumbai (BOM) - Chhatrapati Shivaji</option>
+                      <option value="BLR">Bengaluru (BLR) - Kempegowda Intl</option>
+                      <option value="MAA">Chennai (MAA) - Chennai Intl</option>
+                      <option value="SXR">Srinagar (SXR) - Sheikh ul-Alam Intl (Kashmir)</option>
+                      <option value="IXB">Bagdogra (IXB) - Siliguri (Darjeeling/Sikkim)</option>
+                      <option value="GAU">Guwahati (GAU) - Lokpriya Gopinath (Northeast)</option>
+                      <option value="IXZ">Port Blair (IXZ) - Veer Savarkar (Andaman)</option>
+                      <option value="GOI">Goa (GOI) - Dabolim / Mopa</option>
+                      <option value="COK">Kochi (COK) - Cochin Intl (Kerala)</option>
+                    </optgroup>
+                    <optgroup label="International Flight Sectors">
+                      <option value="BKK">Bangkok (BKK) - Suvarnabhumi (Thailand)</option>
+                      <option value="SIN">Singapore (SIN) - Changi Airport</option>
+                      <option value="KUL">Kuala Lumpur (KUL) - KLIA (Malaysia)</option>
+                      <option value="DXB">Dubai (DXB) - Dubai Intl (UAE)</option>
+                      <option value="MLE">Male (MLE) - Velana Intl (Maldives)</option>
+                      <option value="LHR">London (LHR) - Heathrow (Europe)</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group-row" style="margin-bottom: 15px;">
+                <div class="form-group">
+                  <label><i class="fas fa-calendar-day"></i> Departure Date</label>
+                  <input type="date" class="form-control" required>
+                </div>
+                <div class="form-group" id="return-date-group" style="opacity: 0.5;">
+                  <label><i class="fas fa-calendar-day"></i> Return Date</label>
+                  <input type="date" id="return-date-input" class="form-control" disabled>
+                </div>
+              </div>
+
+              <div class="form-group-row" style="margin-bottom: 20px;">
+                <div class="form-group">
+                  <label><i class="fas fa-users"></i> Passengers</label>
+                  <select class="form-control">
+                    <option value="1">1 Passenger</option>
+                    <option value="2">2 Passengers</option>
+                    <option value="3">3 Passengers</option>
+                    <option value="4+">4+ Passengers</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label><i class="fas fa-couch"></i> Travel Class</label>
+                  <select class="form-control">
+                    <option value="economy">Economy</option>
+                    <option value="premium">Premium Economy</option>
+                    <option value="business">Business Class</option>
+                    <option value="first">First Class</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Customer Contact Details for Quote -->
+              <div style="background-color: var(--bg-secondary); padding: 15px; border-radius: var(--radius-sm); margin-bottom: 20px; border-left: 4px solid var(--accent-color);">
+                <h4 style="font-size: 0.95rem; color: var(--primary-color); margin-bottom: 10px;">Contact Details for Instant Pricing</h4>
+                <div class="form-group-row">
+                  <input type="tel" class="form-control" placeholder="10-digit mobile number" required pattern="[0-9]{10}">
+                  <input type="email" class="form-control" placeholder="Email address" required>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-accent btn-form-submit" style="width:100%;"><i class="fas fa-search"></i> Search Available Flights</button>
+            </form>
+          </div>
+
+          <!-- Flights Search Results Deck (Target) -->
+          <div id="flight-results-deck" style="margin-top: 30px; display: none;"></div>
+        </div>
+
+        <div>
+          <!-- Sidebar Info Box -->
+          <div style="background: var(--white); border-radius: var(--radius-md); padding: 30px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); margin-bottom: 30px;">
+            <h3 style="color: var(--primary-color); font-size: 1.3rem; margin-bottom: 15px;"><i class="fas fa-percentage"></i> Why Book Flights with Us?</h3>
+            <ul style="padding-left: 0; color: var(--text-muted); font-size: 0.95rem;">
+              <li style="margin-bottom: 15px; display: flex; gap: 10px;">
+                <i class="fas fa-check-circle" style="color: #2ecc71; margin-top: 4px;"></i>
+                <span><strong>Private Agency Fares</strong>: We access corporate bulk inventories that cut down tickets by up to ₹500–₹1,500 compared to normal OTA websites.</span>
+              </li>
+              <li style="margin-bottom: 15px; display: flex; gap: 10px;">
+                <i class="fas fa-check-circle" style="color: #2ecc71; margin-top: 4px;"></i>
+                <span><strong>No Hidden Booking Fees</strong>: What you see is what you pay. Zero surcharges or forced insurance markups.</span>
+              </li>
+              <li style="margin-bottom: 15px; display: flex; gap: 10px;">
+                <i class="fas fa-check-circle" style="color: #2ecc71; margin-top: 4px;"></i>
+                <span><strong>Hassle-Free Cancellations</strong>: Need to reschedule? Direct human phone support in Kolkata. No loops with auto chatbot systems.</span>
+              </li>
+              <li style="display: flex; gap: 10px;">
+                <i class="fas fa-check-circle" style="color: #2ecc71; margin-top: 4px;"></i>
+                <span><strong>Group Air Bookings</strong>: Customized group travel schedules and blocked fares for 10+ travelers with flexible passenger list submissions.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- IATA Accreditation Box -->
+          <div class="reveal-up" style="background: var(--white); border-radius: var(--radius-md); padding: 30px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); border-top: 4px solid var(--accent-color); margin-bottom: 30px;">
+            <h3 style="color: var(--primary-color); font-size: 1.3rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-certificate" style="color: var(--accent-color);"></i> FULL IATA Accredited Agency</h3>
+            <p style="font-size: 0.9rem; color: var(--text-dark); margin-bottom: 15px; line-height: 1.5; font-weight: 500;">
+              As a <strong>FULL IATA certified agency</strong>, we benefit from an accreditation numeric code (n° IATA) that directly identifies us to airline companies. We have access to the same tools, all of their fares, and also possess exclusive contact information in order to reach them. In short, we are official representatives of all airline companies and are the equivalent of an Air France or Lufthansa counter.
+            </p>
+            <div style="background: var(--bg-secondary); padding: 15px; border-radius: var(--radius-sm); border-left: 3px solid var(--primary-color); margin-bottom: 15px; font-size: 0.85rem; color: var(--text-muted); line-height: 1.4;">
+              <i class="fas fa-check" style="color: #2ecc71; margin-right: 6px;"></i> This license allows us to directly issue, alter, or refund airline tickets without resorting to an outside agent.
+            </div>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 15px;">
+              Travel agencies without FULL IATA certification must contact the airline company, go through an agent, and then provide information before issuing a ticket. It is often necessary to wait several minutes, and when making changes it is necessary to restart the entire process.
+            </p>
+            <div style="background-color: rgba(46, 204, 113, 0.1); padding: 12px; border-radius: 4px; display: flex; align-items: center; gap: 10px; color: #27ae60; font-size: 0.82rem; font-weight: 700;">
+              <i class="fas fa-circle-check"></i> Our FULL IATA accreditation ensures our clients simplicity, responsiveness, and time-saving!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Airline Partners Logo Grid -->
+  <section class="airline-partners-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Our Credentials</span>
+        <h2 class="section-title">Authorized Airline Partners</h2>
+        <p class="section-desc">We ticket directly with top domestic and international carriers, ensuring instant confirmation slips and priority seating.</p>
+      </div>
+
+      <div class="partner-logo-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 20px; margin-top: 30px;">
+        <div class="partner-logo-card" style="background: var(--white); padding: 15px; border: 1px solid var(--border-color); border-radius: var(--radius-sm); text-align: center; font-weight: 700; color: var(--primary-color); box-shadow: var(--shadow-sm); display: flex; align-items: center; justify-content: center; gap: 6px;"><i class="fas fa-plane"></i> IndiGo Airlines</div>
+        <div class="partner-logo-card" style="background: var(--white); padding: 15px; border: 1px solid var(--border-color); border-radius: var(--radius-sm); text-align: center; font-weight: 700; color: var(--primary-color); box-shadow: var(--shadow-sm); display: flex; align-items: center; justify-content: center; gap: 6px;"><i class="fas fa-plane"></i> Air India</div>
+        <div class="partner-logo-card" style="background: var(--white); padding: 15px; border: 1px solid var(--border-color); border-radius: var(--radius-sm); text-align: center; font-weight: 700; color: var(--primary-color); box-shadow: var(--shadow-sm); display: flex; align-items: center; justify-content: center; gap: 6px;"><i class="fas fa-plane"></i> SpiceJet</div>
+        <div class="partner-logo-card" style="background: var(--white); padding: 15px; border: 1px solid var(--border-color); border-radius: var(--radius-sm); text-align: center; font-weight: 700; color: var(--primary-color); box-shadow: var(--shadow-sm); display: flex; align-items: center; justify-content: center; gap: 6px;"><i class="fas fa-plane"></i> Vistara</div>
+        <div class="partner-logo-card" style="background: var(--white); padding: 15px; border: 1px solid var(--border-color); border-radius: var(--radius-sm); text-align: center; font-weight: 700; color: var(--primary-color); box-shadow: var(--shadow-sm); display: flex; align-items: center; justify-content: center; gap: 6px;"><i class="fas fa-plane"></i> Emirates</div>
+        <div class="partner-logo-card" style="background: var(--white); padding: 15px; border: 1px solid var(--border-color); border-radius: var(--radius-sm); text-align: center; font-weight: 700; color: var(--primary-color); box-shadow: var(--shadow-sm); display: flex; align-items: center; justify-content: center; gap: 6px;"><i class="fas fa-plane"></i> Singapore Airlines</div>
+        <div class="partner-logo-card" style="background: var(--white); padding: 15px; border: 1px solid var(--border-color); border-radius: var(--radius-sm); text-align: center; font-weight: 700; color: var(--primary-color); box-shadow: var(--shadow-sm); display: flex; align-items: center; justify-content: center; gap: 6px;"><i class="fas fa-plane"></i> Qatar Airways</div>
+        <div class="partner-logo-card" style="background: var(--white); padding: 15px; border: 1px solid var(--border-color); border-radius: var(--radius-sm); text-align: center; font-weight: 700; color: var(--primary-color); box-shadow: var(--shadow-sm); display: flex; align-items: center; justify-content: center; gap: 6px;"><i class="fas fa-plane"></i> Thai Airways</div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function toggleReturnDate(enable) {
+      const group = document.getElementById("return-date-group");
+      const input = document.getElementById("return-date-input");
+      if (enable) {
+        group.style.opacity = "1";
+        input.disabled = false;
+        input.required = true;
+      } else {
+        group.style.opacity = "0.5";
+        input.disabled = true;
+        input.required = false;
+        input.value = "";
+      }
+    }
+
+    function searchFlights(event) {
+      event.preventDefault();
+      
+      const destSelect = document.getElementById("flight-destination");
+      const destCode = destSelect.value;
+      const destText = destSelect.options[destSelect.selectedIndex].text.split(' - ')[0];
+      const depDate = document.querySelector("#flight-booking-form input[type='date']").value || "Soon";
+      
+      const resultsDeck = document.getElementById("flight-results-deck");
+      const submitBtn = document.querySelector("#flight-booking-form button[type='submit']");
+      const originalText = submitBtn.innerHTML;
+      
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Searching Available Flights...`;
+      
+      setTimeout(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+        
+        resultsDeck.style.display = "block";
+        
+        const flights = [
+          {
+            carrier: "IndiGo",
+            code: "6E-2041",
+            dep: "07:15 AM",
+            arr: "09:45 AM",
+            price: 5450,
+            type: "Direct Non-Stop",
+            photo: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=150&auto=format&fit=crop"
+          },
+          {
+            carrier: "Air India",
+            code: "AI-701",
+            dep: "11:30 AM",
+            arr: "02:10 PM",
+            price: 6120,
+            type: "Direct Non-Stop",
+            photo: "https://images.unsplash.com/photo-1540962351504-03099e0a754b?q=80&w=150&auto=format&fit=crop"
+          },
+          {
+            carrier: "Vistara",
+            code: "UK-747",
+            dep: "05:45 PM",
+            arr: "08:25 PM",
+            price: 6890,
+            type: "Direct Premium",
+            photo: "https://images.unsplash.com/photo-1483450388369-9ed95738483c?q=80&w=150&auto=format&fit=crop"
+          }
+        ];
+        
+        const isIntl = ["BKK", "SIN", "KUL", "DXB", "MLE", "LHR"].includes(destCode);
+        if (isIntl) {
+          flights[0] = { carrier: "Thai Airways", code: "TG-314", dep: "02:00 AM", arr: "06:10 AM", price: 18400, type: "Intl Non-Stop", photo: "https://images.unsplash.com/photo-1556388158-158ea5ccacbd?q=80&w=150&auto=format&fit=crop" };
+          flights[1] = { carrier: "Singapore Airlines", code: "SQ-517", dep: "11:50 PM", arr: "06:20 AM", price: 24500, type: "Luxury Direct", photo: "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?q=80&w=150&auto=format&fit=crop" };
+          flights[2] = { carrier: "Emirates", code: "EK-573", dep: "08:30 PM", arr: "11:55 PM", price: 29800, type: "Five Star Premium", photo: "https://images.unsplash.com/photo-1520437358207-3dbf587803c7?q=80&w=150&auto=format&fit=crop" };
+        }
+        
+        resultsDeck.innerHTML = `
+          <div style="background: var(--white); border-radius: var(--radius-md); padding: 25px; box-shadow: var(--shadow-md); border-top: 5px solid var(--accent-color); margin-bottom: 25px; animation: fadeIn 0.5s ease;">
+            <h4 style="color: var(--primary-color); font-size: 1.15rem; margin-bottom: 15px; display: flex; align-items: center; justify-content: space-between;">
+              <span><i class="fas fa-plane-departure"></i> Active Flight Fares: Kolkata to ${destText}</span>
+              <span style="background-color: var(--accent-color); color: var(--text-dark); font-size: 0.75rem; padding: 2px 10px; border-radius: 50px; font-weight: 800;">LIVE INVENTORY</span>
+            </h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px;"><i class="fas fa-calendar-day"></i> Departure Date: <strong>${depDate}</strong> | Passenger Quota: <strong>General</strong></p>
+            
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+              ${flights.map(f => `
+                <div class="flight-result-card" style="display: flex; justify-content: space-between; align-items: center; background: var(--bg-secondary); padding: 18px; border-radius: var(--radius-sm); border: 1px solid var(--border-color); flex-wrap: wrap; gap: 15px;">
+                  <div style="display: flex; align-items: center; gap: 12px; min-width: 150px;">
+                    <div style="width: 45px; height: 45px; border-radius: 6px; overflow: hidden; background: var(--bg-secondary); border: 1px solid var(--border-color);">
+                      <img src="${f.photo}" alt="${f.carrier}" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div>
+                      <h5 style="margin: 0; color: var(--primary-color); font-size: 1rem;">${f.carrier}</h5>
+                      <small style="color: var(--text-muted);">${f.code}</small>
+                    </div>
+                  </div>
+                  
+                  <div style="text-align: center;">
+                    <div style="font-weight: 700; color: var(--text-dark); font-size: 1rem;">${f.dep}</div>
+                    <small style="color: var(--text-muted);">Kolkata (CCU)</small>
+                  </div>
+                  
+                  <div style="text-align: center; border-bottom: 2px dashed var(--border-color); padding-bottom: 2px; min-width: 80px;">
+                    <span style="font-size: 0.75rem; background-color: var(--white); color: var(--primary-light); font-weight: 700; padding: 2px 8px; border-radius: 4px; border: 1px solid var(--border-color);">${f.type}</span>
+                  </div>
+                  
+                  <div style="text-align: center;">
+                    <div style="font-weight: 700; color: var(--text-dark); font-size: 1rem;">${f.arr}</div>
+                    <small style="color: var(--text-muted);">${destCode}</small>
+                  </div>
+                  
+                  <div style="text-align: right; min-width: 120px;">
+                    <div style="font-size: 1.3rem; font-weight: 800; color: var(--primary-color);">₹${f.price.toLocaleString('en-IN')}</div>
+                    <small style="color: var(--text-muted); display: block; margin-bottom: 5px;">Agency Slashed Fares</small>
+                    <button class="btn btn-accent btn-sm" onclick="openBookingModal('Flight ${f.code} (${f.carrier}) to ${destCode} on ${depDate} - ₹${f.price}')" style="width: 100%; border-radius: 4px;">Book Seat</button>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+            
+            <div style="margin-top: 20px; background-color: rgba(46, 204, 113, 0.1); padding: 12px; border-radius: 4px; display: flex; align-items: center; gap: 10px; color: #27ae60; font-size: 0.82rem; font-weight: 700;">
+              <i class="fas fa-lock"></i> Direct secure API booking channel. Inclusions: 15kg Baggage + 7kg Cabin Luggage included.
+            </div>
+          </div>
+        `;
+        
+        resultsDeck.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 1200);
+    }
+  </script>
+
+<?php get_footer(); ?>

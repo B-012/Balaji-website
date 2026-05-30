@@ -1,0 +1,160 @@
+<?php
+/**
+ * Template Name: Visa Services Template
+ * Description: Custom page layout detailing tourist visa filings, guidelines, and document checks.
+ */
+get_header(); ?>
+
+  <!-- Subpage Hero / Breadcrumbs -->
+  <section class="sub-hero">
+    <div class="container">
+      <h1>Visa Application Assistance</h1>
+      <div class="breadcrumbs">
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a>
+        <i class="fas fa-chevron-right" style="font-size: 0.75rem; align-self: center;"></i>
+        <span>Visa Services</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Step-by-Step Visa Process Section -->
+  <section class="visa-process-section" style="padding-bottom: 40px;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Simplified Filing</span>
+        <h2 class="section-title">Our Visa Processing Workflow</h2>
+        <p class="section-desc">We convert the highly complex visa application bureaucracy into a simple 4-step stress-free process.</p>
+      </div>
+
+      <div class="step-grid grid-4" style="margin-bottom: 50px;">
+        <div class="step-card" style="background: var(--white); padding: 30px 20px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); text-align: center; position: relative; border: 1px solid var(--border-color);">
+          <div class="step-number" style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); width: 35px; height: 35px; border-radius: 50%; background-color: var(--accent-color); color: var(--text-dark); display: flex; align-items: center; justify-content: center; font-weight: 800; box-shadow: var(--shadow-sm);">1</div>
+          <i class="fas fa-folder-open" style="font-size: 2.2rem; color: var(--primary-color); margin-bottom: 15px;"></i>
+          <h4 style="font-size: 1.1rem; margin-bottom: 10px; color: var(--primary-color);">Submit Documents</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">Provide us your passport and basic documents. We share a clear checklist based on your destination.</p>
+        </div>
+
+        <div class="step-card" style="background: var(--white); padding: 30px 20px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); text-align: center; position: relative; border: 1px solid var(--border-color);">
+          <div class="step-number" style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); width: 35px; height: 35px; border-radius: 50%; background-color: var(--accent-color); color: var(--text-dark); display: flex; align-items: center; justify-content: center; font-weight: 800; box-shadow: var(--shadow-sm);">2</div>
+          <i class="fas fa-spell-check" style="font-size: 2.2rem; color: var(--primary-color); margin-bottom: 15px;"></i>
+          <h4 style="font-size: 1.1rem; margin-bottom: 10px; color: var(--primary-color);">Expert Verification</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">Our visa expert in Kolkata thoroughly audits your papers to eliminate spelling or financial errors.</p>
+        </div>
+
+        <div class="step-card" style="background: var(--white); padding: 30px 20px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); text-align: center; position: relative; border: 1px solid var(--border-color);">
+          <div class="step-number" style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); width: 35px; height: 35px; border-radius: 50%; background-color: var(--accent-color); color: var(--text-dark); display: flex; align-items: center; justify-content: center; font-weight: 800; box-shadow: var(--shadow-sm);">3</div>
+          <i class="fas fa-file-signature" style="font-size: 2.2rem; color: var(--primary-color); margin-bottom: 15px;"></i>
+          <h4 style="font-size: 1.1rem; margin-bottom: 10px; color: var(--primary-color);">Visa Application</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">We submit the application forms, pay embassy fees, and schedule biometric slots or interviews.</p>
+        </div>
+
+        <div class="step-card" style="background: var(--white); padding: 30px 20px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); text-align: center; position: relative; border: 1px solid var(--border-color);">
+          <div class="step-number" style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); width: 35px; height: 35px; border-radius: 50%; background-color: var(--accent-color); color: var(--text-dark); display: flex; align-items: center; justify-content: center; font-weight: 800; box-shadow: var(--shadow-sm);">4</div>
+          <i class="fas fa-passport" style="font-size: 2.2rem; color: var(--primary-color); margin-bottom: 15px;"></i>
+          <h4 style="font-size: 1.1rem; margin-bottom: 10px; color: var(--primary-color);">Approval & Delivery</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">Once passport is stamped or eVisa is approved, we inspect the slips and hand it over to you safely.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Country-wise Visa Info Cards & Forms Section -->
+  <section class="section-bg" style="padding-top: 60px;">
+    <div class="container">
+      <div class="grid-split-1.6-1">
+        <div>
+          <h3 style="color: var(--primary-color); margin-bottom: 25px;"><i class="fas fa-globe"></i> Popular Tourist Visa Destinations</h3>
+          
+          <div class="grid-2" style="gap: 20px;">
+            <!-- Dubai -->
+            <div style="background: var(--white); padding: 20px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border-left: 4px solid var(--accent-color);">
+              <h4 style="color: var(--primary-color); margin-bottom: 8px;"><i class="fas fa-building"></i> UAE (Dubai Visa)</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px;">Fast eVisa filing system. Approved within 48 to 72 hours.</p>
+              <span class="inclusion-tag" style="background-color: var(--bg-secondary);">Only Passport & Photo</span>
+              <span class="inclusion-tag" style="background-color: var(--bg-secondary);">14 / 30 / 60 Days</span>
+            </div>
+
+            <!-- Thailand -->
+            <div style="background: var(--white); padding: 20px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border-left: 4px solid var(--accent-color);">
+              <h4 style="color: var(--primary-color); margin-bottom: 8px;"><i class="fas fa-umbrella-beach"></i> Thailand eVisa</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px;">Instant paper submissions or pre-departure eVisa approvals.</p>
+              <span class="inclusion-tag" style="background-color: var(--bg-secondary);">Bank Statement</span>
+              <span class="inclusion-tag" style="background-color: var(--bg-secondary);">3-5 Business Days</span>
+            </div>
+
+            <!-- Singapore -->
+            <div style="background: var(--white); padding: 20px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border-left: 4px solid var(--accent-color);">
+              <h4 style="color: var(--primary-color); margin-bottom: 8px;"><i class="fas fa-tree"></i> Singapore eVisa</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px;">Official agency level application filing for quick 35-day multiple entry visa.</p>
+              <span class="inclusion-tag" style="background-color: var(--bg-secondary);">Authorized Agent File</span>
+              <span class="inclusion-tag" style="background-color: var(--bg-secondary);">4 Working Days</span>
+            </div>
+
+            <!-- Europe -->
+            <div style="background: var(--white); padding: 20px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border-left: 4px solid var(--accent-color);">
+              <h4 style="color: var(--primary-color); margin-bottom: 8px;"><i class="fas fa-landmark"></i> Schengen (Europe)</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px;">Accurate document compilation and priority VFS biometric slot bookings.</p>
+              <span class="inclusion-tag" style="background-color: var(--bg-secondary);">ITR + Bank + Cover Letter</span>
+              <span class="inclusion-tag" style="background-color: var(--bg-secondary);">15 Calendar Days</span>
+            </div>
+          </div>
+
+          <div style="background: var(--white); padding: 25px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); margin-top: 30px;">
+            <h3 style="color: var(--primary-color); font-size: 1.25rem; margin-bottom: 15px;"><i class="fas fa-shield-halved"></i> Why Process Visas With Us?</h3>
+            <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 10px;">
+              Our dedicated visa department in Kolkata maintains real-time tracking of updated embassy directives, fee fluctuations, and slot openings. 
+              We draft professional covering letters, design compliant flight itineraries and hotel bookings, and audit your bank certificate layouts to guarantee the absolute highest chances of visa approvals.
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <!-- Apply Form Box -->
+          <div class="enquiry-form-card">
+            <h3>Apply for Visa assistance</h3>
+            <p>Share your destination and our desk will send document checklists and fee formats instantly.</p>
+            
+            <form id="visa-enquiry-form" onsubmit="handleFormSubmit(event, 'visa-enquiry-form')">
+              <div class="form-group" style="margin-bottom: 12px;">
+                <label><i class="fas fa-user"></i> Full Name</label>
+                <input type="text" class="form-control" required>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 12px;">
+                <label><i class="fas fa-phone"></i> Mobile Number</label>
+                <input type="tel" class="form-control" required pattern="[0-9]{10}">
+              </div>
+
+              <div class="form-group" style="margin-bottom: 12px;">
+                <label><i class="fas fa-globe-asia"></i> Destination Country</label>
+                <select class="form-control" required>
+                  <option value="uae">UAE (Dubai)</option>
+                  <option value="thailand">Thailand</option>
+                  <option value="singapore">Singapore</option>
+                  <option value="schengen">Europe (Schengen)</option>
+                  <option value="uk">United Kingdom (UK)</option>
+                  <option value="usa">United States (USA)</option>
+                  <option value="australia">Australia</option>
+                </select>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 12px;">
+                <label><i class="fas fa-calendar-day"></i> Planned Travel Date</label>
+                <input type="date" class="form-control" required>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 15px;">
+                <label><i class="fas fa-comment-alt"></i> Any Current Visas Held?</label>
+                <textarea class="form-control" rows="2" placeholder="Mention if you have active US, UK, or Schengen visas..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-form-submit"><i class="fas fa-paper-plane"></i> Get Visa Checklist</button>
+              <div class="form-success-message" id="visa-enquiry-form-success"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<?php get_footer(); ?>
