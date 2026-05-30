@@ -199,7 +199,7 @@ const travelData = {
       price: 18499,
       category: "domestic",
       type: "Honeymoon / Nature",
-      image: "images/packages/kashmir.jpg",
+      image: "images/packages/kashmir.png",
       inclusions: ["3★/4★ Hotel", "Houseboat Stay", "Daily Breakfast & Dinner", "Shikara Ride", "Private Cab", "Sightseeing"],
       description: "Experience the paradise on earth. Explore the scenic valleys of Srinagar, Gulmarg, Pahalgam, and Sonamarg, with a magical night stay in a traditional luxury houseboat on Dal Lake.",
       highlights: "Srinagar Shikara Ride • Snow activities in Gulmarg • Betaab Valley in Pahalgam"
@@ -211,7 +211,7 @@ const travelData = {
       price: 32999,
       category: "religious",
       type: "Spiritual / Religious",
-      image: "images/packages/chardham.jpg",
+      image: "images/packages/chardham.png",
       inclusions: ["Hotels & Ashrams", "Pure Veg Meals", "Group Transfers", "Medical Assistance", "VIP Darshan Slips", "Guide"],
       description: "A soul-purifying pilgrimage to Yamunotri, Gangotri, Kedarnath, and Badrinath. Deeply structured for senior citizens and families with ultimate comfort, safety, and priority access.",
       highlights: "VIP Kedarnath Darshan • Holy bath at Gangotri • Scenic Himalayan driving guides"
@@ -295,7 +295,7 @@ const travelData = {
       price: 68999,
       category: "international",
       type: "Group / Corporate",
-      image: "images/packages/singapore.jpg",
+      image: "images/packages/singapore.png",
       inclusions: ["3★/4★ Stays", "Daily Breakfast", "Universal Studios Ticket", "Sentosa Island Cable Car", "Kuala Lumpur City Tour", "Genting Highlands Tour"],
       description: "Double country delight. Experience the cutting-edge attractions of Singapore like Gardens by the Bay and Universal Studios, combined with the culture and high-altitude theme parks of Malaysia.",
       highlights: "Universal Studios Singapore • Night Safari • Genting Cable Car Ride"
