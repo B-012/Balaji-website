@@ -263,14 +263,12 @@ header .container {
 }
 
 .logo img {
-  height: 120px;
+  height: 55px;
   width: auto;
-  max-width: 280px;
+  max-width: 200px;
   object-fit: contain;
-  object-position: left center;
   transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
   display: block;
-  mix-blend-mode: multiply;
 }
 
 .logo:hover img {
@@ -279,8 +277,8 @@ header .container {
 
 @media (max-width: 768px) {
   .logo img {
-    height: 75px;
-    max-width: 180px;
+    height: 40px;
+    max-width: 150px;
   }
 }
 
