@@ -493,6 +493,39 @@ const travelData = {
       readTime: "4 min read",
       summary: "Is online booking always cheaper? Learn how professional agencies access private corporate rates, bulk ticketing deals, and why direct consultation saves thousands.",
       content: "Many travelers believe that searching countless third-party OTA websites is the only way to get cheap tickets. However, registered travel agents have direct GDS portals, volume contracts, and package deals that aren't visible to the public. In this blog, we reveal how Balaji Travels leverages partner networks to secure massive discounts on luxury resort bookings, tatkal train bookings, and international group flight tickets..."
+    },
+    {
+      id: "maldives-vs-bali",
+      title: "Maldives vs Bali: Which is the Perfect Honeymoon Destination?",
+      category: "international",
+      date: "May 20, 2026",
+      author: "Romance Travel Expert",
+      image: "blog-honeymoon.jpg",
+      readTime: "6 min read",
+      summary: "Struggling to choose between the overwater villas of the Maldives and the cultural paradise of Bali? We break down the costs, activities, and vibe to help you decide.",
+      content: "For newlyweds, picking the right destination is the first big decision. The Maldives offers unparalleled privacy, stunning coral reefs, and luxurious all-inclusive resorts—perfect if you just want to relax. Bali, on the other hand, is a vibrant mix of lush jungles, rich Hindu culture, stunning temples, and lively beach clubs. In this guide, we compare flight costs from Kolkata, the best time to visit, and what kind of couple each destination suits best..."
+    },
+    {
+      id: "northeast-hidden-gems",
+      title: "Exploring Northeast India: Top 5 Hidden Gems in Meghalaya and Sikkim",
+      category: "domestic",
+      date: "May 25, 2026",
+      author: "Adventure Guide",
+      image: "blog-northeast.jpg",
+      readTime: "7 min read",
+      summary: "Go beyond Darjeeling. Discover the untouched beauty of the Northeast, from crystal-clear rivers in Meghalaya to frozen lakes in high-altitude Sikkim.",
+      content: "Northeast India is a treasure trove of raw natural beauty. While most tourists stick to the standard Darjeeling-Gangtok circuit, the real magic lies off the beaten path. Explore Dawki in Meghalaya, where boats seem to float on air on the crystal-clear Umngot River, or trek to the Double Decker Living Root Bridges in Cherrapunji. In Sikkim, the pristine Gurudongmar Lake offers breathtaking high-altitude views. Let Balaji Travels craft a customized SUV itinerary for your Northeast adventure..."
+    },
+    {
+      id: "cruise-vacation-guide",
+      title: "Cruising from India: Everything You Need to Know Before You Book",
+      category: "cruises",
+      date: "June 02, 2026",
+      author: "Cruise Specialist",
+      image: "blog-cruise.jpg",
+      readTime: "5 min read",
+      summary: "Never been on a cruise? From choosing the right deck to understanding all-inclusive packages, here is your ultimate guide to luxury ocean cruising.",
+      content: "Cruise holidays are becoming incredibly popular among Indian families. With luxury liners departing from Mumbai and international cruises easily accessible via short flights to Singapore or Dubai, there's a cruise for every budget. But how do you pick between an Oceanview cabin and a Balcony suite? Are drinks included? What about vegetarian Indian food on board? In this comprehensive guide, our cruise experts answer all your first-timer questions and share insider tips for getting onboard credit..."
     }
   ]
 };
