@@ -374,8 +374,26 @@ const travelData = {
     }
   ],
 
-  // 6 Premium customer reviews (Google style)
+  // Premium customer reviews (Google style)
   testimonials: [
+    {
+      name: "Sandeep Agarwal",
+      location: "Park Street, Kolkata",
+      trip: "Corporate Flight Bookings",
+      rating: 5,
+      date: "May 2026",
+      text: "Balaji Travels is our go-to agency for all corporate flight bookings. Their team consistently secures the best corporate fares, manages last-minute itinerary changes flawlessly, and provides exceptional 24/7 support. Highly professional service.",
+      avatar: "avatar1.jpg"
+    },
+    {
+      name: "Priyanka Desai",
+      location: "Bhowanipore, Kolkata",
+      trip: "IRCTC Train Booking",
+      rating: 5,
+      date: "April 2026",
+      text: "Getting confirmed train tickets during the holiday season seemed impossible until I contacted Balaji Travels. They handled the Tatkal train tickets enquiry and booking with absolute efficiency. A highly reliable travel agent in Kolkata.",
+      avatar: "avatar2.jpg"
+    },
     {
       name: "Arijit Sen",
       location: "Behala, Kolkata",
