@@ -1050,6 +1050,10 @@ function handleFormSubmit(event, formId) {
           <p style="font-size: 0.85rem; margin: 0;">Dhanyabaad! Our Kolkata-based travel expert will contact you within <strong>2 hours</strong>.<br><strong style="color: var(--primary-color);">Apna Sapna, Hamari Zimmedari!</strong></p>
         </div>
       `;
+      
+      // Send WhatsApp notification to owner
+      sendWhatsAppNotification(formData, formId);
+      
       form.reset();
       
       successEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -1074,6 +1078,46 @@ function handleFormSubmit(event, formId) {
     successEl.style.backgroundColor = "#ffefef";
     successEl.style.color = "#d9534f";
     successEl.innerHTML = `<strong>Error:</strong> Network issue. Please call us directly.`;
+  });
+}
+
+// 8b. PUSH NOTIFICATION via ntfy.sh (Free, works in India, no account needed)
+// HOW TO ACTIVATE:
+//   1. Install "ntfy" app from Play Store (Android) or App Store (iPhone)
+//   2. Open app → tap + → type the NTFY_TOPIC name below → Subscribe
+//   3. Done! You'll get instant push notifications on your phone.
+// CHANGE THE TOPIC to something unique (no spaces). Keep it private — don't share it.
+const NTFY_TOPIC = "balaji-travels-leads-2026"; // ← Change this to your unique topic name
+
+function sendWhatsAppNotification(formData, formId) {
+  // Build notification message from submitted form fields
+  const name        = formData.get("enter_your_full_name") || formData.get("name") || "N/A";
+  const phone       = formData.get("phone")                  || "N/A";
+  const email       = formData.get("email")                  || "N/A";
+  const destination = formData.get("e_g_kashmir_dubai")      || formData.get("destination") || "N/A";
+  const travelDate  = formData.get("travel_date")            || "N/A";
+  const travelers   = formData.get("travelers")              || "";
+  const details     = formData.get("tell_us_about_the_number_of_adults_kids_hotel_class_preference_3_4_5_or_any_custom_flight_schedules") || "";
+  const source      = formId === "modal-enquiry-form" ? "Book Now Modal" : "Contact Page Form";
+
+  const title   = `New Enquiry - ${name}`;
+  let   body    = `📱 ${phone} | 📍 ${destination} | 📅 ${travelDate}`;
+  if (travelers) body += ` | 👥 ${travelers}`;
+  body += ` | Source: ${source}`;
+  if (details) body += `\n${details}`;
+
+  // Fire-and-forget ntfy push notification
+  fetch(`https://ntfy.sh/${NTFY_TOPIC}`, {
+    method : "POST",
+    headers: {
+      "Title"   : title,
+      "Priority": "high",
+      "Tags"     : "bell,airplane",
+      "Content-Type": "text/plain"
+    },
+    body: body
+  }).catch(() => {
+    console.warn("ntfy.sh notification could not be sent. Check your internet connection.");
   });
 }
 
