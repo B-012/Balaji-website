@@ -1053,6 +1053,16 @@ function handleFormSubmit(event, formId) {
       
       // Send WhatsApp notification to owner
       sendWhatsAppNotification(formData, formId);
+
+      // Track lead conversion in Google Analytics and log to console
+      if (typeof gtag === 'function') {
+        gtag('event', 'generate_lead', {
+          'event_category': 'Engagement',
+          'event_label': formId,
+          'value': 1
+        });
+      }
+      console.log("✅ Lead submitted successfully from: " + formId);
       
       form.reset();
       
