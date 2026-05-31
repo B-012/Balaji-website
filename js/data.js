@@ -199,7 +199,7 @@ const travelData = {
       price: 18499,
       category: "domestic",
       type: "Honeymoon / Nature",
-      image: "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?q=80&w=600&auto=format&fit=crop",
+      image: "images/packages/dubai.jpg",
       inclusions: ["3★/4★ Hotel", "Houseboat Stay", "Daily Breakfast & Dinner", "Shikara Ride", "Private Cab", "Sightseeing"],
       description: "Experience the paradise on earth. Explore the scenic valleys of Srinagar, Gulmarg, Pahalgam, and Sonamarg, with a magical night stay in a traditional luxury houseboat on Dal Lake.",
       highlights: "Srinagar Shikara Ride • Snow activities in Gulmarg • Betaab Valley in Pahalgam"
@@ -211,7 +211,7 @@ const travelData = {
       price: 32999,
       category: "religious",
       type: "Spiritual / Religious",
-      image: "https://images.unsplash.com/photo-1626244498322-9907310df049?q=80&w=600&auto=format&fit=crop",
+      image: "images/packages/france.jpg",
       inclusions: ["Hotels & Ashrams", "Pure Veg Meals", "Group Transfers", "Medical Assistance", "VIP Darshan Slips", "Guide"],
       description: "A soul-purifying pilgrimage to Yamunotri, Gangotri, Kedarnath, and Badrinath. Deeply structured for senior citizens and families with ultimate comfort, safety, and priority access.",
       highlights: "VIP Kedarnath Darshan • Holy bath at Gangotri • Scenic Himalayan driving guides"
@@ -223,7 +223,7 @@ const travelData = {
       price: 14999,
       category: "domestic",
       type: "Adventure / Heritage",
-      image: "https://images.unsplash.com/photo-1477587458883-47145ed94245?q=80&w=600&auto=format&fit=crop",
+      image: "images/packages/kashmir package image.webp",
       inclusions: ["Heritage Havelis", "Desert Tent Stay", "Breakfast & Traditional Dinner", "Camel Safari", "Folk Dance Show", "Sightseeing"],
       description: "Immerse yourself in royalty. Tour the majestic palaces of Jaipur, Udaipur, and Jodhpur, and spend a night in luxury Swiss desert camps amidst the golden dunes of Jaisalmer.",
       highlights: "Jaipur Amer Fort Elephant Ride • Jaisalmer Desert Camping • Udaipur Boat Cruise"
@@ -235,7 +235,7 @@ const travelData = {
       price: 11499,
       category: "domestic",
       type: "Honeymoon / Adventure",
-      image: "https://images.unsplash.com/photo-1512100356356-de1b84283e18?q=80&w=600&auto=format&fit=crop",
+      image: "images/packages/chardham yatra image.webp",
       inclusions: ["Near-Beach 3★ Resort", "Daily Breakfast", "South Goa Tour", "North Goa Tour", "Airport Transfers", "Cruise Ticket"],
       description: "Relax, party, and rejuvenate. Enjoy pristine beaches, historic Portuguese churches, vibrant markets, and adventurous water sports in both North and South Goa.",
       highlights: "Baga Beach Water Sports • Mandovi River Cruise • Basilica of Bom Jesus"
@@ -247,7 +247,7 @@ const travelData = {
       price: 16999,
       category: "domestic",
       type: "Honeymoon / Nature",
-      image: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=600&auto=format&fit=crop",
+      image: "images/packages/rajasthan.jpg",
       inclusions: ["Munnar Hill Resort", "Alleppey Houseboat", "Daily Breakfast & Dinner", "All Houseboat Meals", "Spice Plantation Tour", "Cab"],
       description: "Discover 'God's Own Country'. Wander through the lush green tea gardens of Munnar, explore the wildlife in Thekkady, and cruise along the tranquil backwaters of Alleppey in a private houseboat.",
       highlights: "Munnar Tea Estate Walk • Thekkady Wildlife Boat Tour • Private Houseboat Cruise"
@@ -259,7 +259,7 @@ const travelData = {
       price: 24499,
       category: "domestic",
       type: "Adventure / Honeymoon",
-      image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=600&auto=format&fit=crop",
+      image: "images/packages/goa.jpg",
       inclusions: ["Luxury Beach Resorts", "Ferry Tickets (Makruzz)", "Breakfast Included", "Radhanagar Beach Visit", "Snorkeling Trip", "Transfers"],
       description: "Escape to tropical paradise. Lounge on Asia's best beach (Radhanagar Beach), witness the historic cellular jail light show, and indulge in scuba and snorkeling in Havelock & Neil Islands.",
       highlights: "Cellular Jail Sound & Light • Radhanagar Beach Sunset • Scuba diving in Havelock"
@@ -271,7 +271,7 @@ const travelData = {
       price: 52999,
       category: "international",
       type: "Adventure / Group",
-      image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=600&auto=format&fit=crop",
+      image: "images/packages/kerala.jpg",
       inclusions: ["4★ Premium Hotel", "Daily Breakfast", "Burj Khalifa 124th Floor", "Desert Safari with BBQ", "Dhow Cruise", "Visa & Tickets"],
       description: "Explore the city of future. Witness the world's tallest building, enjoy thrilling desert dune bashing, dine on a romantic cruise, and tour the majestic Sheikh Zayed Grand Mosque in Abu Dhabi.",
       highlights: "Burj Khalifa Top Floor View • Abu Dhabi Ferrari World • Arabian Desert Safari"
@@ -283,7 +283,7 @@ const travelData = {
       price: 34999,
       category: "international",
       type: "Group / Adventure",
-      image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=600&auto=format&fit=crop",
+      image: "images/packages/andaman.jpg",
       inclusions: ["3★/4★ Hotels", "Daily Breakfast", "Coral Island Tour with Lunch", "Bangkok Temple Tour", "Airport Transfers", "Visa Support"],
       description: "The ultimate budget international getaway. Experience the lively nightlife of Pattaya, beautiful Coral Island beaches, and rich golden temples and shopping centers in Bangkok.",
       highlights: "Coral Island Speedboat Tour • Reclining Buddha Temple • Chao Phraya Dinner Cruise"
@@ -295,7 +295,7 @@ const travelData = {
       price: 68999,
       category: "international",
       type: "Group / Corporate",
-      image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?q=80&w=600&auto=format&fit=crop",
+      image: "images/packages/dubai.jpg",
       inclusions: ["3★/4★ Stays", "Daily Breakfast", "Universal Studios Ticket", "Sentosa Island Cable Car", "Kuala Lumpur City Tour", "Genting Highlands Tour"],
       description: "Double country delight. Experience the cutting-edge attractions of Singapore like Gardens by the Bay and Universal Studios, combined with the culture and high-altitude theme parks of Malaysia.",
       highlights: "Universal Studios Singapore • Night Safari • Genting Cable Car Ride"
@@ -307,7 +307,7 @@ const travelData = {
       price: 154999,
       category: "international",
       type: "Group / Honeymoon",
-      image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=600&auto=format&fit=crop",
+      image: "images/packages/thailand.jpg",
       inclusions: ["4★ Star Hotels", "Buffet Breakfast & Indian Dinners", "Schengen Visa Filing", "Eiffel Tower 2nd Level", "Mt. Titlis Swiss Alps", "Luxury Coach"],
       description: "A dream journey across Europe's finest treasures: Paris, Brussels, Amsterdam, Frankfurt, and the stunning mountain ranges of Switzerland.",
       highlights: "Eiffel Tower Panoramic View • Seine River Cruise • Mount Titlis Snow Adventure"
@@ -319,7 +319,7 @@ const travelData = {
       price: 74999,
       category: "international",
       type: "Honeymoon / Nature",
-      image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=600&auto=format&fit=crop",
+      image: "images/packages/singapore.png",
       inclusions: ["4★ Overwater Villa", "All-Inclusive Meals & Drinks", "Speedboat Airport Transfers", "Water Sports Gear", "Welcome Bottle of Wine", "Taxes"],
       description: "Indulge in ultimate romance and luxury. Wake up to direct crystal blue ocean access from your private overwater villa, and dine under the stars with world-class tropical hospitality.",
       highlights: "Overwater villa stay • Snorkeling over live reefs • Sunset dolphin cruise"
@@ -331,7 +331,7 @@ const travelData = {
       price: 12499,
       category: "domestic",
       type: "Honeymoon / Nature",
-      image: "https://images.unsplash.com/photo-1626618774776-63d1ce5dc422?q=80&w=600&auto=format&fit=crop",
+      image: "images/packages/europe.jpg",
       inclusions: ["Deluxe Valley View Rooms", "Daily Breakfast & Dinner", "Solang Valley Excursion", "Shimla Mall Road Walk", "Private Cab", "Sightseeing"],
       description: "Breathe in the fresh mountain air of Himachal. Stroll through the pine valleys of Manali, witness snow activities at Solang Valley, and experience colonial heritage in Shimla.",
       highlights: "Solang Valley Paragliding • Atal Tunnel Crossway • Jakhoo Temple Shimla"
@@ -343,7 +343,7 @@ const travelData = {
       price: 19999,
       category: "domestic",
       type: "Adventure / Nature",
-      image: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=600&auto=format&fit=crop",
+      image: "images/packages/maldives.jpg",
       inclusions: ["Premium Hotels", "Daily Breakfast & Dinner", "Tsomgo Lake Excursion", "Darjeeling Sunrise Tour", "Meghalaya Living Root Bridge", "Private SUV"],
       description: "Explore the misty hills of Darjeeling, the stunning frozen lakes of Sikkim (Gangtok), and the unique living root bridges and cleanest villages of Meghalaya (Shillong).",
       highlights: "Tiger Hill Darjeeling Sunrise • Gangtok Ropeway • Cherrapunji Waterfalls"
@@ -355,7 +355,7 @@ const travelData = {
       price: 28999,
       category: "international",
       type: "Adventure / Culture",
-      image: "https://images.unsplash.com/photo-1627885068412-f19b22a033c4?q=80&w=600&auto=format&fit=crop",
+      image: "images/packages/manali.jpg",
       inclusions: ["3★/4★ Hotels", "All Meals Included", "Phuentsholing Transfer", "Thimphu Sightseeing", "Tiger's Nest Trek", "SDF Taxes"],
       description: "Discover the last great Himalayan kingdom. Experience the unique culture of Thimphu and Paro, and hike up to the iconic Tiger's Nest Monastery perched on a cliff edge.",
       highlights: "Tiger's Nest Hike • Punakha Dzong • Thimphu Buddha Dordenma"
@@ -367,7 +367,7 @@ const travelData = {
       price: 36999,
       category: "international",
       type: "Nature / Heritage",
-      image: "https://images.unsplash.com/photo-1539151590212-9c98a587cefb?q=80&w=600&auto=format&fit=crop",
+      image: "images/packages/northeast.jpg",
       inclusions: ["Premium Resorts", "Daily Breakfast & Dinner", "Kandy Temple of Tooth", "Nuwara Eliya Tea Gardens", "Bentota Beach", "Private AC Car"],
       description: "Experience the teardrop of India. Explore ancient ruins, lush tea estates in Nuwara Eliya, elephant orphanages, and the pristine golden beaches of Bentota.",
       highlights: "Pinnawala Elephant Orphanage • Kandy Cultural Show • Bentota Water Sports"
@@ -379,7 +379,7 @@ const travelData = {
       price: 13999,
       category: "domestic",
       type: "Nature / Hills",
-      image: "https://images.unsplash.com/photo-1598091383021-15ddea10925d?q=80&w=600&auto=format&fit=crop",
+      image: "images/packages/coorg.jpg",
       inclusions: ["3★ Eco-Resort", "Breakfast & Dinner", "Coffee Estate Walk", "Abbey Falls Visit", "Private Cab", "Transfers"],
       description: "Often called the Scotland of India, Coorg is famous for its lush green hills and sprawling coffee estates. Unwind in nature and visit stunning waterfalls and Tibetan monasteries.",
       highlights: "Coffee Plantation Tour • Abbey Falls • Namdroling Monastery"
@@ -391,7 +391,7 @@ const travelData = {
       price: 9999,
       category: "domestic",
       type: "Adventure / Wildlife",
-      image: "https://images.unsplash.com/photo-1564750975191-0fcfc142c65a?q=80&w=600&auto=format&fit=crop",
+      image: "images/packages/corbett.jpg",
       inclusions: ["Jungle Resort Stay", "All Meals", "Open Jeep Safari", "Nature Walk", "Bonfire", "Taxes"],
       description: "Experience the thrill of the wild. Embark on adventurous open jeep safaris in India's oldest national park to spot the majestic Bengal tiger and diverse wildlife.",
       highlights: "Early Morning Jungle Safari • Kosi River Visit • Bonfire Evenings"
@@ -403,7 +403,7 @@ const travelData = {
       price: 14500,
       category: "domestic",
       type: "Adventure / Wildlife",
-      image: "https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?q=80&w=600&auto=format&fit=crop",
+      image: "images/packages/gir.jpg",
       inclusions: ["4★ Jungle Lodge", "Breakfast & Dinner", "Asiatic Lion Safari", "Somnath Temple Visit", "Local Transfers", "Guide"],
       description: "Visit the only home of the Asiatic Lions. Enjoy an exhilarating safari in Gir National Park and pay your respects at the historic Somnath Temple.",
       highlights: "Asiatic Lion Jeep Safari • Somnath Jyotirlinga • Devalia Safari Park"
@@ -415,7 +415,7 @@ const travelData = {
       price: 16999,
       category: "domestic",
       type: "Adventure / Leisure",
-      image: "https://images.unsplash.com/photo-1512100356356-de1b84283e18?q=80&w=600&auto=format&fit=crop",
+      image: "images/packages/pench.jpg",
       inclusions: ["4★ Beach Resort", "Daily Breakfast", "Dudhsagar Waterfall Trek", "North & South Goa", "Dinner Cruise", "Airport Pickup"],
       description: "The complete Goa experience. From the vibrant nightlife of Baga to the serene beaches of Palolem, topped off with a thrilling trek to Dudhsagar Waterfalls.",
       highlights: "Dudhsagar Waterfalls • Casino Cruise • Fort Aguada"
@@ -427,7 +427,7 @@ const travelData = {
       price: 15499,
       category: "domestic",
       type: "Nature / Heritage",
-      image: "https://images.unsplash.com/photo-1562916568-d069da5c065e?q=80&w=600&auto=format&fit=crop",
+      image: "images/packages/goa.jpg",
       inclusions: ["Heritage Hotel", "Breakfast & Dinner", "Toy Train Joyride Ticket", "Tiger Hill Safari", "Tea Garden Visit", "Cab"],
       description: "A nostalgic journey through the Queen of Hills. Experience the UNESCO World Heritage Toy Train ride through rolling tea gardens and misty mountain curves.",
       highlights: "DHR Toy Train Ride • Tiger Hill Sunrise • Happy Valley Tea Estate"
@@ -439,7 +439,7 @@ const travelData = {
       price: 175000,
       category: "international",
       type: "Adventure / Tour",
-      image: "https://images.unsplash.com/photo-1471623432079-b009d30b6729?q=80&w=600&auto=format&fit=crop",
+      image: "images/packages/darjeeling.jpg",
       inclusions: ["3★/4★ Hotels", "Eurail Global Pass", "Daily Breakfast", "Inter-city Train Bookings", "Visa Assistance", "Map & Itinerary"],
       description: "Backpack or travel in luxury across Europe by train. With the Eurail pass, hop between Paris, Amsterdam, Berlin, and Rome with unlimited scenic rail travel.",
       highlights: "Unlimited Eurail Access • Scenic Alpine Train Routes • Inter-country Hopping"
@@ -451,7 +451,7 @@ const travelData = {
       price: 195000,
       category: "international",
       type: "Group / Luxury",
-      image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=600&auto=format&fit=crop",
+      image: "images/packages/europe.jpg",
       inclusions: ["4★ City Center Hotels", "All Indian Meals", "Skip-the-line Monuments", "Luxury AC Coach", "Visa Fees", "Tour Manager"],
       description: "The ultimate sightseeing experience covering the most iconic monuments of Europe without the hassle of waiting in lines. Ideal for families and seniors.",
       highlights: "Skip-the-line Eiffel Tower • Vatican City Tour • Venice Gondola Ride"
@@ -463,7 +463,7 @@ const travelData = {
       price: 11499,
       category: "domestic",
       type: "Adventure / Wildlife",
-      image: "https://images.unsplash.com/photo-1549366021-9f761d450615?q=80&w=600&auto=format&fit=crop",
+      image: "images/packages/europe.jpg",
       inclusions: ["Luxury Jungle Camp", "Breakfast, Lunch & Dinner", "Open Jeep Safari", "Nature Walk", "Night Drive", "Taxes"],
       description: "Step into the real 'Jungle Book'. Famous for its royal Bengal tigers and lush teak forests, Pench offers one of the most thrilling safari experiences in India.",
       highlights: "Open Jeep Tiger Safari • Night Jungle Drive • Bird Watching"
@@ -475,7 +475,7 @@ const travelData = {
       price: 89999,
       category: "international",
       type: "Heritage / Tour",
-      image: "https://images.unsplash.com/photo-1539667468225-eebb663053e6?q=80&w=600&auto=format&fit=crop",
+      image: "images/packages/pench.jpg",
       inclusions: ["4★ Hotels & Cruise", "All Meals Included", "Pyramids of Giza", "Nile River Cruise", "Visa on Arrival Assist", "Transfers"],
       description: "Travel back in time to the land of Pharaohs. Witness the Great Pyramids, the Sphinx, and sail down the historic Nile River on a luxury cruise.",
       highlights: "Great Pyramids of Giza • Luxor Temple • 3-Night Nile Cruise"
@@ -487,7 +487,7 @@ const travelData = {
       price: 49999,
       category: "international",
       type: "Luxury / Leisure",
-      image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=600&auto=format&fit=crop",
+      image: "images/packages/egypt.jpg",
       inclusions: ["5★ City Hotel", "Daily Breakfast", "Dubai Mall Vouchers", "Global Village Ticket", "Premium Transfers", "Visa Fees"],
       description: "A shopper's paradise designed for ultimate leisure. Stay in the heart of Downtown Dubai, experience the Global Village, and enjoy massive discounts across all malls.",
       highlights: "Dubai Mall Shopping • Global Village Access • Luxury Downtown Stay"
