@@ -371,6 +371,102 @@ const travelData = {
       inclusions: ["Premium Resorts", "Daily Breakfast & Dinner", "Kandy Temple of Tooth", "Nuwara Eliya Tea Gardens", "Bentota Beach", "Private AC Car"],
       description: "Experience the teardrop of India. Explore ancient ruins, lush tea estates in Nuwara Eliya, elephant orphanages, and the pristine golden beaches of Bentota.",
       highlights: "Pinnawala Elephant Orphanage • Kandy Cultural Show • Bentota Water Sports"
+    },
+    {
+      id: "coorg",
+      title: "Lush Green Coorg Coffee Plantations",
+      duration: "3 Nights / 4 Days",
+      price: 13999,
+      category: "domestic",
+      type: "Nature / Hills",
+      image: "https://images.unsplash.com/photo-1598091383021-15ddea10925d?q=80&w=600&auto=format&fit=crop",
+      inclusions: ["3★ Eco-Resort", "Breakfast & Dinner", "Coffee Estate Walk", "Abbey Falls Visit", "Private Cab", "Transfers"],
+      description: "Often called the Scotland of India, Coorg is famous for its lush green hills and sprawling coffee estates. Unwind in nature and visit stunning waterfalls and Tibetan monasteries.",
+      highlights: "Coffee Plantation Tour • Abbey Falls • Namdroling Monastery"
+    },
+    {
+      id: "corbett",
+      title: "Jim Corbett Wildlife Safari",
+      duration: "2 Nights / 3 Days",
+      price: 9999,
+      category: "domestic",
+      type: "Adventure / Wildlife",
+      image: "https://images.unsplash.com/photo-1581451121175-fb18e3845bba?q=80&w=600&auto=format&fit=crop",
+      inclusions: ["Jungle Resort Stay", "All Meals", "Open Jeep Safari", "Nature Walk", "Bonfire", "Taxes"],
+      description: "Experience the thrill of the wild. Embark on adventurous open jeep safaris in India's oldest national park to spot the majestic Bengal tiger and diverse wildlife.",
+      highlights: "Early Morning Jungle Safari • Kosi River Visit • Bonfire Evenings"
+    },
+    {
+      id: "gir",
+      title: "Gir Lion Safari Adventure",
+      duration: "3 Nights / 4 Days",
+      price: 14500,
+      category: "domestic",
+      type: "Adventure / Wildlife",
+      image: "https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?q=80&w=600&auto=format&fit=crop",
+      inclusions: ["4★ Jungle Lodge", "Breakfast & Dinner", "Asiatic Lion Safari", "Somnath Temple Visit", "Local Transfers", "Guide"],
+      description: "Visit the only home of the Asiatic Lions. Enjoy an exhilarating safari in Gir National Park and pay your respects at the historic Somnath Temple.",
+      highlights: "Asiatic Lion Jeep Safari • Somnath Jyotirlinga • Devalia Safari Park"
+    },
+    {
+      id: "goa-premium",
+      title: "Ultimate Goa Beach Party",
+      duration: "5 Nights / 6 Days",
+      price: 16999,
+      category: "domestic",
+      type: "Adventure / Leisure",
+      image: "https://images.unsplash.com/photo-1512100356356-de1b84283e18?q=80&w=600&auto=format&fit=crop",
+      inclusions: ["4★ Beach Resort", "Daily Breakfast", "Dudhsagar Waterfall Trek", "North & South Goa", "Dinner Cruise", "Airport Pickup"],
+      description: "The complete Goa experience. From the vibrant nightlife of Baga to the serene beaches of Palolem, topped off with a thrilling trek to Dudhsagar Waterfalls.",
+      highlights: "Dudhsagar Waterfalls • Casino Cruise • Fort Aguada"
+    },
+    {
+      id: "darjeeling-train",
+      title: "Darjeeling Toy Train & Tea Estates",
+      duration: "4 Nights / 5 Days",
+      price: 15499,
+      category: "domestic",
+      type: "Nature / Heritage",
+      image: "https://images.unsplash.com/photo-1544644181-1484b3f8c8b4?q=80&w=600&auto=format&fit=crop",
+      inclusions: ["Heritage Hotel", "Breakfast & Dinner", "Toy Train Joyride Ticket", "Tiger Hill Safari", "Tea Garden Visit", "Cab"],
+      description: "A nostalgic journey through the Queen of Hills. Experience the UNESCO World Heritage Toy Train ride through rolling tea gardens and misty mountain curves.",
+      highlights: "DHR Toy Train Ride • Tiger Hill Sunrise • Happy Valley Tea Estate"
+    },
+    {
+      id: "europe-rail",
+      title: "Eurail Grand European Journey",
+      duration: "11 Nights / 12 Days",
+      price: 175000,
+      category: "international",
+      type: "Adventure / Tour",
+      image: "https://images.unsplash.com/photo-1471623432079-b009d30b6729?q=80&w=600&auto=format&fit=crop",
+      inclusions: ["3★/4★ Hotels", "Eurail Global Pass", "Daily Breakfast", "Inter-city Train Bookings", "Visa Assistance", "Map & Itinerary"],
+      description: "Backpack or travel in luxury across Europe by train. With the Eurail pass, hop between Paris, Amsterdam, Berlin, and Rome with unlimited scenic rail travel.",
+      highlights: "Unlimited Eurail Access • Scenic Alpine Train Routes • Inter-country Hopping"
+    },
+    {
+      id: "europe-sightseeing",
+      title: "Europe Premium Sightseeing Tour",
+      duration: "10 Nights / 11 Days",
+      price: 195000,
+      category: "international",
+      type: "Group / Luxury",
+      image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=600&auto=format&fit=crop",
+      inclusions: ["4★ City Center Hotels", "All Indian Meals", "Skip-the-line Monuments", "Luxury AC Coach", "Visa Fees", "Tour Manager"],
+      description: "The ultimate sightseeing experience covering the most iconic monuments of Europe without the hassle of waiting in lines. Ideal for families and seniors.",
+      highlights: "Skip-the-line Eiffel Tower • Vatican City Tour • Venice Gondola Ride"
+    },
+    {
+      id: "pench",
+      title: "Pench National Park Safari",
+      duration: "2 Nights / 3 Days",
+      price: 11499,
+      category: "domestic",
+      type: "Adventure / Wildlife",
+      image: "https://images.unsplash.com/photo-1549366021-9f761d450615?q=80&w=600&auto=format&fit=crop",
+      inclusions: ["Luxury Jungle Camp", "Breakfast, Lunch & Dinner", "Open Jeep Safari", "Nature Walk", "Night Drive", "Taxes"],
+      description: "Step into the real 'Jungle Book'. Famous for its royal Bengal tigers and lush teak forests, Pench offers one of the most thrilling safari experiences in India.",
+      highlights: "Open Jeep Tiger Safari • Night Jungle Drive • Bird Watching"
     }
   ],
 
