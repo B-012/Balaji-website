@@ -199,7 +199,7 @@ const travelData = {
       price: 18499,
       category: "domestic",
       type: "Honeymoon / Nature",
-      image: "images/packages/dubai.jpg",
+      image: "images/packages/kashmir.png",
       inclusions: ["3★/4★ Hotel", "Houseboat Stay", "Daily Breakfast & Dinner", "Shikara Ride", "Private Cab", "Sightseeing"],
       description: "Experience the paradise on earth. Explore the scenic valleys of Srinagar, Gulmarg, Pahalgam, and Sonamarg, with a magical night stay in a traditional luxury houseboat on Dal Lake.",
       highlights: "Srinagar Shikara Ride • Snow activities in Gulmarg • Betaab Valley in Pahalgam"
@@ -211,7 +211,7 @@ const travelData = {
       price: 32999,
       category: "religious",
       type: "Spiritual / Religious",
-      image: "images/packages/france.jpg",
+      image: "images/packages/chardham.png",
       inclusions: ["Hotels & Ashrams", "Pure Veg Meals", "Group Transfers", "Medical Assistance", "VIP Darshan Slips", "Guide"],
       description: "A soul-purifying pilgrimage to Yamunotri, Gangotri, Kedarnath, and Badrinath. Deeply structured for senior citizens and families with ultimate comfort, safety, and priority access.",
       highlights: "VIP Kedarnath Darshan • Holy bath at Gangotri • Scenic Himalayan driving guides"
@@ -295,7 +295,7 @@ const travelData = {
       price: 68999,
       category: "international",
       type: "Group / Corporate",
-      image: "images/packages/dubai.jpg",
+      image: "images/packages/singapore.png",
       inclusions: ["3★/4★ Stays", "Daily Breakfast", "Universal Studios Ticket", "Sentosa Island Cable Car", "Kuala Lumpur City Tour", "Genting Highlands Tour"],
       description: "Double country delight. Experience the cutting-edge attractions of Singapore like Gardens by the Bay and Universal Studios, combined with the culture and high-altitude theme parks of Malaysia.",
       highlights: "Universal Studios Singapore • Night Safari • Genting Cable Car Ride"
@@ -415,7 +415,7 @@ const travelData = {
       price: 16999,
       category: "domestic",
       type: "Adventure / Leisure",
-      image: "images/packages/pench.jpg",
+      image: "images/packages/goa.jpg",
       inclusions: ["4★ Beach Resort", "Daily Breakfast", "Dudhsagar Waterfall Trek", "North & South Goa", "Dinner Cruise", "Airport Pickup"],
       description: "The complete Goa experience. From the vibrant nightlife of Baga to the serene beaches of Palolem, topped off with a thrilling trek to Dudhsagar Waterfalls.",
       highlights: "Dudhsagar Waterfalls • Casino Cruise • Fort Aguada"
@@ -427,7 +427,7 @@ const travelData = {
       price: 15499,
       category: "domestic",
       type: "Nature / Heritage",
-      image: "images/packages/goa.jpg",
+      image: "images/packages/darjeeling.jpg",
       inclusions: ["Heritage Hotel", "Breakfast & Dinner", "Toy Train Joyride Ticket", "Tiger Hill Safari", "Tea Garden Visit", "Cab"],
       description: "A nostalgic journey through the Queen of Hills. Experience the UNESCO World Heritage Toy Train ride through rolling tea gardens and misty mountain curves.",
       highlights: "DHR Toy Train Ride • Tiger Hill Sunrise • Happy Valley Tea Estate"
