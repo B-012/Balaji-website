@@ -211,7 +211,7 @@ const travelData = {
       price: 32999,
       category: "religious",
       type: "Spiritual / Religious",
-      image: "https://images.unsplash.com/photo-1560938062-817bfad7c7b8?q=80&w=600&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1626244498322-9907310df049?q=80&w=600&auto=format&fit=crop",
       inclusions: ["Hotels & Ashrams", "Pure Veg Meals", "Group Transfers", "Medical Assistance", "VIP Darshan Slips", "Guide"],
       description: "A soul-purifying pilgrimage to Yamunotri, Gangotri, Kedarnath, and Badrinath. Deeply structured for senior citizens and families with ultimate comfort, safety, and priority access.",
       highlights: "VIP Kedarnath Darshan • Holy bath at Gangotri • Scenic Himalayan driving guides"
@@ -331,7 +331,7 @@ const travelData = {
       price: 12499,
       category: "domestic",
       type: "Honeymoon / Nature",
-      image: "https://images.unsplash.com/photo-1605649487212-4dcb1b6b1837?q=80&w=600&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1626618774776-63d1ce5dc422?q=80&w=600&auto=format&fit=crop",
       inclusions: ["Deluxe Valley View Rooms", "Daily Breakfast & Dinner", "Solang Valley Excursion", "Shimla Mall Road Walk", "Private Cab", "Sightseeing"],
       description: "Breathe in the fresh mountain air of Himachal. Stroll through the pine valleys of Manali, witness snow activities at Solang Valley, and experience colonial heritage in Shimla.",
       highlights: "Solang Valley Paragliding • Atal Tunnel Crossway • Jakhoo Temple Shimla"
@@ -355,7 +355,7 @@ const travelData = {
       price: 28999,
       category: "international",
       type: "Adventure / Culture",
-      image: "https://images.unsplash.com/photo-1574026362526-9d82136e0d37?q=80&w=600&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1627885068412-f19b22a033c4?q=80&w=600&auto=format&fit=crop",
       inclusions: ["3★/4★ Hotels", "All Meals Included", "Phuentsholing Transfer", "Thimphu Sightseeing", "Tiger's Nest Trek", "SDF Taxes"],
       description: "Discover the last great Himalayan kingdom. Experience the unique culture of Thimphu and Paro, and hike up to the iconic Tiger's Nest Monastery perched on a cliff edge.",
       highlights: "Tiger's Nest Hike • Punakha Dzong • Thimphu Buddha Dordenma"
