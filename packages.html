@@ -331,11 +331,8 @@
               <div class="package-inclusions" style="margin-top: auto;">
                 ${p.inclusions.map(inc => `<span class="inclusion-tag">${inc}</span>`).join('')}
               </div>
-              <div class="package-footer" style="padding-top: 15px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
-                <div style="font-size: 0.95rem; font-weight: 700; color: var(--text-dark);">
-                  <i class="fas fa-tags" style="color: var(--accent-color);"></i> Best Rates Available
-                </div>
-                <button class="btn btn-accent btn-sm" onclick="openBookingModal('${p.title}')">Enquire for Booking</button>
+              <div class="package-footer" style="padding-top: 15px; border-top: 1px solid var(--border-color); display: flex; justify-content: center; align-items: center;">
+                <button class="btn btn-accent btn-sm" onclick="openBookingModal('${p.title}')" style="width: 100%;">Enquire now for the price</button>
               </div>
             </div>
           </div>
