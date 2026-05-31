@@ -467,6 +467,30 @@ const travelData = {
       inclusions: ["Luxury Jungle Camp", "Breakfast, Lunch & Dinner", "Open Jeep Safari", "Nature Walk", "Night Drive", "Taxes"],
       description: "Step into the real 'Jungle Book'. Famous for its royal Bengal tigers and lush teak forests, Pench offers one of the most thrilling safari experiences in India.",
       highlights: "Open Jeep Tiger Safari • Night Jungle Drive • Bird Watching"
+    },
+    {
+      id: "egypt",
+      title: "Mystical Egypt & Nile Cruise",
+      duration: "6 Nights / 7 Days",
+      price: 89999,
+      category: "international",
+      type: "Heritage / Tour",
+      image: "https://images.unsplash.com/photo-1539667468225-eebb663053e6?q=80&w=600&auto=format&fit=crop",
+      inclusions: ["4★ Hotels & Cruise", "All Meals Included", "Pyramids of Giza", "Nile River Cruise", "Visa on Arrival Assist", "Transfers"],
+      description: "Travel back in time to the land of Pharaohs. Witness the Great Pyramids, the Sphinx, and sail down the historic Nile River on a luxury cruise.",
+      highlights: "Great Pyramids of Giza • Luxor Temple • 3-Night Nile Cruise"
+    },
+    {
+      id: "dubai-shopping",
+      title: "Dubai Luxury Shopping Festival",
+      duration: "4 Nights / 5 Days",
+      price: 49999,
+      category: "international",
+      type: "Luxury / Leisure",
+      image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=600&auto=format&fit=crop",
+      inclusions: ["5★ City Hotel", "Daily Breakfast", "Dubai Mall Vouchers", "Global Village Ticket", "Premium Transfers", "Visa Fees"],
+      description: "A shopper's paradise designed for ultimate leisure. Stay in the heart of Downtown Dubai, experience the Global Village, and enjoy massive discounts across all malls.",
+      highlights: "Dubai Mall Shopping • Global Village Access • Luxury Downtown Stay"
     }
   ],
 
