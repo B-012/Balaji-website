@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /contact.html
+Disallow: /privacy.html
+Disallow: /terms.html
 
 Sitemap: https://balaji-website-zeta.vercel.app/sitemap.xml
