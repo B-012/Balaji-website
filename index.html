@@ -634,20 +634,108 @@
   <!-- Accreditations & Airline Partners Section -->
   <section class="partners-section" style="padding: 40px 0; background: var(--white); border-top: 1px solid var(--border-color);">
     <div class="container">
-      <div class="section-header" style="margin-bottom: 25px;">
-        <span class="section-subtitle">Our Accreditations</span>
-        <h2 class="section-title" style="font-size: 2rem;">Authorized Travel Partners</h2>
+      <div class="section-header" style="margin-bottom: 30px; text-align: center;">
+        <span class="section-subtitle" style="color: #FFB300; letter-spacing: 2px; text-transform: uppercase; font-size: 0.85rem; font-weight: 700;">Our Credentials</span>
+        <h2 class="section-title" style="font-size: 2.2rem; color: #003B95; margin-top: 10px;">Authorized Airline Partners</h2>
+        <p style="color: #6b7280; max-width: 700px; margin: 15px auto 0; font-size: 0.95rem; line-height: 1.6;">We ticket directly with top domestic and international carriers, ensuring instant confirmation slips and priority seating.</p>
       </div>
-      <div class="partners-grid" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 30px; opacity: 0.8;">
-        <!-- Airlines -->
-        <img loading="lazy" src="images/airindia.png" alt="Air India" style="height: 50px; transition: var(--transition-fast);">
-        <img loading="lazy" src="images/indigo.png" alt="IndiGo" style="height: 50px; transition: var(--transition-fast);">
-        <img loading="lazy" src="images/emirates.png" alt="Emirates" style="height: 50px; transition: var(--transition-fast);">
-        <img loading="lazy" src="images/qatar.png" alt="Qatar Airways" style="height: 50px; transition: var(--transition-fast);">
-        <img loading="lazy" src="images/singapore.png" alt="Singapore Airlines" style="height: 50px; transition: var(--transition-fast);">
-        <img loading="lazy" src="images/vistara.png" alt="Vistara" style="height: 50px; transition: var(--transition-fast);">
-        <img loading="lazy" src="images/airindiaexpress.png" alt="Air India Express" style="height: 50px; transition: var(--transition-fast);">
-        <img loading="lazy" src="images/airasia.png" alt="Air Asia" style="height: 50px; transition: var(--transition-fast);">
+
+      <style>
+        .airline-cards-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 15px;
+          max-width: 1100px;
+          margin: 0 auto;
+        }
+        .airline-card {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #fff;
+          border: 1px solid #eef2f6;
+          border-radius: 6px;
+          padding: 16px 20px;
+          gap: 12px;
+          min-width: 170px;
+          flex: 0 1 auto;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+          transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .airline-card:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+          border-color: #d1e3fa;
+        }
+        .airline-card svg {
+          fill: #003B95;
+          width: 16px;
+          height: 16px;
+          flex-shrink: 0;
+          transform: rotate(45deg);
+        }
+        .airline-card span {
+          color: #003B95;
+          font-weight: 600;
+          font-size: 0.9rem;
+          line-height: 1.3;
+          text-align: center;
+        }
+        @media (max-width: 768px) {
+          .airline-card {
+            flex: 1 1 calc(33.333% - 15px);
+          }
+        }
+        @media (max-width: 480px) {
+          .airline-card {
+            flex: 1 1 calc(50% - 15px);
+          }
+        }
+      </style>
+
+      <div class="airline-cards-container">
+        <!-- SVG Icon definition to reuse -->
+        <svg style="display: none;">
+          <defs>
+            <g id="plane-icon">
+              <path d="M14.532,10.669l-4.57-2.639V2.551C9.962,1.144,8.817,0,7.41,0S4.858,1.144,4.858,2.551v5.479l-4.57,2.639C0.108,10.774,0,10.97,0,11.183v1.319c0,0.354,0.35,0.61,0.69,0.505l4.168-1.282v3.082l-1.129,1.13c-0.129,0.129-0.201,0.304-0.201,0.487v0.99c0,0.384,0.404,0.635,0.75,0.473l3.133-1.472l3.133,1.472c0.346,0.162,0.75-0.089,0.75-0.473v-0.99c0-0.183-0.072-0.358-0.201-0.487l-1.129-1.13v-3.082l4.168,1.282c0.34,0.105,0.69-0.151,0.69-0.505v-1.319C14.82,10.97,14.712,10.774,14.532,10.669z"/>
+            </g>
+          </defs>
+        </svg>
+
+        <div class="airline-card">
+          <svg viewBox="0 0 15 18"><use href="#plane-icon"></use></svg>
+          <span>IndiGo<br>Airlines</span>
+        </div>
+        <div class="airline-card">
+          <svg viewBox="0 0 15 18"><use href="#plane-icon"></use></svg>
+          <span>Air India</span>
+        </div>
+        <div class="airline-card">
+          <svg viewBox="0 0 15 18"><use href="#plane-icon"></use></svg>
+          <span>SpiceJet</span>
+        </div>
+        <div class="airline-card">
+          <svg viewBox="0 0 15 18"><use href="#plane-icon"></use></svg>
+          <span>Vistara</span>
+        </div>
+        <div class="airline-card">
+          <svg viewBox="0 0 15 18"><use href="#plane-icon"></use></svg>
+          <span>Emirates</span>
+        </div>
+        <div class="airline-card">
+          <svg viewBox="0 0 15 18"><use href="#plane-icon"></use></svg>
+          <span>Singapore<br>Airlines</span>
+        </div>
+        <div class="airline-card">
+          <svg viewBox="0 0 15 18"><use href="#plane-icon"></use></svg>
+          <span>Qatar<br>Airways</span>
+        </div>
+        <div class="airline-card">
+          <svg viewBox="0 0 15 18"><use href="#plane-icon"></use></svg>
+          <span>Thai<br>Airways</span>
+        </div>
       </div>
     </div>
   </section>
