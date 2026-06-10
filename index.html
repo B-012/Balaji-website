@@ -281,17 +281,33 @@
   <div id="top-bar-placeholder"></div>
   <div id="header-placeholder"></div>
 
+  <style>
+    .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+    .hero .container {
+      position: relative;
+      z-index: 2;
+    }
+  </style>
+
   <!-- Hero Slider Section -->
   <section class="hero" style="padding: 0;">
-    <div class="hero-slider">
-      <!-- Slide 1 (Kashmir Mountains) -->
-      <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1566228015668-4c45dbc4e2f5?q=80&w=1920&auto=format&fit=crop');"></div>
-      <!-- Slide 2 (Maldives Overwater Villas) -->
-      <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=1920&auto=format&fit=crop');"></div>
-      <!-- Slide 3 (Swiss Alps / Europe) -->
-      <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=1920&auto=format&fit=crop');"></div>
-    </div>
+    <!-- Background Video (Placeholder generic travel video) -->
+    <!-- Replace the src URL below with your own custom video file if you have one containing Air India, Vistara, IndiGo, and Europe rail. For example: src="images/branded-travel-video.mp4" -->
+    <video autoplay loop muted playsinline class="hero-video">
+      <source src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Airplane_takeoff_at_Naples_Int%27I_Airport_from_cabin.webm" type="video/webm">
+    </video>
     
+    <!-- Dark overlay to ensure text readability over video -->
+    <div class="video-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 31, 68, 0.65); z-index: 1;"></div>
+
     <div class="container">
       <div class="hero-content">
         <span class="section-subtitle" style="color: var(--accent-color); text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">Apna Sapna, Hamari Zimmedari</span>
