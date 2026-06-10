@@ -1032,6 +1032,19 @@ function handleFormSubmit(event, formId) {
 
   const formData = new FormData(form);
 
+  // Send push notification via ntfy.sh
+  const phone = formData.get("phone") || "No Phone Provided";
+  const destination = formData.get("where_do_you_want_to_go") || formData.get("e_g_kashmir_dubai") || formData.get("destination") || "Unknown Destination";
+  const name = formData.get("enter_your_full_name") || formData.get("name") || "New Lead";
+  
+  fetch("https://ntfy.sh/balajitravels_leads_kolkata", {
+    method: "POST",
+    body: `New Inquiry!\nName: ${name}\nMobile: ${phone}\nDestination: ${destination}`,
+    headers: {
+      "Title": "Balaji Travels - New Lead!"
+    }
+  }).catch(err => console.error("Ntfy Error:", err));
+
   fetch("https://api.web3forms.com/submit", {
     method: "POST",
     body: formData
