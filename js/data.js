@@ -497,6 +497,15 @@ const travelData = {
   // Premium customer reviews (Google style)
   testimonials: [
     {
+      name: "Somreeta Mandal",
+      location: "Kolkata, WB",
+      trip: "Train Tickets & Transfer",
+      rating: 5,
+      date: "Jul 2025",
+      text: "Best and most efficient travel agent in Kolkata, our last minute plan to book train tickets for NJP along with pickup car was possible thanks to Balaji Travels. Smooth and hassle free experience felt like our booking was in the best hands",
+      avatar: "avatar4.jpg"
+    },
+    {
       name: "Asit Padhi",
       location: "Kolkata, WB",
       trip: "Flight & Train Tickets",
