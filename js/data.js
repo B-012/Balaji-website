@@ -497,6 +497,87 @@ const travelData = {
   // Premium customer reviews (Google style)
   testimonials: [
     {
+      name: "Rohan Das",
+      location: "Kolkata, WB",
+      trip: "Train Tickets",
+      rating: 5,
+      date: "May 2026",
+      text: "Balaji Travels saved my day! I needed an emergency Tatkal ticket from Howrah to Delhi, and everywhere else I checked said it was impossible. The team managed to get a confirmed ticket for me. Excellent and prompt service!",
+      avatar: "avatar2.jpg"
+    },
+    {
+      name: "Sneha Gupta",
+      location: "Kolkata, WB",
+      trip: "Train Tickets",
+      rating: 5,
+      date: "Feb 2026",
+      text: "Booking train tickets during festival season is always a nightmare, but not with Balaji Travels. They secured my family's tickets well in advance and kept me updated throughout. Highly recommend for any railway bookings.",
+      avatar: "avatar3.jpg"
+    },
+    {
+      name: "Amitava Bose",
+      location: "Kolkata, WB",
+      trip: "Train Tickets",
+      rating: 5,
+      date: "Dec 2025",
+      text: "The most reliable train booking agent in Kolkata. I've used their services multiple times for both normal and premium Tatkal bookings, and they have never disappointed. Very professional behavior.",
+      avatar: "avatar4.jpg"
+    },
+    {
+      name: "Vikram Singh",
+      location: "Kolkata, WB",
+      trip: "Flight Tickets",
+      rating: 5,
+      date: "Jun 2026",
+      text: "Got a fantastic deal on my international flight to Dubai through Balaji Travels. They compared multiple airlines and found me the cheapest fare with the best baggage allowance. Very transparent pricing!",
+      avatar: "avatar5.jpg"
+    },
+    {
+      name: "Priya Sharma",
+      location: "Kolkata, WB",
+      trip: "Flight Tickets",
+      rating: 5,
+      date: "Mar 2026",
+      text: "I had to cancel and reschedule my domestic flight due to a medical emergency. The staff at Balaji Travels handled the entire modification process smoothly without any exorbitant cancellation fees. Truly a lifesaver.",
+      avatar: "avatar6.jpg"
+    },
+    {
+      name: "Rakesh Agarwal",
+      location: "Kolkata, WB",
+      trip: "Flight Tickets",
+      rating: 5,
+      date: "Jan 2026",
+      text: "Their flight booking service is incredibly fast. I just messaged them my dates, and within 10 minutes I had my tickets issued on WhatsApp. Better and more personal than any online portal.",
+      avatar: "avatar7.jpg"
+    },
+    {
+      name: "Neha Roy",
+      location: "Kolkata, WB",
+      trip: "Hotel Booking",
+      rating: 5,
+      date: "Apr 2026",
+      text: "Booked a 4-star hotel in Darjeeling through Balaji Travels and the experience was flawless. We even got a complimentary room upgrade and early check-in thanks to their great relationship with the hotel management.",
+      avatar: "avatar8.jpg"
+    },
+    {
+      name: "Subhashish Mukherjee",
+      location: "Kolkata, WB",
+      trip: "Hotel Booking",
+      rating: 5,
+      date: "Oct 2025",
+      text: "I reached out for a last-minute hotel booking in Puri. They quickly provided 3 great options within my budget right near the sea beach. The property was exactly as described. Great job!",
+      avatar: "avatar9.jpg"
+    },
+    {
+      name: "Anjali Desai",
+      location: "Kolkata, WB",
+      trip: "Hotel Booking",
+      rating: 5,
+      date: "Sep 2025",
+      text: "Balaji Travels arranged our entire corporate offsite accommodation in Goa. Handling 50+ rooms can be chaotic, but their team ensured everyone had a smooth check-in and excellent hospitality. 5 stars for their hotel booking expertise.",
+      avatar: "avatar1.jpg"
+    },
+    {
       name: "Somreeta Mandal",
       location: "Kolkata, WB",
       trip: "Train Tickets & Transfer",
