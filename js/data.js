@@ -497,6 +497,213 @@ const travelData = {
   // Premium customer reviews (Google style)
   testimonials: [
     {
+      name: "Asit Padhi",
+      location: "Kolkata, WB",
+      trip: "Flight & Train Tickets",
+      rating: 5,
+      date: "Feb 2024",
+      text: "One of the best Travels for Ticket booking for flight and trains with emergency basis also...Regarding Hotel booking also helps a lot to track best hotel at last moment... Recommended for sure to others to reach out...",
+      avatar: "avatar2.jpg"
+    },
+    {
+      name: "Deb Bhattacharjee",
+      location: "Kolkata, WB",
+      trip: "Emergency Tickets",
+      rating: 5,
+      date: "Jul 2025",
+      text: "Their service is unputdownable. They fulfil commitment to each customer at any cost. There was an emergency ticket at saraighat exp where securing seats are very critical specially on weekend. I approached to other railway top ticket agents but no one could able to provide any assurance. But Balaji travels were able to manage it as committed. The ticket was confirmed on VIP quota well before the chart was prepared. Their representatives are so well mannered and charges are economical then other agents in kolkata. I would highly recommend them for any travel related solutions. They are well connected on flights, hotel reservations as well a tour operator. 🙏 Debarshi",
+      avatar: "avatar3.jpg"
+    },
+    {
+      name: "Muralidhar Jash",
+      location: "Kolkata, WB",
+      trip: "Tatkal Tickets",
+      rating: 5,
+      date: "Jul 2025",
+      text: "I was in dire need to book two Railway Tatkal Tickets for performing a journey by individuals lacking sufficient financial resources from Bihar to Delhi in April’25 which is quite a busy route as understood. I thought of entrusting the search to some reliable and trustworthy Travel agents in Kolkata. I came across of one Balaji Travels who are reportedly very proficient in doing their job. I just tried and found it’s correctness and considered them worth in the field. They provided a good support and service excellence to me to my full satisfaction. Moreover in view of rush in the sector, initially they asked for higher service charges but when I talked about travelling passengers lacking sufficient financial resources to pay higher service charges, they reviewed and lowered it. It was their greatness that impressed me additionally. I wish they prosper further in the forthcoming days in their business profession.",
+      avatar: "avatar1.jpg"
+    },
+    {
+      name: "Minakhi Deka",
+      location: "Kolkata, WB",
+      trip: "Train Tickets",
+      rating: 5,
+      date: "Jan 2024",
+      text: "Too good within so short time they promptly provide us confirmed tickets...that too in season time...luv Balaji travels and their associates...5 star for their promise.",
+      avatar: "avatar1.jpg"
+    },
+    {
+      name: "Tirupati D",
+      location: "Kolkata, WB",
+      trip: "Train Tickets",
+      rating: 5,
+      date: "Apr 2024",
+      text: "I am very happy with balaji travels services. I booked for the first time for train.It was urgent travel where many agents failed to book train ticket. But balaji travels madam did to and return ticket successfully. Full paisa wasool service. Very nice",
+      avatar: "avatar2.jpg"
+    },
+    {
+      name: "Partha Chakraborty",
+      location: "Kolkata, WB",
+      trip: "Travel Services",
+      rating: 5,
+      date: "Apr 2024",
+      text: "I had an amazing experience with Balaji Travels. Everything was perfectly organised and stress free. Highly professional and incredibly reliable. Every moment was memorable and thanks for the excellent service.",
+      avatar: "avatar3.jpg"
+    },
+    {
+      name: "Arpita Paul",
+      location: "Kolkata, WB",
+      trip: "Travel Services",
+      rating: 5,
+      date: "Feb 2024",
+      text: "One of the beat travel agency in Kolkata 👏 I had a great experience with balaji travels ...the whole process was hassle free and easy ...they provide great recommendations that matched my needs perfectly.......I highly recommend balaji travel for anyone looking for reliable travel services.......I m very happy 🤩",
+      avatar: "avatar4.jpg"
+    },
+    {
+      name: "carpediem bazinga",
+      location: "Kolkata, WB",
+      trip: "Last Minute Tickets",
+      rating: 5,
+      date: "Jan 2024",
+      text: "Mr. Joshi is a magician. We urgently needed last-minute tickets for 10 people during the peak holiday season, and most agencies were unable to help. Thanks to his efforts, everything was arranged smoothly and we were able to travel home on time, just as planned. Highly recommend his agency i.e, Balaji travels.",
+      avatar: "avatar5.jpg"
+    },
+    {
+      name: "Madhusree Dasgupta",
+      location: "Kolkata, WB",
+      trip: "Train Tickets",
+      rating: 5,
+      date: "Jan 2024",
+      text: "I am glad to state that Balaji Travels helped me and my family to book our tickets in Howrah SMVT Express and confirmed our seats. They are a highly trustworthy railway booking agency and prompt and courteous in their service.",
+      avatar: "avatar6.jpg"
+    },
+    {
+      name: "Sandeep Agarwal",
+      location: "Kolkata, WB",
+      trip: "Tatkal Tickets",
+      rating: 5,
+      date: "Dec 2023",
+      text: "We urgently needed 2 tickets but the Tatkal window had already closed. When we contacted the brother, he assured us he would help — and he arranged confirmed tickets just before departure. Truly reliable and excellent service!",
+      avatar: "avatar7.jpg"
+    },
+    {
+      name: "krishna murarka",
+      location: "Kolkata, WB",
+      trip: "Travel Services",
+      rating: 5,
+      date: "Dec 2023",
+      text: "Very nice people. They provided me all the travel services I needed and their booking staff is so good.",
+      avatar: "avatar8.jpg"
+    },
+    {
+      name: "Debankur Ghosh",
+      location: "Kolkata, WB",
+      trip: "Train Tickets",
+      rating: 5,
+      date: "Jan 2024",
+      text: "Wonderful experience. Really helped me confirm tickets. Very satisfied and happy with their service. Value for money. A big thanks to Mr. Vikash.",
+      avatar: "avatar9.jpg"
+    },
+    {
+      name: "Debarshi Bhattacharjee",
+      location: "Kolkata, WB",
+      trip: "Corporate Travel Services",
+      rating: 5,
+      date: "Jan 2024",
+      text: "Ajanta Shoes expresses their satisfaction with the services provided by Balaji Travels and Tours. They commend the company's uninterrupted and commendable service across various sectors, including railway, flights, and hotel bookings. Balaji Travels and Tours boasts an extensive network capable of handling general and Tathkal seva bookings, including VIP quota reservations in the most challenging sectors where confirmation is often difficult even in Tathkal. Additionally, their rates for flights and hotels are competitive, offering a wide range of options managed by their highly efficient and trained staff. This exemplary service has significantly contributed to Ajanta Shoes' positive experience.",
+      avatar: "avatar1.jpg"
+    },
+    {
+      name: "ANIRUDDHA",
+      location: "Kolkata, WB",
+      trip: "Travel Services",
+      rating: 5,
+      date: "6 Jul 2026",
+      text: "I had a great experience with Balaji Travels! The service was very quick, and I got my tickets in no time. The agent was really helpful and answered all my questions. I felt supported throughout the process. I highly recommend Balaji Travels for anyone needing travel help. Excellent service!",
+      avatar: "avatar1.jpg"
+    },
+    {
+      name: "Snehankita",
+      location: "Kolkata, WB",
+      trip: "Travel Services",
+      rating: 5,
+      date: "31 May 2026",
+      text: "I had a wonderful experience with Balaji Travels. The agent was very helpful. They confirmed our ticket on time, just as they said. Thank you so much.",
+      avatar: "avatar2.jpg"
+    },
+    {
+      name: "Haque",
+      location: "Kolkata, WB",
+      trip: "Tatkal Tickets & Hotel",
+      rating: 5,
+      date: "29 Oct 2025",
+      text: "I had a fantastic experience with Balaji Travels! The whole process was hassle-free and easy. They provided great recommendations that matched my needs perfectly. I found their prices to be reasonable, and the special offers were a nice bonus. The service was excellent, and they responded to my queries very quickly. I highly recommend Balaji Travels for anyone looking for reliable travel services! Also special word of praise for Jayshree Mam ,she has been extremely polite and made our Tatkal tickets and very comfortable hotel stays at such a short notice.. Through her messages she would enquire about our well being and the quality of service through out our journey . Every thing was taken care of excellently by Jayshree MAM, she was was like a constant caretaker throughout our trip . THANKYOU BALAJI TOURS",
+      avatar: "avatar3.jpg"
+    },
+    {
+      name: "Arup Kayal",
+      location: "Kolkata, WB",
+      trip: "Tour Package",
+      rating: 5,
+      date: "8 Oct 2025",
+      text: "I had a great experience with Balaji Travels! They gave me excellent recommendations for my trip. The team was friendly and helpful. They helped me find the best places to visit and made my journey fun and easy. I loved their service! I will tell my friends about Balaji Travels. Thank you for everything!",
+      avatar: "avatar4.jpg"
+    },
+    {
+      name: "Debnath",
+      location: "Kolkata, WB",
+      trip: "Train Tickets",
+      rating: 5,
+      date: "7 Oct 2025",
+      text: "খুব ভালো, আমি খুব খুশি, আমার এই ট্রেনের টিকিট খুব জরুরি ছিল, এনারা যেরকম বলেছিলেন যথা সময়ে করে দিয়েছেন, আমি খুবই আপ্লুত, ধন্যবাদ",
+      avatar: "avatar5.jpg"
+    },
+    {
+      name: "shubhro Banerjee",
+      location: "Kolkata, WB",
+      trip: "Tour Package",
+      rating: 5,
+      date: "3 Oct 2025",
+      text: "My experience at Balaji Travels was exceptional! The agents were knowledgeable and attentive, ensuring every detail of my trip was perfect. Their personalized service made me feel valued, and they went above and beyond to accommodate my requests. From booking to support during the journey, Balaji Travels truly excels in customer satisfaction. Highly recommend!",
+      avatar: "avatar6.jpg"
+    },
+    {
+      name: "User",
+      location: "Kolkata, WB",
+      trip: "Last Minute Tickets",
+      rating: 5,
+      date: "12 Sep 2025",
+      text: "Most efficient travel agent in Kolkata with reasonably priced. If have any plan even in last minute , Bajali is there for you with support and confidence every time.  for every time, when ever I have faced any trouble in getting tickets in last minute, they always stand by me . Highly recommend. Specially thanks to Madam..",
+      avatar: "avatar7.jpg"
+    },
+    {
+      name: "Sudipta Mondal",
+      location: "Kolkata, WB",
+      trip: "Travel Services",
+      rating: 5,
+      date: "7 Jan 2025",
+      text: "Excellent service by Balaji Travels! The agent was knowledgeable and efficient in arranging our trip. Hassle-free process from booking to the journey. Highly recommend their services for a smooth travel experience.",
+      avatar: "avatar8.jpg"
+    },
+    {
+      name: "Sourav Mazumder",
+      location: "Kolkata, WB",
+      trip: "Travel Services",
+      rating: 5,
+      date: "14 Dec 2024",
+      text: "I had an excellent experience at Balaji Travels. The agent was very helpful and provided quick service. The prices were reasonable and they offered good deals. I highly recommend their services!",
+      avatar: "avatar9.jpg"
+    },
+    {
+      name: "Harish",
+      location: "Kolkata, WB",
+      trip: "Tatkal Tickets",
+      rating: 5,
+      date: "16 Jun 2026",
+      text: "Tatkal ticket korar jonno biswas joggo jayga \nMam ke asokho dhonnobad\nJeta sobhob noy seta akhane shombhob",
+      avatar: "avatar1.jpg"
+    },
+    {
       name: "Sandeep Agarwal",
       location: "Park Street, Kolkata",
       trip: "Corporate Flight Bookings",

@@ -919,66 +919,68 @@ function initStatsCounter() {
   observer.observe(statsSection);
 }
 
-// 5. TESTIMONIALS SLIDER CAROUSEL
-let currentSlideIndex = 0;
+// 5. REVIEWS MARQUEE — Infinite dual-row scroller
+const AVATAR_COLORS = [
+  '#003580','#1a6fbf','#c0392b','#16a085','#8e44ad',
+  '#e67e22','#2c3e50','#27ae60','#d35400','#2980b9'
+];
+
+function buildReviewCard(t, colorIdx) {
+  const initials = t.name.split(' ').map(n => n[0]).join('').toUpperCase();
+  const color = AVATAR_COLORS[colorIdx % AVATAR_COLORS.length];
+  const stars = Array(Math.floor(t.rating)).fill('<i class="fas fa-star"></i>').join('')
+    + (t.rating % 1 !== 0 ? '<i class="fas fa-star-half-alt"></i>' : '');
+
+  return `
+    <div class="review-card">
+      <div class="review-card-header">
+        <div class="review-card-user">
+          <div class="review-card-avatar" style="background:${color};">${initials}</div>
+          <div>
+            <div class="review-card-name">${t.name}</div>
+            <div class="review-card-location">${t.location || 'Kolkata, WB'}</div>
+          </div>
+        </div>
+        <!-- Google G mark -->
+        <svg class="review-card-google-g" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+          <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+          <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+          <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+        </svg>
+      </div>
+      <div class="review-card-stars">${stars}</div>
+      <p class="review-card-text">"${t.text}"</p>
+      <span class="review-card-trip"><i class="fas fa-check-circle" style="color:#27ae60;"></i> ${t.trip} · ${t.date}</span>
+    </div>
+  `;
+}
+
 function initTestimonialsSlider() {
-  const track = document.getElementById("testimonial-track");
-  const dotsContainer = document.getElementById("carousel-dots");
-  
-  if (!track || !window.travelData) return;
+  const track1 = document.getElementById('reviews-track-1');
+  const track2 = document.getElementById('reviews-track-2');
+
+  if (!track1 || !track2 || !window.travelData) return;
 
   const testimonials = window.travelData.testimonials;
-  
-  // Render Testimonial slides
-  track.innerHTML = testimonials.map((t, idx) => `
-    <div class="testimonial-slide">
-      <div class="test-rating">
-        ${Array(Math.floor(t.rating)).fill('<i class="fas fa-star"></i>').join('')}
-        ${t.rating % 1 !== 0 ? '<i class="fas fa-star-half-alt"></i>' : ''}
-      </div>
-      <p class="test-text">${t.text}</p>
-      <div class="test-user">
-        <div class="test-avatar" style="display:flex; align-items:center; justify-content:center; background-color: var(--primary-color); color: white; font-weight: bold; font-size:1.4rem;">
-          ${t.name.split(' ').map(n => n[0]).join('')}
-        </div>
-        <div class="test-meta">
-          <h4>${t.name}</h4>
-          <span>Verified Client • ${t.trip} (${t.date})</span>
-        </div>
-      </div>
-    </div>
-  `).join('');
+  const half = Math.ceil(testimonials.length / 2);
+  const row1 = testimonials.slice(0, half);
+  const row2 = testimonials.slice(half);
 
-  // Render navigation dots
-  if (dotsContainer) {
-    dotsContainer.innerHTML = testimonials.map((_, idx) => `
-      <button class="carousel-dot ${idx === 0 ? "active" : ""}" onclick="goToTestimonialSlide(${idx})" aria-label="Go to slide ${idx+1}"></button>
-    `).join('');
-  }
+  // Build card HTML for each row
+  const buildRow = (items) => items.map((t, i) => buildReviewCard(t, i)).join('');
 
-  // Automatic slide rotation
-  setInterval(() => {
-    let nextIndex = (currentSlideIndex + 1) % testimonials.length;
-    goToTestimonialSlide(nextIndex);
-  }, 6000);
+  // Duplicate each row for seamless infinite scroll
+  const row1Html = buildRow(row1);
+  track1.innerHTML = row1Html + row1Html; // duplicate
+
+  const row2Html = buildRow(row2.length ? row2 : row1);
+  track2.innerHTML = row2Html + row2Html; // duplicate
 }
 
-function goToTestimonialSlide(index) {
-  const track = document.getElementById("testimonial-track");
-  const dots = document.querySelectorAll(".carousel-dot");
-  if (!track) return;
+// Stub kept for backward compatibility (dots no longer used)
+function goToTestimonialSlide(index) {}
 
-  currentSlideIndex = index;
-  track.style.transform = `translateX(-${index * 100}%)`;
-  
-  dots.forEach((dot, idx) => {
-    if (idx === index) {
-      dot.classList.add("active");
-    } else {
-      dot.classList.remove("active");
-    }
-  });
-}
 
 // 6. HERO BACKGROUND SLIDER
 let currentHeroSlide = 0;
