@@ -1017,7 +1017,37 @@ function closeBookingModal() {
   }
 }
 
-// 8. INTERACTIVE ENQUIRY FORM HANDLER
+// 8. INTERACTIVE ENQUIRY FORM & NTFY ROUTING HANDLER
+const NTFY_TOPIC = "balaji_travels_leads_2026";
+
+function sendToNtfy(formData, formId) {
+  const name        = formData.get("enter_your_full_name") || formData.get("name") || "New Lead";
+  const phone       = formData.get("phone")                  || "No Phone Provided";
+  const email       = formData.get("email")                  || "No Email Provided";
+  const destination = formData.get("e_g_kashmir_dubai")      || formData.get("destination") || formData.get("where_do_you_want_to_go") || "N/A";
+  const travelDate  = formData.get("travel_date")            || "N/A";
+  const travelers   = formData.get("travelers")              || "";
+  const details     = formData.get("tell_us_about_the_number_of_adults_kids_hotel_class_preference_3_4_5_or_any_custom_flight_schedules") || "";
+  const source      = formId === "modal-enquiry-form" ? "Book Now Modal" : "Contact Page Form";
+
+  const title   = `New Enquiry - ${name}`;
+  let   body    = `📱 ${phone} | 📍 ${destination} | 📅 ${travelDate}`;
+  if (travelers) body += ` | 👥 ${travelers}`;
+  body += ` | Source: ${source}`;
+  if (details) body += `\n${details}`;
+
+  fetch(`https://ntfy.sh/${NTFY_TOPIC}`, {
+    method : "POST",
+    headers: {
+      "Title"   : title,
+      "Priority": "high",
+      "Tags"    : "bell,airplane",
+      "Content-Type": "text/plain"
+    },
+    body: body
+  }).catch(err => console.error("Ntfy Error:", err));
+}
+
 function handleFormSubmit(event, formId) {
   event.preventDefault();
   const form = document.getElementById(formId);
@@ -1028,25 +1058,15 @@ function handleFormSubmit(event, formId) {
   const submitBtn = form.querySelector("button[type='submit']");
   const originalText = submitBtn.innerHTML;
   
-  // Disable button and show spinner
   submitBtn.disabled = true;
   submitBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Processing Request...`;
 
   const formData = new FormData(form);
 
-  // Send push notification via ntfy.sh
-  const phone = formData.get("phone") || "No Phone Provided";
-  const destination = formData.get("where_do_you_want_to_go") || formData.get("e_g_kashmir_dubai") || formData.get("destination") || "Unknown Destination";
-  const name = formData.get("enter_your_full_name") || formData.get("name") || "New Lead";
-  
-  fetch("https://ntfy.sh/balajitravels_leads_kolkata", {
-    method: "POST",
-    body: `New Inquiry!\nName: ${name}\nMobile: ${phone}\nDestination: ${destination}`,
-    headers: {
-      "Title": "Balaji Travels - New Lead!"
-    }
-  }).catch(err => console.error("Ntfy Error:", err));
+  // 1. Send push notification instantly
+  sendToNtfy(formData, formId);
 
+  // 2. Submit to backend (Web3Forms)
   fetch("https://api.web3forms.com/submit", {
     method: "POST",
     body: formData
@@ -1066,28 +1086,15 @@ function handleFormSubmit(event, formId) {
         </div>
       `;
       
-      // Send WhatsApp notification to owner
-      sendWhatsAppNotification(formData, formId);
-
-      // Track lead conversion in Google Analytics and log to console
       if (typeof gtag === 'function') {
-        gtag('event', 'generate_lead', {
-          'event_category': 'Engagement',
-          'event_label': formId,
-          'value': 1
-        });
+        gtag('event', 'generate_lead', { 'event_category': 'Engagement', 'event_label': formId, 'value': 1 });
       }
-      console.log("✅ Lead submitted successfully from: " + formId);
       
       form.reset();
-      
       successEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       
       if (formId === 'modal-enquiry-form') {
-        setTimeout(() => {
-          closeBookingModal();
-          successEl.style.display = "none";
-        }, 5500);
+        setTimeout(() => { closeBookingModal(); successEl.style.display = "none"; }, 5500);
       }
     } else {
       successEl.style.display = "block";
@@ -1103,46 +1110,6 @@ function handleFormSubmit(event, formId) {
     successEl.style.backgroundColor = "#ffefef";
     successEl.style.color = "#d9534f";
     successEl.innerHTML = `<strong>Error:</strong> Network issue. Please call us directly.`;
-  });
-}
-
-// 8b. PUSH NOTIFICATION via ntfy.sh (Free, works in India, no account needed)
-// HOW TO ACTIVATE:
-//   1. Install "ntfy" app from Play Store (Android) or App Store (iPhone)
-//   2. Open app → tap + → type the NTFY_TOPIC name below → Subscribe
-//   3. Done! You'll get instant push notifications on your phone.
-// CHANGE THE TOPIC to something unique (no spaces). Keep it private — don't share it.
-const NTFY_TOPIC = "balaji-travels-leads-2026"; // ← Change this to your unique topic name
-
-function sendWhatsAppNotification(formData, formId) {
-  // Build notification message from submitted form fields
-  const name        = formData.get("enter_your_full_name") || formData.get("name") || "N/A";
-  const phone       = formData.get("phone")                  || "N/A";
-  const email       = formData.get("email")                  || "N/A";
-  const destination = formData.get("e_g_kashmir_dubai")      || formData.get("destination") || "N/A";
-  const travelDate  = formData.get("travel_date")            || "N/A";
-  const travelers   = formData.get("travelers")              || "";
-  const details     = formData.get("tell_us_about_the_number_of_adults_kids_hotel_class_preference_3_4_5_or_any_custom_flight_schedules") || "";
-  const source      = formId === "modal-enquiry-form" ? "Book Now Modal" : "Contact Page Form";
-
-  const title   = `New Enquiry - ${name}`;
-  let   body    = `📱 ${phone} | 📍 ${destination} | 📅 ${travelDate}`;
-  if (travelers) body += ` | 👥 ${travelers}`;
-  body += ` | Source: ${source}`;
-  if (details) body += `\n${details}`;
-
-  // Fire-and-forget ntfy push notification
-  fetch(`https://ntfy.sh/${NTFY_TOPIC}`, {
-    method : "POST",
-    headers: {
-      "Title"   : title,
-      "Priority": "high",
-      "Tags"     : "bell,airplane",
-      "Content-Type": "text/plain"
-    },
-    body: body
-  }).catch(() => {
-    console.warn("ntfy.sh notification could not be sent. Check your internet connection.");
   });
 }
 
