@@ -1018,7 +1018,7 @@ function closeBookingModal() {
 }
 
 // 8. INTERACTIVE ENQUIRY FORM & NTFY ROUTING HANDLER
-const NTFY_TOPIC = "balaji_travels_leads_2026";
+const NTFY_TOPIC = "balaji-travels-leads-2026";
 
 function sendToNtfy(formData, formId) {
   const name        = formData.get("enter_your_full_name") || formData.get("name") || "New Lead";
@@ -1036,16 +1036,20 @@ function sendToNtfy(formData, formId) {
   body += ` | Source: ${source}`;
   if (details) body += `\n${details}`;
 
-  fetch(`https://ntfy.sh/${NTFY_TOPIC}`, {
-    method : "POST",
-    headers: {
-      "Title"   : title,
-      "Priority": "high",
-      "Tags"    : "bell,airplane",
-      "Content-Type": "text/plain"
-    },
-    body: body
-  }).catch(err => console.error("Ntfy Error:", err));
+  try {
+    fetch('https://ntfy.sh/', {
+      method: 'POST',
+      body: JSON.stringify({
+        topic: NTFY_TOPIC,
+        message: body,
+        title: title,
+        tags: ['bell', 'airplane'],
+        priority: 4
+      })
+    }).catch(err => console.error("Ntfy Error:", err));
+  } catch (err) {
+    console.error("Ntfy Sync Error:", err);
+  }
 }
 
 function handleFormSubmit(event, formId) {
@@ -1066,8 +1070,8 @@ function handleFormSubmit(event, formId) {
   // 1. Send push notification instantly
   sendToNtfy(formData, formId);
 
-  // 2. Submit to backend (Web3Forms)
-  fetch("https://api.web3forms.com/submit", {
+  // 2. Submit to backend (Formsubmit.co)
+  fetch("https://formsubmit.co/ajax/noreplycom.balajitravels@gmail.com", {
     method: "POST",
     body: formData
   })

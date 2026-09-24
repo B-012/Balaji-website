@@ -10,7 +10,7 @@ const jsFilesToUpdate = [
 ];
 
 const newCode = `// 8. INTERACTIVE ENQUIRY FORM & NTFY ROUTING HANDLER
-const NTFY_TOPIC = "balaji_travels_leads_2026";
+const NTFY_TOPIC = "balaji-travels-leads-2026";
 
 function sendToNtfy(formData, formId) {
   const name        = formData.get("enter_your_full_name") || formData.get("name") || "New Lead";
