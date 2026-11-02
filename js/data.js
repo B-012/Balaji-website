@@ -491,6 +491,42 @@ const travelData = {
       inclusions: ["5★ City Hotel", "Daily Breakfast", "Dubai Mall Vouchers", "Global Village Ticket", "Premium Transfers", "Visa Fees"],
       description: "A shopper's paradise designed for ultimate leisure. Stay in the heart of Downtown Dubai, experience the Global Village, and enjoy massive discounts across all malls.",
       highlights: "Dubai Mall Shopping • Global Village Access • Luxury Downtown Stay"
+        },
+    {
+      id: "cordelia-cruise",
+      title: "Cordelia Luxury Indian Ocean Cruise",
+      duration: "3 Nights / 4 Days",
+      price: 29999,
+      category: "domestic",
+      type: "Cruise Bookings / Luxury",
+      image: "images/blog/blog-cruise.png",
+      inclusions: ["Ocean View Cabin", "All Meals & Fine Dining", "Broadway Shows & Entertainment", "Casino & Pool Access", "Port Taxes Included"],
+      description: "Sail India's premier luxury liner across Mumbai, Goa, and Lakshadweep. Enjoy oceanfront sunsets, 5-star hospitality, Broadway-style entertainment, and gaming lounges.",
+      highlights: "Ocean View Stateroom • Gourmet Dining & Casino • Live Entertainment & Pool"
+    },
+    {
+      id: "singapore-superstar-cruise",
+      title: "Singapore & Malaysia SuperStar Cruise",
+      duration: "5 Nights / 6 Days",
+      price: 64999,
+      category: "international",
+      type: "Cruise Bookings / International",
+      image: "images/packages/singapore.webp?v=2",
+      inclusions: ["Luxury Cruise Balcony Stateroom", "Singapore 4★ Hotel", "All Onboard Meals", "Penang Shore Excursion", "Return Flights & Visa Assistance"],
+      description: "Embark on an extraordinary cruise holiday from Singapore to Penang and Phuket. Experience luxury duty-free shopping, rooftop pools, world-class nightlife, and shore excursions.",
+      highlights: "Balcony Sea-View Cabin • Penang & Phuket Ports • All Meals & Flights Included"
+    },
+    {
+      id: "sundarbans-river-cruise",
+      title: "Sundarbans Luxury River Cruise & Safari",
+      duration: "2 Nights / 3 Days",
+      price: 13999,
+      category: "domestic",
+      type: "Cruise Bookings / Wildlife",
+      image: "images/packages/kolkata.webp?v=2",
+      inclusions: ["AC Luxury Cruise Vessel", "All Bengali Gourmet Meals", "Sundarbans National Park Entry", "Expert Naturalist Guide", "Kolkata Return Transfers"],
+      description: "Exclusive wildlife river cruise from Kolkata through the dense mangrove forests of Sundarbans. Spot Royal Bengal Tigers, estuarine crocodiles, and rare migratory birds in supreme comfort.",
+      highlights: "Mangrove River Cruise • Royal Bengal Tiger Safari • Traditional Gourmet Dining"
     }
   ],
 

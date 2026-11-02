@@ -45,9 +45,10 @@ function loadSharedLayouts() {
       <div class="top-bar">
         <div class="container">
           <div class="top-bar-contact">
-            <a href="tel:+919339288770"><i class="fas fa-phone"></i> +91 93392 88770</a>
+            <a href="tel:+918910829412" onclick="trackSocialConversion('Contact', {method: 'Phone', source: 'TopBar'})"><i class="fas fa-phone"></i> +91 89108 29412</a>
+            <a href="tel:+919339288770" onclick="trackSocialConversion('Contact', {method: 'Phone', source: 'TopBar'})"><i class="fas fa-phone-alt"></i> +91 93392 88770</a>
             <a href="mailto:vkshjoshi@gmail.com"><i class="fas fa-envelope"></i> vkshjoshi@gmail.com</a>
-            <a href="https://wa.me/919339288770" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+            <a href="https://wa.me/918910829412?text=Hi%20Balaji%20Travels,%20I%20would%20like%20to%20enquire%20about%20travel%20services." target="_blank" onclick="trackSocialConversion('Contact', {method: 'WhatsApp', source: 'TopBar'})"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
           </div>
           <div class="top-bar-right">
             <span class="top-bar-badge"><i class="fas fa-headset"></i> 24x7 Emergency Support</span>
@@ -137,10 +138,11 @@ function loadSharedLayouts() {
               </a>
               <p>Your Journey, Our Passion — Explore the World with Balaji Travels. The most trusted premium tour operator and booking assistant based in Kolkata, West Bengal.</p>
               <div class="social-links" style="margin-bottom: 20px;">
-                <a href="https://www.facebook.com/p/Balaji-Travels-100067196636092/" target="_blank" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://instagram.com" target="_blank" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://twitter.com" target="_blank" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="https://youtube.com" target="_blank" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.facebook.com/p/Balaji-Travels-100067196636092/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/balajitravelskolkata/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/918910829412?text=Hi%20Balaji%20Travels,%20I%20would%20like%20to%20enquire%20about%20travel%20services." target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp" onclick="trackSocialConversion('Contact', {method: 'WhatsApp', source: 'Footer'})"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://twitter.com/balajitravels" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com/@balajitravelskolkata" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
               </div>
               <div class="iata-accreditation" style="display: inline-block;">
                 <img src="images/iata-logo.svg" alt="IATA Accredited Agent" style="height: 55px; width: auto; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
@@ -180,7 +182,7 @@ function loadSharedLayouts() {
                 </li>
                 <li>
                   <i class="fas fa-phone-alt"></i>
-                  <span>+91 93392 88770</span>
+                  <span><a href="tel:+918910829412" style="color:inherit;" onclick="trackSocialConversion('Contact', {method: 'Phone', source: 'Footer'})">+91 89108 29412</a> / <a href="tel:+919339288770" style="color:inherit;" onclick="trackSocialConversion('Contact', {method: 'Phone', source: 'Footer'})">+91 93392 88770</a></span>
                 </li>
                 <li>
                   <i class="fas fa-envelope"></i>
@@ -1093,6 +1095,7 @@ function handleFormSubmit(event, formId) {
       if (typeof gtag === 'function') {
         gtag('event', 'generate_lead', { 'event_category': 'Engagement', 'event_label': formId, 'value': 1 });
       }
+      trackSocialConversion('Lead', { content_name: formId, currency: 'INR', value: 1 });
       
       form.reset();
       successEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -1149,9 +1152,9 @@ function initLocalBusinessSchema() {
     "@type": "TravelAgency",
     "name": "Balaji Travels",
     "image": "https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=600&auto=format&fit=crop",
-    "@id": "https://balajitravels.in/#agency",
-    "url": "https://balajitravels.in",
-    "telephone": "+919339288770",
+    "@id": "https://balaji-website-zeta.vercel.app/#agency",
+    "url": "https://balaji-website-zeta.vercel.app",
+    "telephone": "+918910829412",
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",

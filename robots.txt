@@ -1,6 +1,21 @@
 User-agent: *
 Allow: /
+Disallow: /privacy
+Disallow: /terms
 Disallow: /privacy.html
 Disallow: /terms.html
+
+# Social Media Crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
 
 Sitemap: https://balaji-website-zeta.vercel.app/sitemap.xml
