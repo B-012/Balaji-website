@@ -422,7 +422,7 @@ const travelData = {
     },
     {
       id: "darjeeling-train",
-      title: "Darjeeling Toy Train & Tea Estates",
+      title: "Darjeeling Toy Train Bookings & Tea Estates",
       duration: "4 Nights / 5 Days",
       price: 15499,
       category: "domestic",
@@ -434,7 +434,7 @@ const travelData = {
     },
     {
       id: "europe-rail",
-      title: "Eurail Grand European Journey",
+      title: "Rail Europe & Eurail Grand Scenic Journey",
       duration: "11 Nights / 12 Days",
       price: 175000,
       category: "international",
@@ -527,7 +527,444 @@ const travelData = {
       inclusions: ["AC Luxury Cruise Vessel", "All Bengali Gourmet Meals", "Sundarbans National Park Entry", "Expert Naturalist Guide", "Kolkata Return Transfers"],
       description: "Exclusive wildlife river cruise from Kolkata through the dense mangrove forests of Sundarbans. Spot Royal Bengal Tigers, estuarine crocodiles, and rare migratory birds in supreme comfort.",
       highlights: "Mangrove River Cruise • Royal Bengal Tiger Safari • Traditional Gourmet Dining"
-    }
+    },
+    {
+      "id": "russia",
+      "title": "Imperial Russia & Moscow St. Petersburg",
+      "duration": "6 Nights / 7 Days",
+      "price": 89999,
+      "category": "international",
+      "type": "Heritage / International",
+      "image": "https://images.unsplash.com/photo-1513326738677-b964603b136d?q=80&w=800&auto=format&fit=crop",
+      "inclusions": [
+            "4★ Moscow & St. Petersburg Hotels",
+            "Sapsan High-Speed Bullet Train",
+            "Red Square & Kremlin Tour",
+            "Hermitage Museum Entry",
+            "Russian Tourist Visa Support",
+            "Daily Breakfast"
+      ],
+      "description": "Explore the grandeur of Russia. Walk through Moscow's iconic Red Square and Kremlin, ride the high-speed Sapsan train, and discover the tsarist palaces and canals of St. Petersburg.",
+      "highlights": "Red Square & Kremlin • Hermitage Museum • Sapsan High-Speed Bullet Train"
+},
+    {
+      "id": "phillipines",
+      "title": "Enchanting Philippines Island Hopper",
+      "duration": "5 Nights / 6 Days",
+      "price": 48999,
+      "category": "international",
+      "type": "Island Beach / Adventure",
+      "image": "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?q=80&w=800&auto=format&fit=crop",
+      "inclusions": [
+            "Beachfront Resort Stays",
+            "Manila City Sightseeing",
+            "Boracay White Beach Catamaran",
+            "Island Hopping & Snorkeling",
+            "Domestic Inter-Island Flights",
+            "Visa Assistance"
+      ],
+      "description": "Paradise of 7,000 islands. Relax on the powdery white sands of Boracay, discover hidden lagoons in Palawan, and experience Manila's vibrant heritage.",
+      "highlights": "Boracay Crystal Waters • Palawan Hidden Lagoons • Island Hopping Boat Cruise"
+},
+    {
+      "id": "south-korea",
+      "title": "Dynamic South Korea & K-Wave Experience",
+      "duration": "5 Nights / 6 Days",
+      "price": 67999,
+      "category": "international",
+      "type": "Culture / Modern Asia",
+      "image": "https://images.unsplash.com/photo-1538485399081-7191377e8241?q=80&w=800&auto=format&fit=crop",
+      "inclusions": [
+            "4★ Seoul & Busan Hotels",
+            "KTX High-Speed Bullet Train",
+            "Gyeongbokgung Palace Hanbok Tour",
+            "Nami Island Day Tour",
+            "Korean Visa Support",
+            "Daily Breakfast"
+      ],
+      "description": "Discover the vibrant fusion of ancient dynasties and futuristic cityscapes. Tour historic royal palaces in Hanbok attire, explore K-pop hotspot Myeongdong, and visit scenic Nami Island.",
+      "highlights": "Gyeongbokgung Royal Palace • Nami Island • KTX Bullet Train to Busan"
+},
+    {
+      "id": "south-america",
+      "title": "Grand South America & Machu Picchu Explorer",
+      "duration": "10 Nights / 11 Days",
+      "price": 219999,
+      "category": "international",
+      "type": "Bucket List / Wonder of World",
+      "image": "https://images.unsplash.com/photo-1526392060635-9d6019884377?q=80&w=800&auto=format&fit=crop",
+      "inclusions": [
+            "Luxury Hotels in Lima, Cusco & Rio",
+            "Machu Picchu Vistadome Train",
+            "Christ the Redeemer & Sugarloaf",
+            "Sacred Valley Guided Excursion",
+            "All Regional Flights",
+            "Visa Assistance"
+      ],
+      "description": "The ultimate Latin American odyssey. Uncover the lost Incan citadel of Machu Picchu high in the Andes, and soak in the electric energy and beaches of Rio de Janeiro, Brazil.",
+      "highlights": "Machu Picchu Citadel • Rio Christ the Redeemer • Sacred Valley of Incas"
+},
+    {
+      "id": "australia",
+      "title": "Splendors of Australia & Great Barrier Reef",
+      "duration": "7 Nights / 8 Days",
+      "price": 138999,
+      "category": "international",
+      "type": "Adventure / Luxury",
+      "image": "images/packages/australia.webp?v=2",
+      "inclusions": [
+            "4★ Sydney & Gold Coast Hotels",
+            "Sydney Opera House Guided Tour",
+            "Great Barrier Reef Catamaran Cruise",
+            "Blue Mountains Scenic World",
+            "Koala & Wildlife Sanctuary",
+            "Australian Visa Support"
+      ],
+      "description": "Experience the best of Down Under. Cruise Sydney Harbour, marvel at the Sydney Opera House, explore the Great Barrier Reef, and encounter wild kangaroos and koalas.",
+      "highlights": "Sydney Opera House Tour • Great Barrier Reef Cruise • Gold Coast Theme Parks"
+},
+    {
+      "id": "vietnam",
+      "title": "Breathtaking Vietnam & Halong Bay Cruise",
+      "duration": "5 Nights / 6 Days",
+      "price": 38999,
+      "category": "international",
+      "type": "Nature & Cruise",
+      "image": "https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=800&auto=format&fit=crop",
+      "inclusions": [
+            "4★ Hotels in Hanoi & Da Nang",
+            "Overnight 5★ Halong Bay Cruise",
+            "Ba Na Hills Golden Bridge Cable Car",
+            "Hoi An Ancient Lantern Town",
+            "Return Flights Assistance",
+            "E-Visa Filing"
+      ],
+      "description": "Cruise through thousands of limestone karsts in Halong Bay, walk on the famous Golden Hands Bridge in Da Nang, and stroll the lantern-lit streets of historic Hoi An.",
+      "highlights": "5★ Halong Bay Luxury Cruise • Ba Na Hills Golden Bridge • Hoi An Ancient Town"
+},
+    {
+      "id": "kenya",
+      "title": "Kenya Maasai Mara Big 5 Wildlife Safari",
+      "duration": "5 Nights / 6 Days",
+      "price": 98999,
+      "category": "international",
+      "type": "Wildlife Safari / Adventure",
+      "image": "https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=800&auto=format&fit=crop",
+      "inclusions": [
+            "Luxury Tented Safari Lodges",
+            "4x4 Land Cruiser Game Drives",
+            "Maasai Mara National Reserve",
+            "Lake Naivasha Boat Safari",
+            "All Meals On Safari",
+            "Park Entry Permits"
+      ],
+      "description": "Witness the greatest wildlife spectacle on Earth. Spot lions, elephants, leopards, rhinos, and buffalos across the golden savannahs of Maasai Mara with expert ranger guides.",
+      "highlights": "Maasai Mara Big 5 Game Drives • Lake Naivasha Safari • Traditional Maasai Village"
+},
+    {
+      "id": "morocco",
+      "title": "Magical Morocco & Sahara Desert Caravan",
+      "duration": "6 Nights / 7 Days",
+      "price": 79999,
+      "category": "international",
+      "type": "Exotic Culture / Desert",
+      "image": "https://images.unsplash.com/photo-1539020140153-e479b8c22e70?q=80&w=800&auto=format&fit=crop",
+      "inclusions": [
+            "Traditional Luxury Riads",
+            "Sahara Desert Glamping Camp",
+            "Sunset Camel Trek in Merzouga",
+            "Marrakech Medina & Souks",
+            "Casablanca Hassan II Mosque",
+            "Visa Support"
+      ],
+      "description": "Step into an Arabian Nights fairytale. Wander the cobalt blue alleyways of Chefchaouen, ride camels across towering dunes in the Sahara, and explore the bustling souks of Marrakech.",
+      "highlights": "Sahara Desert Luxury Camp • Merzouga Camel Sunset • Marrakech Medina & Palaces"
+},
+    {
+      "id": "south-africa",
+      "title": "Spectacular South Africa & Kruger Safari",
+      "duration": "7 Nights / 8 Days",
+      "price": 119999,
+      "category": "international",
+      "type": "Wildlife & Scenery",
+      "image": "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=800&auto=format&fit=crop",
+      "inclusions": [
+            "4★ Cape Town & Kruger Lodges",
+            "Table Mountain Cableway",
+            "Cape of Good Hope & Boulders Penguins",
+            "Kruger National Park Open Safari",
+            "Scenic Garden Route Drive",
+            "Visa Assistance"
+      ],
+      "description": "Ascend the iconic Table Mountain in Cape Town, meet African penguins at Boulders Beach, and witness Africa's apex predators on game drives in Kruger National Park.",
+      "highlights": "Table Mountain Cable Car • Kruger Big 5 Safari • Boulders Beach African Penguins"
+},
+    {
+      "id": "indonesia",
+      "title": "Exotic Indonesia & Komodo Dragons Explorer",
+      "duration": "6 Nights / 7 Days",
+      "price": 54999,
+      "category": "international",
+      "type": "Nature & Wildlife",
+      "image": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=800&auto=format&fit=crop",
+      "inclusions": [
+            "4★ Resort Stays in Bali & Labuan Bajo",
+            "Private Komodo Island Speedboat",
+            "Pink Beach Snorkeling & Mantas",
+            "Padar Island Sunrise Trek",
+            "Indonesian E-Visa on Arrival Assist",
+            "Domestic Island Flights"
+      ],
+      "description": "Venture beyond the ordinary to the UNESCO World Heritage Komodo National Park. See prehistoric Komodo dragons in their natural habitat, trek Padar Island, and swim at the Pink Beach.",
+      "highlights": "Komodo Dragon Guided Encounter • Padar Island Panoramic Trek • Pink Beach Snorkeling"
+},
+    {
+      "id": "gujarat",
+      "title": "Vibrant Gujarat Heritage & Rann of Kutch",
+      "duration": "5 Nights / 6 Days",
+      "price": 19999,
+      "category": "domestic",
+      "type": "Heritage & Wildlife",
+      "image": "images/packages/gir.webp?v=2",
+      "inclusions": [
+            "3★/4★ Heritage Hotels",
+            "Statue of Unity Express Entry",
+            "Somnath & Dwarkadhish Darshan",
+            "Gir Asiatic Lion Jeep Safari",
+            "Rann of Kutch White Desert Excursion",
+            "Private AC Cab & Driver"
+      ],
+      "description": "Explore the legendary Land of Legends. Stand before the towering Statue of Unity, visit sacred Dwarka and Somnath jyotirlinga temples, and spot wild Asiatic lions in Gir National Park.",
+      "highlights": "Statue of Unity Viewing Deck • Gir Asiatic Lion Safari • Somnath & Dwarka Temples"
+},
+    {
+      "id": "nepal",
+      "title": "Majestic Nepal Himalayan Panorama",
+      "duration": "4 Nights / 5 Days",
+      "price": 17499,
+      "category": "international",
+      "type": "Mountains & Spirituality",
+      "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=800&auto=format&fit=crop",
+      "inclusions": [
+            "3★/4★ Hotels in Kathmandu & Pokhara",
+            "Pashupatinath Temple VIP Darshan",
+            "Fewa Lake Boating & Peace Pagoda",
+            "Sarangkot Annapurna Sunrise",
+            "Chitwan Jungle Safari (Optional)",
+            "Private AC Vehicle"
+      ],
+      "description": "Experience divine serenity in the lap of the Himalayas. Pray at sacred Pashupatinath, gaze at snow-capped Annapurna peaks from Pokhara, and sail along serene Fewa Lake.",
+      "highlights": "Pashupatinath Temple Darshan • Annapurna Sunrise at Sarangkot • Fewa Lake Boating"
+},
+    {
+      "id": "ladakh",
+      "title": "Mystical Ladakh & Pangong Tso Lake",
+      "duration": "5 Nights / 6 Days",
+      "price": 22499,
+      "category": "domestic",
+      "type": "Adventure / Mountains",
+      "image": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop",
+      "inclusions": [
+            "Deluxe Hotels in Leh & Nubra Valley",
+            "Pangong Lake Luxury Camp Stay",
+            "Khardung La Pass (Highest Motorable Road)",
+            "Camel Safari at Hunder Sand Dunes",
+            "Inner Line Travel Permits",
+            "Oxygen Cylinder in Cab"
+      ],
+      "description": "The Land of High Passes awaits. Cross the world's highest motorable pass at Khardung La, ride double-humped camels in Nubra Valley, and witness the changing blues of Pangong Tso Lake.",
+      "highlights": "Pangong Lake Color Changing Waters • Khardung La 18,380 ft • Nubra Valley Dunes"
+},
+    {
+      "id": "china",
+      "title": "Wonders of China & The Great Wall",
+      "duration": "6 Nights / 7 Days",
+      "price": 84999,
+      "category": "international",
+      "type": "Wonder of World / Heritage",
+      "image": "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?q=80&w=800&auto=format&fit=crop",
+      "inclusions": [
+            "4★ Beijing & Shanghai Hotels",
+            "Great Wall of China Cable Car & Tour",
+            "Forbidden City & Tiananmen Square",
+            "Shanghai Bund & Huangpu River Cruise",
+            "High-Speed Bullet Train",
+            "Visa Support"
+      ],
+      "description": "Walk atop the Great Wall of China, discover the imperial secrets of the Forbidden City in Beijing, and admire the glittering neon skyline along the Bund in futuristic Shanghai.",
+      "highlights": "Great Wall of China Excursion • Forbidden City Imperial Palace • Shanghai Bund Cruise"
+},
+    {
+      "id": "bali",
+      "title": "Tropical Bali Paradise & Nusa Penida Island",
+      "duration": "5 Nights / 6 Days",
+      "price": 39999,
+      "category": "international",
+      "type": "Honeymoon & Leisure",
+      "image": "images/packages/maldives-vs-bali.webp?v=2",
+      "inclusions": [
+            "4★ Private Pool Villa in Ubud/Seminyak",
+            "Nusa Penida Speedboat & Kelingking Beach",
+            "Bali Swing & Tegalalang Rice Terraces",
+            "Tanah Lot Sunset Sea Temple",
+            "Candlelight Dinner & Spa",
+            "Visa on Arrival Assist"
+      ],
+      "description": "The ultimate tropical island escape. Relax in your private pool villa, swing above lush emerald rice terraces in Ubud, watch romantic sunsets at Tanah Lot, and explore Nusa Penida.",
+      "highlights": "Private Pool Villa Stay • Nusa Penida Kelingking T-Rex Cliff • Bali Swing in Ubud"
+},
+    {
+      "id": "puri",
+      "title": "Divine Puri Jagannath & Chilika Dolphin Tour",
+      "duration": "3 Nights / 4 Days",
+      "price": 9999,
+      "category": "religious",
+      "type": "Pilgrimage & Coastal",
+      "image": "images/packages/puri.webp?v=2",
+      "inclusions": [
+            "Beachfront Hotel in Puri",
+            "Jagannath Temple Darshan Assistance",
+            "Konark Sun Temple Light & Sound",
+            "Chilika Lake Irrawaddy Dolphin Boat",
+            "Chandrabhaga Beach",
+            "Howrah-Puri Train Transfers"
+      ],
+      "description": "Kolkata's most beloved coastal pilgrimage. Seek blessings at the holy Jagannath Temple, marvel at the stone chariot wheels of Konark Sun Temple, and cruise Chilika Lake to spot wild dolphins.",
+      "highlights": "Jagannath Temple Darshan • Konark UNESCO Sun Temple • Chilika Lake Dolphins"
+},
+    {
+      "id": "kolkata",
+      "title": "Heritage Kolkata & City of Joy Experience",
+      "duration": "2 Nights / 3 Days",
+      "price": 6499,
+      "category": "domestic",
+      "type": "Heritage & Culture",
+      "image": "images/packages/kolkata.webp?v=2",
+      "inclusions": [
+            "Heritage Hotel Stay in Central Kolkata",
+            "Victoria Memorial & St. Paul's Cathedral",
+            "Dakshineswar & Belur Math Boat Cruise",
+            "Howrah Bridge & Flower Market Walk",
+            "Authentic Bengali Thali Lunches",
+            "AC Private Transport"
+      ],
+      "description": "Immerse yourself in Kolkata's colonial architecture, spiritual river ghats, and rich culinary culture. Visit Victoria Memorial, sail the holy Ganges, and savor famous sweets and dishes.",
+      "highlights": "Victoria Memorial & Howrah Bridge • Dakshineswar-Belur Ferry • Authentic Bengali Cuisine"
+},
+    {
+      "id": "paris",
+      "title": "Romantic Paris & French Riviera Getaway",
+      "duration": "5 Nights / 6 Days",
+      "price": 114999,
+      "category": "international",
+      "type": "Honeymoon / Europe Luxury",
+      "image": "images/packages/france.webp?v=2",
+      "inclusions": [
+            "4★ Central Paris Hotel",
+            "Eiffel Tower 2nd Floor Skip-The-Line",
+            "Romantic Seine River Dinner Cruise",
+            "Louvre Museum Masterpieces Tour",
+            "Day Trip to Palace of Versailles",
+            "Schengen Visa Consultation"
+      ],
+      "description": "Fall in love with the City of Lights. Climb the Eiffel Tower for panoramic Parisian views, glide down the Seine River at twilight, and admire the Mona Lisa in the majestic Louvre Museum.",
+      "highlights": "Eiffel Tower Fast-Track • Seine River Dinner Cruise • Louvre Museum & Versailles"
+},
+    {
+      "id": "tripura",
+      "title": "Untouched Tripura & Neermahal Water Palace",
+      "duration": "3 Nights / 4 Days",
+      "price": 12499,
+      "category": "domestic",
+      "type": "Offbeat Culture / Heritage",
+      "image": "https://images.unsplash.com/photo-1609137144813-7d9921338f24?q=80&w=800&auto=format&fit=crop",
+      "inclusions": [
+            "Heritage Hotel in Agartala",
+            "Neermahal Floating Palace Boating",
+            "Unakoti Rock-Cut Bas-Relief Sculptures",
+            "Ujjayanta Palace & Museum",
+            "Tripura Sundari Temple Darshan",
+            "All Local Transfers"
+      ],
+      "description": "Discover the hidden jewel of Northeast India. Sail across Rudrasagar Lake to the floating Neermahal palace, marvel at the ancient rock carvings of Unakoti, and visit sacred temples.",
+      "highlights": "Neermahal Water Palace Boating • Unakoti Ancient Rock Carvings • Tripura Sundari Temple"
+},
+    {
+      "id": "new-zealand",
+      "title": "Pure New Zealand & Milford Sound Explorer",
+      "duration": "8 Nights / 9 Days",
+      "price": 169999,
+      "category": "international",
+      "type": "Adventure / Scenic Wonder",
+      "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=800&auto=format&fit=crop",
+      "inclusions": [
+            "4★ Hotels in Auckland, Rotorua & Queenstown",
+            "Milford Sound Scenic Nature Cruise",
+            "Hobbiton Movie Set Guided Tour",
+            "Waitomo Glowworm Caves Boat Ride",
+            "Skyline Gondola & Luge in Queenstown",
+            "New Zealand Visa Filing"
+      ],
+      "description": "Step into Middle-earth and witness pristine natural splendor. Cruise the dramatic fjords and waterfalls of Milford Sound, explore Hobbiton, and experience adrenaline adventures in Queenstown.",
+      "highlights": "Milford Sound Fjord Cruise • Hobbiton Movie Set • Glowworm Caves & Queenstown"
+},
+    {
+      "id": "antarctica",
+      "title": "Ultimate Antarctica Polar Expedition Cruise",
+      "duration": "10 Nights / 11 Days",
+      "price": 449999,
+      "category": "international",
+      "type": "Cruise Bookings / Polar Expedition",
+      "image": "https://images.unsplash.com/photo-1516900557549-41557d405adf?q=80&w=800&auto=format&fit=crop",
+      "inclusions": [
+            "Polar Icebreaker Vessel Stateroom",
+            "Drake Passage Crossing with Marine Scientists",
+            "Daily Zodiac Landings on Ice",
+            "Penguin Colonies & Whale Watching",
+            "All Gourmet Meals & Expedition Gear",
+            "Ushuaia Hotel Night"
+      ],
+      "description": "The journey of a lifetime to the Seventh Continent. Sail through towering glaciers, encounter thousands of penguins and breaching humpback whales, and step foot on the pristine white continent.",
+      "highlights": "Zodiac Landings on Antarctic Ice • Humpback Whale Encounters • Penguin Colonies"
+},
+    {
+      "id": "japan",
+      "title": "Timeless Japan & Mount Fuji Shinkansen",
+      "duration": "6 Nights / 7 Days",
+      "price": 124999,
+      "category": "international",
+      "type": "Culture & High-Speed Rail",
+      "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=800&auto=format&fit=crop",
+      "inclusions": [
+            "4★ Tokyo & Kyoto Hotels",
+            "Shinkansen Bullet Train Experience",
+            "Mount Fuji 5th Station & Lake Ashi Cruise",
+            "Fushimi Inari Shrine & Arashiyama Bamboo Grove",
+            "Tokyo Skytree Entry",
+            "Japan Visa Processing"
+      ],
+      "description": "Experience the mesmerizing harmony of ancient traditions and futuristic neon. Take the Shinkansen bullet train past snow-capped Mount Fuji, walk through thousands of vermilion torii gates in Kyoto, and explore Tokyo.",
+      "highlights": "Mount Fuji & Hakone Lake Cruise • Shinkansen Bullet Train • Kyoto Torii Gates"
+},
+    {
+      "id": "greece",
+      "title": "Mythical Greece & Santorini Caldera Romance",
+      "duration": "6 Nights / 7 Days",
+      "price": 104999,
+      "category": "international",
+      "type": "Island Romance / Heritage",
+      "image": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=800&auto=format&fit=crop",
+      "inclusions": [
+            "4★ Hotels in Athens & Cliffside Santorini",
+            "Acropolis & Parthenon Guided Tour",
+            "Santorini Sunset Catamaran Sailing Cruise",
+            "High-Speed Aegean Sea Ferries",
+            "Wine Tasting Tour in Oia",
+            "Schengen Visa Consultation"
+      ],
+      "description": "Walk among classical legends at the Acropolis in Athens, sail across the azure Aegean Sea, and watch world-famous golden sunsets over the whitewashed, blue-domed cliffside villages of Santorini.",
+      "highlights": "Athens Acropolis Parthenon • Santorini Sunset Catamaran Cruise • Oia Cliffside Views"
+}
   ],
 
   // Premium customer reviews (Google style)
