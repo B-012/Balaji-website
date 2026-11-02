@@ -1,53 +1,58 @@
 # Balaji Travels Kolkata — Master SEO Keyword Optimization Blueprint
 
 **Target Service Pillars:**
-1. ✈️ **Flights**
+1. ✈️ **Flights & Airline Tickets**
 2. 🚆🏨 **Train and Hotel**
-3. 🏖️ **Package Bookings**
-4. 🚢 **Cruise Bookings**
-
-**Specialized Rail Focus:**
-- `train kolkata`
-- `train bookings`
-- `train tickets`
-- `sector wise train enquiry`
+3. 🏨⛺ **All Types of Hotels (5★, 3★, 2★, Tents & Camps)**
+4. 🏖️ **Package Bookings (50+ Destinations)**
+5. 🚢 **Cruise Bookings**
 
 ---
 
-## 1. Targeted Keyword Clusters & On-Page Mapping
-
-### ✈️ Pillar 1: Flights
-* **Primary Target Page:** [`flights.html`](file:///d:/balaji%20travels%20website/flights.html) (Supporting: [`index.html`](file:///d:/balaji%20travels%20website/index.html), [`services.html`](file:///d:/balaji%20travels%20website/services.html))
-* **Target Intent:** Commercial & Transactional (Travelers searching for low airfares, group tickets, and agent assistance from Netaji Subhash Chandra Bose International Airport - CCU).
+## 1. ✈️ Deep-Dive: Flight Tickets SEO
+* **Primary Target Page:** [`flights.html`](file:///d:/balaji%20travels%20website/flights.html)
 * **Keyword Architecture:**
-  | Keyword Type | High-Intent Keywords |
+  | Search Keyword Category | Target Search Phrases |
   |---|---|
-  | **Core Keywords** | `flights`, `flight booking kolkata`, `cheap flight tickets from kolkata` |
-  | **Sector Keywords** | `flights kolkata to delhi`, `flights kolkata to bangalore`, `flights kolkata to mumbai`, `flights kolkata to bangkok`, `flights kolkata to dubai` |
-  | **Feature Keywords** | `tatkal air tickets`, `last minute flight deals kolkata`, `student flight discounts`, `airline coupon tickets kolkata` |
-  | **Agency Keywords** | `authorised flight booking travel agency kolkata`, `best flight agent in kolkata`, `offline air ticket agent near me` |
+  | **Carrier Specific** | `flights airindia`, `vistara`, `air india flight booking kolkata`, `vistara business class kolkata`, `tata sia airlines deals` |
+  | **Deals & Discounts** | `coupon tickets`, `deals fare`, `airline coupon discounts`, `cheap flight tickets under 5000`, `flight deals fare kolkata` |
+  | **Corporate & Business** | `corporate tickets`, `corporate flight booking desk kolkata`, `business travel flight agent with gst invoice`, `sme corporate fare` |
+  | **Group Travel** | `group booking`, `group flight tickets kolkata`, `bulk air tickets 10+ passengers`, `wedding group flights`, `college tour flights` |
+  | **Family Vacations** | `family trip tickets`, `family flight booking offers`, `adjacent seats family flight`, `infant discount air tickets` |
+  | **Core & Local** | `flights`, `flight booking kolkata`, `cheap flight tickets from kolkata`, `domestic flight booking offers`, `international flights from kolkata` |
+
+### On-Page SEO Implementation:
+- **Title Tag**: `Air India, Vistara Flights Kolkata | Coupon Tickets, Deals Fare, Corporate & Group Booking - Balaji Travels`
+- **Search Form UI**: Added "Fare Type / Category" selection for Deals Fare, Coupon Tickets, Air India/Vistara Full-Service, Corporate Tickets (with GST Invoice), Group Booking (10+ Pax), and Family Trip Tickets.
+- **Dedicated Feature Showcase**: 6 feature cards detailing benefits, meal inclusions, 25kg luggage allowances, and direct WhatsApp enquiry desks.
 
 ---
 
-### 🚆🏨 Pillar 2: Train and Hotel (Bundles & Standalone)
-* **Primary Target Pages:** [`trains.html`](file:///d:/balaji%20travels%20website/trains.html) & [`hotels.html`](file:///d:/balaji%20travels%20website/hotels.html)
-* **Target Intent:** High-conversion booking intent for travelers seeking end-to-end comfort combining confirmed railway tickets with verified hotel stays.
+## 2. 🏨⛺ Deep-Dive: Search All Types of Hotels SEO
+* **Primary Target Page:** [`hotels.html`](file:///d:/balaji%20travels%20website/hotels.html)
 * **Keyword Architecture:**
-  | Keyword Type | High-Intent Keywords |
+  | Accommodation Category | Target Search Phrases |
   |---|---|
-  | **Combo Keywords** | `train and hotel`, `train and hotel packages`, `train and hotel combo kolkata`, `rail and resort holiday packages` |
-  | **Hotel Keywords** | `hotel reservations kolkata`, `best hotel booking deals`, `luxury resort packages from kolkata`, `budget hotels near me`, `book hotels with free cancellation` |
-  | **Puri Combo** | `howrah to puri train and hotel package`, `puri vande bharat hotel package` |
-  | **Darjeeling Combo**| `darjeeling train and hotel package`, `sealdah to darjeeling rail resort combo` |
-  | **Varanasi Combo** | `varanasi train and hotel package`, `kashi vande bharat hotel package` |
+  | **5 Star Hotels** | `5 star hotels`, `5 star luxury resorts`, `taj hotels booking kolkata`, `oberoi luxury resorts`, `marriott hotels discount`, `itc hotels kolkata agent` |
+  | **3 Star Hotels** | `3 star hotels`, `3 star deluxe comfort hotels`, `lemon tree hotel booking`, `ginger hotels deals`, `family friendly 3 star hotel` |
+  | **2 Star Hotels** | `2 star hotels`, `2 star budget hotels`, `clean budget stays near railway station`, `cheap ac rooms kolkata`, `safe transit hotel booking` |
+  | **Luxury Tents** | `tents`, `luxury tents`, `glamping tents`, `desert camps jaisalmer`, `sam sand dunes swiss tents`, `glamping tents ladakh`, `pushkar luxury tents` |
+  | **Adventure Camps** | `camps`, `adventure camps`, `riverside camps rishikesh`, `river rafting camp packages`, `jim corbett jungle camps`, `spiti valley stargazing camps` |
+  | **Train + Hotel Combos** | `train and hotel`, `train and hotel packages`, `howrah to puri train and hotel`, `darjeeling train and hotel package` |
+
+### On-Page SEO Implementation:
+- **Title Tag**: `5 Star, 3 Star, 2 Star Hotels, Luxury Tents & Camps Booking | Train and Hotel Packages - Balaji Travels`
+- **Accommodation Category Filter Bar**: Sticky navigation tabs for `All Categories`, `5 Star Hotels`, `3 Star Hotels`, `2 Star Budget Hotels`, `Luxury Tents`, and `Adventure Camps`.
+- **Search Form Dropdown**: Expanded to specify exact property tiers and desert/camp locations (Jaisalmer, Rishikesh, Ladakh, Corbett, Goa, Kashmir, etc.).
+- **Live Search Engine Deck**: Filters real properties for each category with photo galleries, star ratings, old vs wholesale price comparison, verified amenities, and direct WhatsApp quote dispatch.
 
 ---
 
-### 🚆 Deep-Dive: Train Tickets, Train Kolkata & Sector Wise Train Enquiry
-* **Primary Target Page:** [`trains.html`](file:///d:/balaji%20travels%20website/trains.html) (with interactive sector cards and instant WhatsApp consultation)
-* **Target Intent:** High-urgency searchers looking for real-time seat availability, Tatkal clearance, and sector timings from Eastern Railway stations.
+## 3. 🚆 Deep-Dive: Train Tickets, Train Kolkata & Sector Wise Train Enquiry
+* **Primary Target Page:** [`trains.html`](file:///d:/balaji%20travels%20website/trains.html)
+* **Target Intent:** High-urgency searchers looking for real-time seat availability, Tatkal clearance, and sector timings from Eastern Railway stations (HWH & SDAH).
 
-#### Sector Wise Train Enquiry Breakdown from Kolkata:
+### Sector Wise Train Enquiry Breakdown from Kolkata:
 | Sector Code | Sector Name | Key Trains Covered | Travel Time & Classes |
 |---|---|---|---|
 | **SECTOR 1** | **Kolkata (HWH/SDAH) ➡️ NJP / Siliguri** *(Darjeeling/Sikkim Gateway)* | • Vande Bharat Express (22301)<br>• Shatabdi Express (12041)<br>• Darjeeling Mail (12343)<br>• Padatik Express (12377)<br>• Saraighat Express (12345) | **Fastest:** 7h 30m<br>**Classes:** EC, CC, 1A, 2A, 3A, SL<br>**Tatkal Window:** 10:00 AM (AC) / 11:00 AM (SL) |
@@ -59,36 +64,21 @@
 
 ---
 
-### 🏖️ Pillar 3: Package Bookings
+## 4. 🏖️ Pillar: Package Bookings (51 Total Destinations)
 * **Primary Target Page:** [`packages.html`](file:///d:/balaji%20travels%20website/packages.html)
-* **Target Intent:** Travelers searching for pre-planned holiday tours with flights, hotels, meals, and transfers included.
 * **Keyword Architecture:**
   - `package bookings`, `tour packages from kolkata`, `holiday package bookings kolkata`
   - `domestic tour packages from west bengal`, `international holiday packages kolkata`
   - `chardham yatra package from kolkata`, `kashmir tour package from kolkata`
   - `all inclusive holiday packages`, `family tour packages from kolkata`, `honeymoon packages kolkata`
+* **Real-Time Search Feature**: Instant destination filter searching 50+ packages (Russia, Sri Lanka, Philippines, South Korea, South America, Australia, Dubai, Vietnam, Egypt, Kenya, Morocco, South Africa, Indonesia, Gujarat, Nepal, Ladakh, Kashmir, China, Bali, Rajasthan, Puri, Kolkata, Goa, Bhutan, Paris, Tripura, New Zealand, Antarctica, Japan, Greece, Rail Europe, Darjeeling Toy Train).
 
 ---
 
-### 🚢 Pillar 4: Cruise Bookings
+## 5. 🚢 Pillar: Cruise Bookings
 * **Primary Target Pages:** [`packages.html`](file:///d:/balaji%20travels%20website/packages.html) (Cruise Filter) & [`services.html`](file:///d:/balaji%20travels%20website/services.html)
-* **Target Intent:** Luxury vacationers looking for ocean and river cruise liners departing India or Southeast Asia.
 * **Keyword Architecture:**
   - `cruise bookings`, `cruise bookings kolkata`, `luxury cruise booking agent kolkata`
   - `cordelia cruise booking agent kolkata`, `cordelia cruise packages india`
   - `singapore cruise package from kolkata`, `genting dream cruise bookings`
   - `nile river cruise packages`, `sundarbans luxury river cruise from kolkata`
-
----
-
-## 2. On-Page SEO Implementation Summary
-
-1. **Title & Meta Description Optimization:**
-   - Every page now features primary keywords within optimal Google SERP character lengths (50–60 characters for titles, 150–160 characters for descriptions).
-2. **Schema.org JSON-LD Structured Data:**
-   - `Service` + `FAQPage` schemas specifically answering sector-wise train enquiry and Tatkal booking timelines.
-   - `OfferCatalog` schema on [`packages.html`](file:///d:/balaji%20travels%20website/packages.html) indexable with direct pricing in INR.
-3. **Local SEO Geo-Attributes:**
-   - Injected Kolkata coordinates and regional targeting (`IN-WB`) for dominant rankings in Kolkata, Howrah, and South Bengal search queries.
-4. **Actionable Conversion Funnels:**
-   - Pre-filled WhatsApp deep links on every sector and cruise card to convert organic searchers into immediate WhatsApp sales conversations.

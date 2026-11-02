@@ -129,3 +129,4 @@ WhatsApp is the highest-converting sales channel for Kolkata travelers.
 | **Content Creation (Reels & Creatives)** | In-house / Smartphone | 12 Reels + 8 Carousels / Month |
 | **WhatsApp Marketing Tool** | ₹1,000 – ₹2,000 | Broadcast automation & auto-replies |
 | **Total Estimated Investment** | **₹31,000 – ₹52,000** | **₹3.5L – ₹8.5L in booking revenue** |
+
