@@ -795,10 +795,10 @@ alt="Balaji Travels Meta Pixel" /></noscript>
                         const bgColor = isWL ? "rgba(230, 126, 34, 0.05)" : "rgba(39, 174, 96, 0.05)";
                         return `
                           <div style="border: 1px solid ${statusColor}; background: ${bgColor}; border-radius: 6px; padding: 8px 12px; min-width: 110px; cursor: pointer; transition: all 0.2s;" 
-                               onclick="openBookingModal('Train ${t.number} - ${t.name} (Class: ${c.name}) from ${originCode} to ${destCode} on ${travelDate} - Fare: â‚¹${c.price}')">
+                               onclick="openBookingModal('Train ${t.number} - ${t.name} (Class: ${c.name}) from ${originCode} to ${destCode} on ${travelDate} - Fare: ₹${c.price}')">
                             <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 0.9rem; color: var(--primary-color);">
                               <span>Class: ${c.name}</span>
-                              <span style="color: ${statusColor};">â‚¹${c.price}</span>
+                              <span style="color: ${statusColor};">₹${c.price}</span>
                             </div>
                             <div style="font-size: 0.75rem; color: ${statusColor}; font-weight: 600; margin-top: 4px;">
                               ${c.seats}
