@@ -142,6 +142,7 @@ function loadSharedLayouts() {
                 <a href="https://www.instagram.com/balajitravelskolkata/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 <a href="https://wa.me/918910829412?text=Hi%20Balaji%20Travels,%20I%20would%20like%20to%20enquire%20about%20travel%20services." target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp" onclick="trackSocialConversion('Contact', {method: 'WhatsApp', source: 'Footer'})"><i class="fab fa-whatsapp"></i></a>
                 <a href="https://twitter.com/balajitravels" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.google.com/search?q=BALAJI+TRAVELS&stick=H4sIAAAAAAAA_-NgU1I1qDBONDAyN080MzVMsjQ2SzO3MqhIMjVNNkkzMDc2TklJTTW1XMTK5-To4-jlqRAS5Bjm6hMMAJ0yfX86AAAA" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Google Business Profile" title="Google Business Profile"><i class="fab fa-google"></i></a>
                 <a href="https://www.youtube.com/@balajitravelskolkata" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
               </div>
               <div class="iata-accreditation" style="display: inline-block;">
