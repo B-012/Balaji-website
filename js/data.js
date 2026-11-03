@@ -7,188 +7,132 @@ const travelData = {
   // 26 Services requested by the user
   services: [
     {
-      id: "all-inclusive",
-      title: "All Inclusive Packages",
-      icon: "fa-suitcase-rolling",
-      category: "tours",
-      description: "Hassle-free vacations with flights, hotels, meals, sightseeing, and local transfers included in a single price."
+        "id": "flights-airindia-vistara",
+        "title": "Flight Tickets (Air India & Vistara)",
+        "icon": "fa-plane-departure",
+        "category": "ticketing",
+        "description": "Authorized full-service airline ticketing for Air India and Vistara with complimentary hot meals, 25kg luggage allowances, and Club Vistara / Flying Returns frequent flyer points."
     },
     {
-      id: "corporate-travel",
-      title: "Corporate Travel",
-      icon: "fa-briefcase",
-      category: "business",
-      description: "End-to-end business travel solutions including MICE, conference bookings, team-building retreats, and executive travel."
+        "id": "coupon-tickets-deals-fare",
+        "title": "Coupon Tickets & Deals Fare",
+        "icon": "fa-tags",
+        "category": "ticketing",
+        "description": "Exclusive agency promotional coupon codes and unpublished deals fare that slash ₹500 to ₹1,500 off public retail OTA fares on domestic and international routes."
     },
     {
-      id: "cruises",
-      title: "Cruises",
-      icon: "fa-ship",
-      category: "tours",
-      description: "Luxurious ocean and river cruise bookings worldwide, featuring top liners with world-class dining and entertainment."
+        "id": "corporate-flight-tickets",
+        "title": "Corporate Flight Tickets",
+        "icon": "fa-briefcase",
+        "category": "business",
+        "description": "SME and enterprise business ticketing with compliant GST tax invoicing, priority seat blocking, free date modification privileges, and dedicated account billing."
     },
     {
-      id: "day-trips",
-      title: "Day Trips",
-      icon: "fa-calendar-day",
-      category: "tours",
-      description: "Short weekend excursions and local day tours around Kolkata, ideal for quick getaways and family outings."
+        "id": "group-flight-booking",
+        "title": "Group Flight Bookings (10+ Pax)",
+        "icon": "fa-users",
+        "category": "ticketing",
+        "description": "Bulk airline seat reservations for destination weddings, student tours, and corporate groups with locked prices and flexible passenger list submissions up to 7 days before departure."
     },
     {
-      id: "excursion-booking",
-      title: "Excursion Booking",
-      icon: "fa-mountain",
-      category: "tours",
-      description: "Exciting adventure excursions, outdoor sightseeing activities, and customized group experiences."
+        "id": "family-trip-tickets",
+        "title": "Family Trip Flight Tickets",
+        "icon": "fa-house-chimney-window",
+        "category": "ticketing",
+        "description": "Discounted family vacation flight bundles guaranteeing adjacent seating, infant/child concessions, and special airport mobility assistance."
     },
     {
-      id: "family-trips",
-      title: "Family Trips",
-      icon: "fa-people-roof",
-      category: "tours",
-      description: "Specially curated family holidays focusing on comfort, kid-friendly activities, and memorable experiences for all age groups."
+        "id": "5-star-hotels",
+        "title": "5 Star Luxury Hotels & Resorts",
+        "icon": "fa-star",
+        "category": "booking",
+        "description": "Ultra-luxury hotel reservations (Taj, Oberoi, ITC, Marriott, Hyatt) with fine dining, infinity pools, luxury spa wellness, and exclusive VIP check-in privileges."
     },
     {
-      id: "flight-booking",
-      title: "Flight Booking (Domestic & International)",
-      icon: "fa-plane-departure",
-      category: "ticketing",
-      description: "Instant booking and reservations for domestic and international routes at highly competitive, low fares."
+        "id": "3-star-hotels",
+        "title": "3 Star Comfort & Deluxe Hotels",
+        "icon": "fa-award",
+        "category": "booking",
+        "description": "The ideal balance of comfort and value. Verified 3-star properties (Lemon Tree, Ginger, Fortune) with modern AC rooms, free Wi-Fi, and buffet breakfast."
     },
     {
-      id: "flight-tickets",
-      title: "Flight Tickets",
-      icon: "fa-ticket",
-      category: "ticketing",
-      description: "Quick air ticketing, modifications, cancellations, and premium seat selections for all major domestic airlines."
+        "id": "2-star-hotels",
+        "title": "2 Star Budget & Transit Hotels",
+        "icon": "fa-wallet",
+        "category": "booking",
+        "description": "Clean, verified, and safe budget accommodations with working AC, clean linens, and 24-hour hot water, strategically located near railway stations and city hubs."
     },
     {
-      id: "group-travel",
-      title: "Group Travel & Group Tours",
-      icon: "fa-users",
-      category: "tours",
-      description: "Fun, escorted group departures with dedicated tour managers, structured itineraries, and shared laughter."
+        "id": "luxury-tents",
+        "title": "Luxury Glamping Tents",
+        "icon": "fa-campground",
+        "category": "booking",
+        "description": "Royal Swiss desert tents in Jaisalmer Sam Sand Dunes, mountain glamping tents in Ladakh, and heritage tents in Pushkar featuring attached tiled bathrooms and folk cultural nights."
     },
     {
-      id: "hotel-bookings",
-      title: "Hotel Bookings",
-      icon: "fa-hotel",
-      category: "booking",
-      description: "Affordable luxury stays, boutique hotels, budget guest houses, and 5-star resort bookings across India and abroad."
+        "id": "adventure-camps",
+        "title": "Adventure & Wilderness Camps",
+        "icon": "fa-mountain",
+        "category": "booking",
+        "description": "Thrilling nature stays: white-water river rafting camps on the Ganges in Rishikesh, jungle safari camps in Jim Corbett, and high-altitude stargazing camps in Spiti."
     },
     {
-      id: "international-services",
-      title: "International Services",
-      icon: "fa-globe-asia",
-      category: "international",
-      description: "Global travel assistance including international holiday customization, foreign exchange guidance, and translation services."
+        "id": "train-and-hotel",
+        "title": "Train and Hotel Combo Packages",
+        "icon": "fa-train-subway",
+        "category": "tours",
+        "description": "End-to-end holiday bundles combining confirmed IRCTC train berths (Sleeper/3AC/2AC/Vande Bharat) with verified hotel or tent stays and station transfers across Puri, Darjeeling, Varanasi, and Kashmir."
     },
     {
-      id: "tours-sightseeing",
-      title: "Tours & Sightseeing",
-      icon: "fa-camera-retro",
-      category: "tours",
-      description: "Guided local sightseeing packages, monument entries, historical tours, and expert English/Hindi-speaking local guides."
+        "id": "package-bookings",
+        "title": "Package Bookings (50+ Destinations)",
+        "icon": "fa-suitcase-rolling",
+        "category": "tours",
+        "description": "Handcrafted domestic and international holiday package bookings covering 50+ destinations: Russia, Japan, Paris, Dubai, Vietnam, Bali, Kashmir, Ladakh, and more with instant live search."
     },
     {
-      id: "travel-insurance",
-      title: "Travel Insurance",
-      icon: "fa-shield-halved",
-      category: "booking",
-      description: "Comprehensive medical and trip cancellation coverage protecting you against flight delays, lost baggage, and emergencies."
+        "id": "cruise-bookings",
+        "title": "Cruise Bookings (Ocean & River)",
+        "icon": "fa-ship",
+        "category": "tours",
+        "description": "Premium cruise holidays on Cordelia Cruises (Goa, Mumbai, Lakshadweep), Singapore SuperStar cruises, and luxury Sundarbans river cruises."
     },
     {
-      id: "ticketing",
-      title: "Ticketing (Air, Rail, Bus)",
-      icon: "fa-clipboard-list",
-      category: "ticketing",
-      description: "Unified booking desk for train, bus, and flight bookings, catering to all travel preferences and budgets."
+        "id": "irctc-sector-enquiry",
+        "title": "IRCTC Train Tickets & Sector Enquiry",
+        "icon": "fa-train",
+        "category": "ticketing",
+        "description": "Authorized rail ticketing and real-time sector-wise train enquiry across 6 major corridors from Kolkata: NJP/Darjeeling, New Delhi, Puri, Haridwar, Varanasi, and Mumbai."
     },
     {
-      id: "train-tickets",
-      title: "Train Tickets & Rail Booking",
-      icon: "fa-train",
-      category: "ticketing",
-      description: "Fast and convenient booking of Indian Railways tickets, offering waitlist clearance assistance and tatkal bookings."
+        "id": "chardham-package",
+        "title": "Chardham Yatra Pilgrimage",
+        "icon": "fa-om",
+        "category": "religious",
+        "description": "Dedicated spiritual pilgrimage packages to Yamunotri, Gangotri, Kedarnath, and Badrinath with VIP darshan assistance and senior citizen support."
     },
     {
-      id: "international-flight-bookings",
-      title: "International Flight Bookings",
-      icon: "fa-plane",
-      category: "ticketing",
-      description: "Special corporate and discount fares for long-haul international flights to US, UK, Europe, Australia, and Asia."
+        "id": "visa-assistance",
+        "title": "Visa Application Assistance",
+        "icon": "fa-passport",
+        "category": "business",
+        "description": "Step-by-step document verification, embassy appointment scheduling, and fast-track processing for Dubai, Schengen, UK, US, Thailand, and Singapore visas."
     },
     {
-      id: "travel-plans",
-      title: "Travel Plans & Travel Packages",
-      icon: "fa-compass",
-      category: "tours",
-      description: "Custom-made trip planning with flexible itineraries designed according to your specific dates, interests, and budget."
+        "id": "travel-insurance",
+        "title": "Travel Insurance",
+        "icon": "fa-shield-halved",
+        "category": "booking",
+        "description": "Comprehensive overseas and domestic medical insurance, trip delay protection, and baggage loss coverage with cashless global hospital networks."
     },
     {
-      id: "customer-support",
-      title: "24x7 Customer Support",
-      icon: "fa-headset",
-      category: "booking",
-      description: "Round-the-clock emergency support line assisting travelers with live re-routing, hotel changes, or on-trip emergencies."
-    },
-    {
-      id: "business-tour",
-      title: "Business Tour",
-      icon: "fa-user-tie",
-      category: "business",
-      description: "Optimized corporate layouts, private transfers, premium lounges, and boardroom access for high-profile business visits."
-    },
-    {
-      id: "chardham-service",
-      title: "Chardham Package",
-      icon: "fa-om",
-      category: "religious",
-      description: "Expertly managed spiritual pilgrimage to Yamunotri, Gangotri, Kedarnath, and Badrinath with VIP Darshan priority."
-    },
-    {
-      id: "city-travel",
-      title: "City Travel",
-      icon: "fa-city",
-      category: "tours",
-      description: "Bespoke city experiences, heritage walks in Kolkata, food tours, and structured intra-city transfers."
-    },
-    {
-      id: "desert-safari-service",
-      title: "Desert Safari",
-      icon: "fa-dromedary",
-      category: "tours",
-      description: "Thrilling dune bashing, camel rides, traditional belly dance performances, and BBQ buffet dinners under the desert sky."
-    },
-    {
-      id: "domestic-intl-packages",
-      title: "Domestic & International Tour Packages",
-      icon: "fa-map-location-dot",
-      category: "tours",
-      description: "Wide collection of ready-to-book and bespoke travel bundles stretching from the Himalayas to global coastal havens."
-    },
-    {
-      id: "kashmir-service",
-      title: "Kashmir Package",
-      icon: "fa-snowflake",
-      category: "tours",
-      description: "Enchanting journeys to Srinagar, Gulmarg, Pahalgam, and Sonamarg including premium Shikara rides on Dal Lake."
-    },
-    {
-      id: "visa-assistance",
-      title: "Visa Application Assistance",
-      icon: "fa-passport",
-      category: "booking",
-      description: "Expert assistance with visa documentation, application filing, embassy scheduling, and mock interviews."
-    },
-    {
-      id: "irctc-bookings",
-      title: "IRCTC / Train Bookings",
-      icon: "fa-train-subway",
-      category: "ticketing",
-      description: "Authorized agency-level booking for standard, luxury, and tourist trains operating under Indian Railways."
+        "id": "corporate-mice",
+        "title": "Corporate MICE & Business Travel",
+        "icon": "fa-building",
+        "category": "business",
+        "description": "End-to-end management for corporate offsites, conferences, delegate transfers, and executive business travel with centralized corporate billing."
     }
-  ],
+],
 
   // 13 Custom tour packages with full descriptions and metadata
   packages: [
